@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fisu_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,183 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zu0-Pw-8ba">
+                                <rect key="frame" x="182" y="116" width="236" height="49"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="IbQ-ql-VzR"/>
+                                    <constraint firstAttribute="width" constant="236" id="U8x-Hl-BnP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="52"/>
+                                <color key="textColor" red="0.81836960078534027" green="0.46250122479482886" blue="0.077669953630559591" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4J-BW-o6a">
+                                <rect key="frame" x="35" y="28" width="29" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="1ae-hF-dcg"/>
+                                    <constraint firstAttribute="height" constant="29" id="Hgq-6k-dH0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="profile" image="users81.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-me-lzb">
+                                <rect key="frame" x="286" y="28" width="29" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="7ZS-Zm-J1E"/>
+                                    <constraint firstAttribute="height" constant="29" id="QPR-MM-wrp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="home" image="house28.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-g9-ziS">
+                                <rect key="frame" x="211" y="301" width="41" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="1pl-Tb-h3r"/>
+                                    <constraint firstAttribute="width" constant="41" id="4xG-P5-90b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="eventsimg" image="calendar146.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-u5-RoE">
+                                <rect key="frame" x="211" y="363" width="41" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="Iiv-QB-frE"/>
+                                    <constraint firstAttribute="height" constant="41" id="wQJ-2U-tZD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="restaurantsimg" image="cutlery23.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wl-p3-XcR">
+                                <rect key="frame" x="211" y="424" width="41" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="R1l-OL-XoT"/>
+                                    <constraint firstAttribute="height" constant="41" id="epy-Wt-Y1W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="citymapimg" image="pin71.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbY-z1-ZNN">
+                                <rect key="frame" x="265" y="307" width="84" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ecL-PH-Gqi"/>
+                                    <constraint firstAttribute="width" constant="84" id="qUg-gL-Sy5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Events"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-wg-36B">
+                                <rect key="frame" x="265" y="363" width="128" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="hzr-mo-XP6"/>
+                                    <constraint firstAttribute="width" constant="128" id="ua7-6q-Ql5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Restaurants"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVF-7w-mPm">
+                                <rect key="frame" x="265" y="424" width="96" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Ly8-Ku-oTg"/>
+                                    <constraint firstAttribute="width" constant="96" id="gnn-vq-S6H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="City map"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfd-WR-2NL">
+                                <rect key="frame" x="533" y="28" width="29" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="2gg-dH-vlr"/>
+                                    <constraint firstAttribute="height" constant="29" id="e5T-Sz-JFr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="logout" image="logout13.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blIr42c2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-gW-NTa">
+                                <rect key="frame" x="247" y="164" width="107" height="105"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="4BI-1G-blg"/>
+                                    <constraint firstAttribute="height" constant="130" id="PIA-jd-AIv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n4J-BW-o6a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="1E9-nA-Sit"/>
+                            <constraint firstItem="ABt-gW-NTa" firstAttribute="top" secondItem="Zu0-Pw-8ba" secondAttribute="bottom" constant="8" id="Acm-yY-3Jb"/>
+                            <constraint firstItem="cVF-7w-mPm" firstAttribute="leading" secondItem="5Wl-p3-XcR" secondAttribute="trailing" constant="13" id="DOR-Up-KQv"/>
+                            <constraint firstItem="O3g-wg-36B" firstAttribute="leading" secondItem="gHh-u5-RoE" secondAttribute="trailing" constant="13" id="FbV-So-g2U"/>
+                            <constraint firstItem="gHh-u5-RoE" firstAttribute="top" secondItem="Oyf-g9-ziS" secondAttribute="bottom" constant="21" id="HPo-8x-hsh"/>
+                            <constraint firstItem="5Wl-p3-XcR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-68.5" id="LvA-Ar-UqZ"/>
+                            <constraint firstItem="gHh-u5-RoE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-68.5" id="MkO-8G-LJM"/>
+                            <constraint firstItem="n4J-BW-o6a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Mpa-Em-Yio"/>
+                            <constraint firstItem="5Wl-p3-XcR" firstAttribute="top" secondItem="gHh-u5-RoE" secondAttribute="bottom" constant="20" id="MwS-lh-E04"/>
+                            <constraint firstItem="O3g-wg-36B" firstAttribute="top" secondItem="WbY-z1-ZNN" secondAttribute="bottom" constant="26" id="PlQ-JI-Kcb"/>
+                            <constraint firstItem="Zfd-WR-2NL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Qag-3A-yP0"/>
+                            <constraint firstItem="5gJ-me-lzb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R8T-ES-Lta"/>
+                            <constraint firstItem="Zu0-Pw-8ba" firstAttribute="top" secondItem="5gJ-me-lzb" secondAttribute="bottom" constant="48" id="TCX-Ao-ret"/>
+                            <constraint firstItem="cVF-7w-mPm" firstAttribute="top" secondItem="O3g-wg-36B" secondAttribute="bottom" constant="20" id="VlX-4P-SfF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zfd-WR-2NL" secondAttribute="trailing" constant="18" id="YGj-k0-Auj"/>
+                            <constraint firstItem="Zu0-Pw-8ba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b1A-Ox-OPU"/>
+                            <constraint firstItem="WbY-z1-ZNN" firstAttribute="leading" secondItem="Oyf-g9-ziS" secondAttribute="trailing" constant="13" id="fQT-mN-M3a"/>
+                            <constraint firstItem="5gJ-me-lzb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iad-h9-BFk"/>
+                            <constraint firstItem="Oyf-g9-ziS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-68.5" id="iix-XY-9Ng"/>
+                            <constraint firstItem="Oyf-g9-ziS" firstAttribute="top" secondItem="ABt-gW-NTa" secondAttribute="bottom" constant="42" id="jxZ-RM-PVE"/>
+                            <constraint firstItem="WbY-z1-ZNN" firstAttribute="top" secondItem="ABt-gW-NTa" secondAttribute="bottom" constant="48" id="lLl-rp-hfh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zfd-WR-2NL" secondAttribute="trailing" constant="18" id="p3l-PF-Ek7"/>
+                            <constraint firstItem="Zfd-WR-2NL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uki-IP-fY7"/>
+                            <constraint firstItem="ABt-gW-NTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v5S-mG-l7B"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="254" y="324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blIr42c2.jpg" width="348" height="348"/>
+        <image name="calendar146.png" width="128" height="128"/>
+        <image name="cutlery23.png" width="128" height="128"/>
+        <image name="house28.png" width="128" height="128"/>
+        <image name="logout13.png" width="128" height="128"/>
+        <image name="pin71.png" width="128" height="128"/>
+        <image name="users81.png" width="256" height="256"/>
+    </resources>
 </document>

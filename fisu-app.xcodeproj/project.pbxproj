@@ -15,6 +15,14 @@
 		7F76B8BD1C6372F30061DE36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */; };
 		7F76B8C81C6372F30061DE36 /* fisu_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76B8C71C6372F30061DE36 /* fisu_appTests.swift */; };
 		7F76B8D31C6372F30061DE36 /* fisu_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76B8D21C6372F30061DE36 /* fisu_appUITests.swift */; };
+		7F76B8E11C6379E60061DE36 /* Desktop in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8E01C6379E60061DE36 /* Desktop */; };
+		7F76B8E31C637B280061DE36 /* users81.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8E21C637B280061DE36 /* users81.png */; };
+		7F76B8E51C6383CE0061DE36 /* cutlery23.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8E41C6383CE0061DE36 /* cutlery23.png */; };
+		7F76B8E71C638A3E0061DE36 /* house28.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8E61C638A3E0061DE36 /* house28.png */; };
+		7F76B8E91C638A460061DE36 /* logout13.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8E81C638A460061DE36 /* logout13.png */; };
+		7F76B8EB1C638A4F0061DE36 /* pin71.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8EA1C638A4F0061DE36 /* pin71.png */; };
+		7F76B8ED1C638A560061DE36 /* blIr42c2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8EC1C638A560061DE36 /* blIr42c2.jpg */; };
+		7F76B8EF1C638A5F0061DE36 /* calendar146.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8EE1C638A5F0061DE36 /* calendar146.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		7F76B8CE1C6372F30061DE36 /* fisu-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fisu-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F76B8D21C6372F30061DE36 /* fisu_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fisu_appUITests.swift; sourceTree = "<group>"; };
 		7F76B8D41C6372F30061DE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F76B8E01C6379E60061DE36 /* Desktop */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Desktop; path = ../..; sourceTree = "<group>"; };
+		7F76B8E21C637B280061DE36 /* users81.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = users81.png; path = ../../users81.png; sourceTree = "<group>"; };
+		7F76B8E41C6383CE0061DE36 /* cutlery23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cutlery23.png; path = ../../cutlery23.png; sourceTree = "<group>"; };
+		7F76B8E61C638A3E0061DE36 /* house28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = house28.png; path = ../../house28.png; sourceTree = "<group>"; };
+		7F76B8E81C638A460061DE36 /* logout13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logout13.png; path = ../../logout13.png; sourceTree = "<group>"; };
+		7F76B8EA1C638A4F0061DE36 /* pin71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin71.png; path = ../../pin71.png; sourceTree = "<group>"; };
+		7F76B8EC1C638A560061DE36 /* blIr42c2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blIr42c2.jpg; path = ../../blIr42c2.jpg; sourceTree = "<group>"; };
+		7F76B8EE1C638A5F0061DE36 /* calendar146.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar146.png; path = ../../calendar146.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,14 @@
 				7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
+				7F76B8EE1C638A5F0061DE36 /* calendar146.png */,
+				7F76B8EC1C638A560061DE36 /* blIr42c2.jpg */,
+				7F76B8EA1C638A4F0061DE36 /* pin71.png */,
+				7F76B8E81C638A460061DE36 /* logout13.png */,
+				7F76B8E61C638A3E0061DE36 /* house28.png */,
+				7F76B8E41C6383CE0061DE36 /* cutlery23.png */,
+				7F76B8E21C637B280061DE36 /* users81.png */,
+				7F76B8E01C6379E60061DE36 /* Desktop */,
 				7F76B8B91C6372F30061DE36 /* Assets.xcassets */,
 				7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */,
 				7F76B8BE1C6372F30061DE36 /* Info.plist */,
@@ -232,9 +256,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F76B8E31C637B280061DE36 /* users81.png in Resources */,
 				7F76B8BD1C6372F30061DE36 /* LaunchScreen.storyboard in Resources */,
+				7F76B8E11C6379E60061DE36 /* Desktop in Resources */,
+				7F76B8E71C638A3E0061DE36 /* house28.png in Resources */,
+				7F76B8E51C6383CE0061DE36 /* cutlery23.png in Resources */,
+				7F76B8EB1C638A4F0061DE36 /* pin71.png in Resources */,
+				7F76B8E91C638A460061DE36 /* logout13.png in Resources */,
 				7F76B8BA1C6372F30061DE36 /* Assets.xcassets in Resources */,
 				7F76B8B51C6372F30061DE36 /* Main.storyboard in Resources */,
+				7F76B8ED1C638A560061DE36 /* blIr42c2.jpg in Resources */,
+				7F76B8EF1C638A5F0061DE36 /* calendar146.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +520,7 @@
 				7F76B8D91C6372F30061DE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F76B8DA1C6372F30061DE36 /* Build configuration list for PBXNativeTarget "fisu-appTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +529,7 @@
 				7F76B8DC1C6372F30061DE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F76B8DD1C6372F30061DE36 /* Build configuration list for PBXNativeTarget "fisu-appUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +538,7 @@
 				7F76B8DF1C6372F30061DE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
