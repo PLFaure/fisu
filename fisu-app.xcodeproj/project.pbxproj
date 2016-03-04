@@ -142,6 +142,7 @@
 				7FD406041C63A6DC00EA4851 /* calendar146.png */,
 				7FD406051C63A6DC00EA4851 /* cutlery23.png */,
 				7FD406061C63A6DC00EA4851 /* fisu_app.xcdatamodeld */,
+				7F76B8B61C6372F30061DE36 /* fisu_app.xcdatamodeld */,
 				7FD406081C63A6DC00EA4851 /* house28.png */,
 				7FD406091C63A6DC00EA4851 /* logout13.png */,
 				7FD4060A1C63A6DC00EA4851 /* pin71.png */,
@@ -150,7 +151,6 @@
 				7F76B8B91C6372F30061DE36 /* Assets.xcassets */,
 				7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */,
 				7F76B8BE1C6372F30061DE36 /* Info.plist */,
-				7F76B8B61C6372F30061DE36 /* fisu_app.xcdatamodeld */,
 			);
 			path = "fisu-app";
 			sourceTree = "<group>";
@@ -463,10 +463,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "fisu-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fageo.fisu-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -474,10 +476,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "fisu-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fageo.fisu-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

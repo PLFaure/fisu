@@ -9,5 +9,20 @@
 import UIKit
 
 class ActivityType: NSObject {
+    var atlabel: String = ""
+    
+    init(lbl: String) {
+        super.init()
+        self.label = lbl
+    }
+    
+    var label: String {
+        set {
+            self.atlabel = label
+        }
+        get {
+            return self.atlabel
+        }
+    }
 
 }
