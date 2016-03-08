@@ -11,9 +11,9 @@ import UIKit
 class ActivityType: NSObject {
     var atlabel: String = ""
     
-    init(lbl: String) {
+    init(label: String) {
         super.init()
-        self.label = lbl
+        self.label = label
     }
     
     var label: String {
