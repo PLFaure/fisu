@@ -18,25 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar146.png" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-pL-EFA">
-                                <rect key="frame" x="157" y="97" width="54" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="FY4-GB-bbD"/>
-                                    <constraint firstAttribute="width" constant="54" id="Sxf-43-XV8"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="hTR-uZ-T1i"/>
-                                    <constraint firstAttribute="height" constant="54" id="v48-vN-IQl"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHb-Z1-ifh">
-                                <rect key="frame" x="224" y="97" width="153" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="7j9-oo-obH"/>
-                                    <constraint firstAttribute="height" constant="63" id="krA-Tp-d1o"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="52"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD1-gC-jlU">
                                 <rect key="frame" x="34" y="28" width="29" height="29"/>
                                 <constraints>
@@ -50,15 +31,34 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar146.png" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-pL-EFA">
+                                <rect key="frame" x="162" y="80" width="54" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="FY4-GB-bbD"/>
+                                    <constraint firstAttribute="width" constant="54" id="Sxf-43-XV8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="hTR-uZ-T1i"/>
+                                    <constraint firstAttribute="height" constant="54" id="v48-vN-IQl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHb-Z1-ifh">
+                                <rect key="frame" x="210" y="80" width="153" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="7j9-oo-obH"/>
+                                    <constraint firstAttribute="height" constant="63" id="krA-Tp-d1o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jHb-Z1-ifh" firstAttribute="top" secondItem="8zm-pL-EFA" secondAttribute="top" id="9e4-xt-4Xj"/>
-                            <constraint firstItem="8zm-pL-EFA" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="77" id="CQ3-Os-PWD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8zm-pL-EFA" secondAttribute="trailing" constant="369" id="D3P-a7-zq7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8zm-pL-EFA" secondAttribute="trailing" constant="369" id="mP5-jN-92e"/>
+                            <constraint firstItem="8zm-pL-EFA" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="60" id="CQ3-Os-PWD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8zm-pL-EFA" secondAttribute="trailing" constant="364" id="D3P-a7-zq7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8zm-pL-EFA" secondAttribute="trailing" constant="364" id="mP5-jN-92e"/>
                             <constraint firstItem="lD1-gC-jlU" firstAttribute="centerX" secondItem="zOE-AW-gPU" secondAttribute="centerX" constant="-251.5" id="uc2-20-ybk"/>
-                            <constraint firstItem="jHb-Z1-ifh" firstAttribute="centerX" secondItem="lD1-gC-jlU" secondAttribute="centerX" constant="252" id="wB5-er-Dyl"/>
+                            <constraint firstItem="jHb-Z1-ifh" firstAttribute="centerX" secondItem="lD1-gC-jlU" secondAttribute="centerX" constant="238" id="wB5-er-Dyl"/>
                             <constraint firstItem="lD1-gC-jlU" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="8" id="zR2-f8-vSV"/>
                         </constraints>
                     </view>
@@ -151,6 +151,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Restaurants"/>
+                                <connections>
+                                    <segue destination="yQ4-4c-lRf" kind="show" id="yUJ-dE-PiX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVF-7w-mPm">
                                 <rect key="frame" x="265" y="457" width="96" height="41"/>
@@ -238,7 +241,47 @@
                     <view key="view" contentMode="scaleToFill" id="vhb-t9-kHc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ts-U4-pU8">
+                                <rect key="frame" x="211" y="69" width="221" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="0gk-jp-DyE"/>
+                                    <constraint firstAttribute="height" constant="49" id="6co-Ad-jJe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="40"/>
+                                <color key="textColor" red="0.11764705882352941" green="0.50196078431372548" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-ck-WoB">
+                                <rect key="frame" x="34" y="20" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Pt8-Wb-xjr"/>
+                                    <constraint firstAttribute="width" constant="29" id="Y94-mo-tBF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="home" image="house28.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cutlery23.png" translatesAutoresizingMaskIntoConstraints="NO" id="xau-cl-BEq">
+                                <rect key="frame" x="145" y="60" width="58" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="gkk-JT-MnX"/>
+                                    <constraint firstAttribute="width" constant="58" id="zvH-WM-3lz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xau-cl-BEq" firstAttribute="leading" secondItem="vhb-t9-kHc" secondAttribute="leadingMargin" constant="125" id="3ZL-h8-V3j"/>
+                            <constraint firstItem="ZvV-ck-WoB" firstAttribute="leading" secondItem="vhb-t9-kHc" secondAttribute="leadingMargin" constant="14" id="9A7-O9-TtR"/>
+                            <constraint firstItem="5ts-U4-pU8" firstAttribute="leading" secondItem="xau-cl-BEq" secondAttribute="trailing" constant="8" id="H64-gz-DaW"/>
+                            <constraint firstItem="ZvV-ck-WoB" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" id="MZJ-hv-TJo"/>
+                            <constraint firstItem="xau-cl-BEq" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" constant="40" id="eyF-12-iHS"/>
+                            <constraint firstItem="5ts-U4-pU8" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" constant="49" id="nBh-aP-GKH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nT7-xJ-rcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
