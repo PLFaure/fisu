@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Accomodation.swift
 //  fisu-app
 //
 //  Created by IG2013 on 14/03/2016.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class User: NSManagedObject {
+class Accomodation: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

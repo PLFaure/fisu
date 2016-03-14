@@ -2,27 +2,16 @@
 //  ActivityType.swift
 //  fisu-app
 //
-//  Created by IG2013 on 04/03/2016.
+//  Created by IG2013 on 14/03/2016.
 //  Copyright © 2016 Faure Geoffray. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreData
 
-class ActivityType: NSObject {
-    var atlabel: String = ""
-    
-    init(label: String) {
-        super.init()
-        self.label = label
-    }
-    
-    var label: String {
-        set {
-            self.atlabel = label
-        }
-        get {
-            return self.atlabel
-        }
-    }
+
+class ActivityType: NSManagedObject {
+
+// Insert code here to add functionality to your managed object subclass
 
 }
