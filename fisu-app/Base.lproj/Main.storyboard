@@ -18,45 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cev-gl-ees">
-                                <rect key="frame" x="35" y="28" width="29" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="P5D-hb-bEq"/>
-                                    <constraint firstAttribute="width" constant="29" id="Tgh-09-86G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="profile" image="users81.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnh-av-qwz">
-                                <rect key="frame" x="551" y="28" width="29" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="Ahw-zv-NSq"/>
-                                    <constraint firstAttribute="height" constant="29" id="FMu-mk-wWK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="logout" image="logout13.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD1-gC-jlU">
-                                <rect key="frame" x="286" y="28" width="29" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="3Lf-s5-31J"/>
-                                    <constraint firstAttribute="height" constant="29" id="CbE-8y-jkf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="home" image="house28.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar146.png" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-pL-EFA">
                                 <rect key="frame" x="157" y="97" width="54" height="54"/>
                                 <constraints>
@@ -76,21 +37,28 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD1-gC-jlU">
+                                <rect key="frame" x="34" y="28" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="3Lf-s5-31J"/>
+                                    <constraint firstAttribute="height" constant="29" id="CbE-8y-jkf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="home" image="house28.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jHb-Z1-ifh" firstAttribute="top" secondItem="8zm-pL-EFA" secondAttribute="top" id="9e4-xt-4Xj"/>
                             <constraint firstItem="8zm-pL-EFA" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="77" id="CQ3-Os-PWD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8zm-pL-EFA" secondAttribute="trailing" constant="369" id="D3P-a7-zq7"/>
-                            <constraint firstItem="Cev-gl-ees" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="8" id="Fkz-p6-2IY"/>
-                            <constraint firstItem="mnh-av-qwz" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="8" id="No3-eL-AAN"/>
-                            <constraint firstItem="mnh-av-qwz" firstAttribute="trailing" secondItem="zOE-AW-gPU" secondAttribute="trailingMargin" id="OJT-nj-2dR"/>
-                            <constraint firstItem="Cev-gl-ees" firstAttribute="leading" secondItem="zOE-AW-gPU" secondAttribute="leadingMargin" constant="15" id="aEV-ze-tNZ"/>
-                            <constraint firstItem="mnh-av-qwz" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="8" id="l1f-gT-Wn5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8zm-pL-EFA" secondAttribute="trailing" constant="369" id="mP5-jN-92e"/>
-                            <constraint firstItem="lD1-gC-jlU" firstAttribute="centerX" secondItem="zOE-AW-gPU" secondAttribute="centerX" id="uc2-20-ybk"/>
-                            <constraint firstItem="jHb-Z1-ifh" firstAttribute="centerX" secondItem="lD1-gC-jlU" secondAttribute="centerX" id="wB5-er-Dyl"/>
-                            <constraint firstItem="mnh-av-qwz" firstAttribute="trailing" secondItem="zOE-AW-gPU" secondAttribute="trailingMargin" id="y9x-nS-pdN"/>
+                            <constraint firstItem="lD1-gC-jlU" firstAttribute="centerX" secondItem="zOE-AW-gPU" secondAttribute="centerX" constant="-251.5" id="uc2-20-ybk"/>
+                            <constraint firstItem="jHb-Z1-ifh" firstAttribute="centerX" secondItem="lD1-gC-jlU" secondAttribute="centerX" constant="252" id="wB5-er-Dyl"/>
                             <constraint firstItem="lD1-gC-jlU" firstAttribute="top" secondItem="Mcq-mr-j4o" secondAttribute="bottom" constant="8" id="zR2-f8-vSV"/>
                         </constraints>
                     </view>
@@ -131,19 +99,6 @@
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal" title="profile" image="users81.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-me-lzb">
-                                <rect key="frame" x="286" y="28" width="29" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="7ZS-Zm-J1E"/>
-                                    <constraint firstAttribute="height" constant="29" id="QPR-MM-wrp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="home" image="house28.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -253,13 +208,10 @@
                             <constraint firstItem="5Wl-p3-XcR" firstAttribute="top" secondItem="gHh-u5-RoE" secondAttribute="bottom" constant="20" id="MwS-lh-E04"/>
                             <constraint firstItem="O3g-wg-36B" firstAttribute="top" secondItem="WbY-z1-ZNN" secondAttribute="bottom" constant="26" id="PlQ-JI-Kcb"/>
                             <constraint firstItem="Zfd-WR-2NL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Qag-3A-yP0"/>
-                            <constraint firstItem="5gJ-me-lzb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R8T-ES-Lta"/>
-                            <constraint firstItem="Zu0-Pw-8ba" firstAttribute="top" secondItem="5gJ-me-lzb" secondAttribute="bottom" constant="48" id="TCX-Ao-ret"/>
                             <constraint firstItem="cVF-7w-mPm" firstAttribute="top" secondItem="O3g-wg-36B" secondAttribute="bottom" constant="20" id="VlX-4P-SfF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zfd-WR-2NL" secondAttribute="trailing" constant="18" id="YGj-k0-Auj"/>
                             <constraint firstItem="Zu0-Pw-8ba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b1A-Ox-OPU"/>
                             <constraint firstItem="WbY-z1-ZNN" firstAttribute="leading" secondItem="Oyf-g9-ziS" secondAttribute="trailing" constant="13" id="fQT-mN-M3a"/>
-                            <constraint firstItem="5gJ-me-lzb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iad-h9-BFk"/>
                             <constraint firstItem="Oyf-g9-ziS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-68.5" id="iix-XY-9Ng"/>
                             <constraint firstItem="Oyf-g9-ziS" firstAttribute="top" secondItem="ABt-gW-NTa" secondAttribute="bottom" constant="42" id="jxZ-RM-PVE"/>
                             <constraint firstItem="WbY-z1-ZNN" firstAttribute="top" secondItem="ABt-gW-NTa" secondAttribute="bottom" constant="48" id="lLl-rp-hfh"/>
@@ -267,6 +219,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Zfd-WR-2NL" secondAttribute="trailing" constant="18" id="qW1-r7-Niz"/>
                             <constraint firstItem="Zfd-WR-2NL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uki-IP-fY7"/>
                             <constraint firstItem="ABt-gW-NTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="v5S-mG-l7B"/>
+                            <constraint firstItem="Zu0-Pw-8ba" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="zks-Lw-0jR"/>
                         </constraints>
                     </view>
                 </viewController>
