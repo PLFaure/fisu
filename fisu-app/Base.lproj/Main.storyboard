@@ -242,21 +242,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ts-U4-pU8">
-                                <rect key="frame" x="211" y="69" width="221" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="221" id="0gk-jp-DyE"/>
-                                    <constraint firstAttribute="height" constant="49" id="6co-Ad-jJe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="40"/>
-                                <color key="textColor" red="0.11764705882352941" green="0.50196078431372548" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-ck-WoB">
-                                <rect key="frame" x="34" y="20" width="29" height="29"/>
+                                <rect key="frame" x="20" y="20" width="29" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Pt8-Wb-xjr"/>
-                                    <constraint firstAttribute="width" constant="29" id="Y94-mo-tBF"/>
+                                    <constraint firstAttribute="height" constant="29" id="3JU-Lp-kZd"/>
+                                    <constraint firstAttribute="width" constant="29" id="HPe-70-9JL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
@@ -265,22 +255,32 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cutlery23.png" translatesAutoresizingMaskIntoConstraints="NO" id="xau-cl-BEq">
-                                <rect key="frame" x="145" y="60" width="58" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ts-U4-pU8">
+                                <rect key="frame" x="208" y="33" width="184" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="gkk-JT-MnX"/>
-                                    <constraint firstAttribute="width" constant="58" id="zvH-WM-3lz"/>
+                                    <constraint firstAttribute="width" constant="184" id="BXu-9D-9ha"/>
+                                    <constraint firstAttribute="height" constant="43" id="SPG-rU-so6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="35"/>
+                                <color key="textColor" red="0.11764705882352941" green="0.50196078431372548" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cutlery23.png" translatesAutoresizingMaskIntoConstraints="NO" id="xau-cl-BEq">
+                                <rect key="frame" x="151" y="28" width="49" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="2pU-gO-LJ6"/>
+                                    <constraint firstAttribute="height" constant="48" id="Aua-xc-g9h"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xau-cl-BEq" firstAttribute="leading" secondItem="vhb-t9-kHc" secondAttribute="leadingMargin" constant="125" id="3ZL-h8-V3j"/>
-                            <constraint firstItem="ZvV-ck-WoB" firstAttribute="leading" secondItem="vhb-t9-kHc" secondAttribute="leadingMargin" constant="14" id="9A7-O9-TtR"/>
-                            <constraint firstItem="5ts-U4-pU8" firstAttribute="leading" secondItem="xau-cl-BEq" secondAttribute="trailing" constant="8" id="H64-gz-DaW"/>
-                            <constraint firstItem="ZvV-ck-WoB" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" id="MZJ-hv-TJo"/>
-                            <constraint firstItem="xau-cl-BEq" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" constant="40" id="eyF-12-iHS"/>
-                            <constraint firstItem="5ts-U4-pU8" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" constant="49" id="nBh-aP-GKH"/>
+                            <constraint firstItem="5ts-U4-pU8" firstAttribute="leading" secondItem="xau-cl-BEq" secondAttribute="trailing" constant="8" id="2jq-nF-5FG"/>
+                            <constraint firstItem="xau-cl-BEq" firstAttribute="leading" secondItem="ZvV-ck-WoB" secondAttribute="trailing" constant="102" id="9ia-cP-NUr"/>
+                            <constraint firstItem="5ts-U4-pU8" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" constant="13" id="XHB-Xj-7hy"/>
+                            <constraint firstItem="5ts-U4-pU8" firstAttribute="centerX" secondItem="vhb-t9-kHc" secondAttribute="centerX" id="lSK-YK-2uR"/>
+                            <constraint firstItem="ZvV-ck-WoB" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" id="sUZ-FK-uax"/>
+                            <constraint firstItem="xau-cl-BEq" firstAttribute="top" secondItem="RKF-uT-SvN" secondAttribute="bottom" constant="8" id="v1l-jm-RHJ"/>
                         </constraints>
                     </view>
                 </viewController>
