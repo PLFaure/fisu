@@ -23,6 +23,6 @@ extension Speaker {
     @NSManaged var picture: NSData?
     @NSManaged var sex: String?
     @NSManaged var title: String?
-    @NSManaged var speakerSet: NSManagedObject?
+    @NSManaged var event: Event?
 
 }

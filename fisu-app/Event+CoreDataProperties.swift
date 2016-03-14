@@ -17,9 +17,9 @@ extension Event {
     @NSManaged var date: NSDate?
     @NSManaged var descr: String?
     @NSManaged var name: String?
-    @NSManaged var activityType: NSManagedObject?
-    @NSManaged var eventsSet: NSManagedObject?
-    @NSManaged var location: NSManagedObject?
-    @NSManaged var speakersSet: NSManagedObject?
+    @NSManaged var activityType: ActivityType?
+    @NSManaged var location: Location?
+    @NSManaged var speaker: Speaker?
+    @NSManaged var user: User?
 
 }

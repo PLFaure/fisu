@@ -13,19 +13,60 @@ import CoreData
 class Event: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
-
-    func setDate(d: NSDate) {
-        self.date = d
+    
+    private var speakers: SpeakersSet?
+    
+    var pdate: NSDate? {
+        set {
+            self.date = pdate
+        }
+        get {
+            return self.date
+        }
     }
     
-    func getDate() -> NSDate {
-      return self.date
+    var pname: String? {
+        set {
+            self.name = pname
+        }
+        get {
+            return self.name
+        }
+    }
+    
+    var pdescr: String? {
+        set {
+            self.descr = pdescr
+        }
+        get {
+            return self.descr
+        }
+    }
+    
+    var ptype: ActivityType? {
+        set {
+            self.activityType = ptype
+        }
+        get {
+            return self.activityType
+        }
+    }
+    
+    var ploc: Location? {
+        set {
+            self.location = ploc
+        }
+        get {
+            return self.location
+        }
+    }
+    
+    var pspeakers: SpeakersSet? {
+        set {
+            self.speakers = pspeakers
+        }
+        get {
+            return self.speakers
+        }
     }
 }
-@NSManaged var date: NSDate?
-@NSManaged var descr: String?
-@NSManaged var name: String?
-@NSManaged var activityType: NSManagedObject?
-@NSManaged var eventsSet: NSManagedObject?
-@NSManaged var location: NSManagedObject?
-@NSManaged var speakersSet: NSManagedObject?

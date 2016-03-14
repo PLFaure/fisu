@@ -13,5 +13,10 @@ import CoreData
 class Accomodation: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
-
+    
 }
+
+@NSManaged var descr: String?
+@NSManaged var name: String?
+@NSManaged var picture: NSData?
+@NSManaged var location: NSManagedObject?

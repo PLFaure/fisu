@@ -11,7 +11,6 @@
 		3ED5C68F1C96C6EE006AA967 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67D1C96C6EE006AA967 /* Event.swift */; };
 		3ED5C6901C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */; };
 		3ED5C6911C96C6EE006AA967 /* Accomodation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67F1C96C6EE006AA967 /* Accomodation.swift */; };
-		3ED5C6921C96C6EE006AA967 /* EventsSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C6801C96C6EE006AA967 /* EventsSet+CoreDataProperties.swift */; };
 		3ED5C6931C96C6EE006AA967 /* EventsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C6811C96C6EE006AA967 /* EventsSet.swift */; };
 		3ED5C6941C96C6EE006AA967 /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C6821C96C6EE006AA967 /* Restaurant+CoreDataProperties.swift */; };
 		3ED5C6951C96C6EE006AA967 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C6831C96C6EE006AA967 /* Restaurant.swift */; };
@@ -23,7 +22,6 @@
 		3ED5C69B1C96C6EE006AA967 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C6891C96C6EE006AA967 /* Speaker.swift */; };
 		3ED5C69C1C96C6EE006AA967 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68A1C96C6EE006AA967 /* User+CoreDataProperties.swift */; };
 		3ED5C69D1C96C6EE006AA967 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68B1C96C6EE006AA967 /* User.swift */; };
-		3ED5C69E1C96C6EE006AA967 /* SpeakersSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68C1C96C6EE006AA967 /* SpeakersSet+CoreDataProperties.swift */; };
 		3ED5C69F1C96C6EE006AA967 /* SpeakersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68D1C96C6EE006AA967 /* SpeakersSet.swift */; };
 		7F76B8B01C6372F30061DE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */; };
 		7F76B8B21C6372F30061DE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76B8B11C6372F30061DE36 /* ViewController.swift */; };
@@ -64,7 +62,6 @@
 		3ED5C67D1C96C6EE006AA967 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Accomodation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C67F1C96C6EE006AA967 /* Accomodation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accomodation.swift; sourceTree = "<group>"; };
-		3ED5C6801C96C6EE006AA967 /* EventsSet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventsSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C6811C96C6EE006AA967 /* EventsSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsSet.swift; sourceTree = "<group>"; };
 		3ED5C6821C96C6EE006AA967 /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C6831C96C6EE006AA967 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -76,7 +73,6 @@
 		3ED5C6891C96C6EE006AA967 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		3ED5C68A1C96C6EE006AA967 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C68B1C96C6EE006AA967 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		3ED5C68C1C96C6EE006AA967 /* SpeakersSet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpeakersSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C68D1C96C6EE006AA967 /* SpeakersSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersSet.swift; sourceTree = "<group>"; };
 		7F76B8AC1C6372F30061DE36 /* fisu-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fisu-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,13 +147,11 @@
 			children = (
 				3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */,
 				3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */,
-				3ED5C6801C96C6EE006AA967 /* EventsSet+CoreDataProperties.swift */,
 				3ED5C6821C96C6EE006AA967 /* Restaurant+CoreDataProperties.swift */,
 				3ED5C6841C96C6EE006AA967 /* ActivityType+CoreDataProperties.swift */,
 				3ED5C6861C96C6EE006AA967 /* Location+CoreDataProperties.swift */,
 				3ED5C6881C96C6EE006AA967 /* Speaker+CoreDataProperties.swift */,
 				3ED5C68A1C96C6EE006AA967 /* User+CoreDataProperties.swift */,
-				3ED5C68C1C96C6EE006AA967 /* SpeakersSet+CoreDataProperties.swift */,
 				3ED5C67D1C96C6EE006AA967 /* Event.swift */,
 				3ED5C67F1C96C6EE006AA967 /* Accomodation.swift */,
 				3ED5C6811C96C6EE006AA967 /* EventsSet.swift */,
@@ -354,10 +348,8 @@
 				3ED5C6961C96C6EE006AA967 /* ActivityType+CoreDataProperties.swift in Sources */,
 				3ED5C6991C96C6EE006AA967 /* Location.swift in Sources */,
 				3ED5C68E1C96C6EE006AA967 /* Event+CoreDataProperties.swift in Sources */,
-				3ED5C69E1C96C6EE006AA967 /* SpeakersSet+CoreDataProperties.swift in Sources */,
 				3ED5C6981C96C6EE006AA967 /* Location+CoreDataProperties.swift in Sources */,
 				7F76B8B01C6372F30061DE36 /* AppDelegate.swift in Sources */,
-				3ED5C6921C96C6EE006AA967 /* EventsSet+CoreDataProperties.swift in Sources */,
 				3ED5C6971C96C6EE006AA967 /* ActivityType.swift in Sources */,
 				3ED5C68F1C96C6EE006AA967 /* Event.swift in Sources */,
 				3ED5C6911C96C6EE006AA967 /* Accomodation.swift in Sources */,
