@@ -1,10 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Automatic">
-    <entity name="ActivityType" syncable="YES">
-        <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Accomodation" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="accomodation" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="ActivityType" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="activityType" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="Event" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activityType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ActivityType" inverseName="event" inverseEntity="ActivityType" syncable="YES"/>
+        <relationship name="eventsSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventsSet" inverseName="event" inverseEntity="EventsSet" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="event" inverseEntity="Location" syncable="YES"/>
+        <relationship name="speakersSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SpeakersSet" inverseName="event" inverseEntity="SpeakersSet" syncable="YES"/>
+    </entity>
+    <entity name="EventsSet" syncable="YES">
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="eventsSet" inverseEntity="Event" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="eventsSet" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accomodation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Accomodation" inverseName="location" inverseEntity="Accomodation" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="location" inverseEntity="Event" syncable="YES"/>
+        <relationship name="restaurant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="location" inverseEntity="Restaurant" syncable="YES"/>
+    </entity>
+    <entity name="Restaurant" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="restaurant" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Speaker" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="speakerSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SpeakersSet" inverseName="speaker" inverseEntity="SpeakersSet" syncable="YES"/>
+    </entity>
+    <entity name="SpeakersSet" syncable="YES">
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="speakersSet" inverseEntity="Event" syncable="YES"/>
+        <relationship name="speaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speaker" inverseName="speakerSet" inverseEntity="Speaker" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nationality" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventsSet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventsSet" inverseName="user" inverseEntity="EventsSet" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ActivityType" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="ActivityType" positionX="-4142" positionY="-3340" width="128" height="28"/>
+        <element name="Event" positionX="-4140" positionY="-3438" width="128" height="28"/>
+        <element name="SpeakersSet" positionX="-4140" positionY="-3564" width="128" height="30"/>
+        <element name="Speaker" positionX="-3897" positionY="-3564" width="128" height="30"/>
+        <element name="EventsSet" positionX="-3933" positionY="-3438" width="128" height="30"/>
+        <element name="User" positionX="-3735" positionY="-3438" width="128" height="30"/>
+        <element name="Location" positionX="-4392" positionY="-3438" width="128" height="30"/>
+        <element name="Accomodation" positionX="-4392" positionY="-3576" width="128" height="30"/>
+        <element name="Restaurant" positionX="-4608" positionY="-3438" width="128" height="30"/>
     </elements>
 </model>

@@ -66,11 +66,11 @@
                                     <constraint firstAttribute="height" constant="54" id="v48-vN-IQl"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHb-Z1-ifh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHb-Z1-ifh">
                                 <rect key="frame" x="224" y="97" width="153" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="7j9-oo-obH"/>
-                                    <constraint firstAttribute="height" constant="49" id="krA-Tp-d1o"/>
+                                    <constraint firstAttribute="width" constant="153" id="7j9-oo-obH"/>
+                                    <constraint firstAttribute="height" constant="63" id="krA-Tp-d1o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="52"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,7 +219,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blIr42c2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-gW-NTa">
+                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blIr42c2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-gW-NTa">
                                 <rect key="frame" x="235" y="162" width="132" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="4BI-1G-blg"/>
@@ -266,7 +266,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Zfd-WR-2NL" secondAttribute="trailing" constant="18" id="p3l-PF-Ek7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zfd-WR-2NL" secondAttribute="trailing" constant="18" id="qW1-r7-Niz"/>
                             <constraint firstItem="Zfd-WR-2NL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uki-IP-fY7"/>
-                            <constraint firstItem="ABt-gW-NTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v5S-mG-l7B"/>
+                            <constraint firstItem="ABt-gW-NTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="v5S-mG-l7B"/>
                         </constraints>
                     </view>
                 </viewController>
