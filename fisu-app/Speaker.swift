@@ -12,6 +12,9 @@ import CoreData
 
 class Speaker: NSManagedObject {
 
+    /// the lastName property
+    /// - set: for set the lastName
+    /// - get: for get the lastName
     var plastName: String? {
         get {
             return self.lastName
@@ -21,6 +24,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the firstName property
+    /// - set: for set the firstName
+    /// - get: for get the firstName
     var pfirstName: String? {
         get {
             return self.firstName
@@ -30,6 +36,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the sex property
+    /// - set: for set the sex
+    /// - get: for get the sex
     var psex: String? {
         get {
             return self.sex
@@ -39,6 +48,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the title property
+    /// - set: for set the title
+    /// - get: for get the title
     var ptitle: String? {
         get {
             return self.title
@@ -48,6 +60,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the description property
+    /// - set: for set the description
+    /// - get: for get the description
     var pdescr: String? {
         get {
             return self.descr
@@ -57,6 +72,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the email property
+    /// - set: for set the email
+    /// - get: for get the email
     var pemail: String? {
         get {
             return self.email
@@ -66,6 +84,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the phone property
+    /// - set: for set the phone
+    /// - get: for get the phone
     var pphone: String? {
         get {
             return self.phone
@@ -75,6 +96,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the address property
+    /// - set: for set the address
+    /// - get: for get the address
     var paddress: String? {
         get {
             return self.address
@@ -84,6 +108,9 @@ class Speaker: NSManagedObject {
         }
     }
     
+    /// the picture property
+    /// - set: for set the picture
+    /// - get: for get the picture
     var ppicture: NSData? {
         get {
             return self.picture

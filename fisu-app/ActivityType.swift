@@ -12,6 +12,9 @@ import CoreData
 
 class ActivityType: NSManagedObject {
 
+    /// the label property
+    /// - set: for set the label
+    /// - get: for get the label
     var plabel: String? {
         get {
             return self.label

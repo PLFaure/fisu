@@ -12,6 +12,9 @@ import CoreData
 
 class Location: NSManagedObject {
 
+    /// the name property
+    /// - set: for set the name
+    /// - get: for get the name
     var pname: String? {
         get {
             return self.name
@@ -21,6 +24,9 @@ class Location: NSManagedObject {
         }
     }
     
+    /// the latitude property
+    /// - set: for set the latitude
+    /// - get: for get the latitude
     var platitude: String? {
         get {
             return self.latitude
@@ -30,6 +36,9 @@ class Location: NSManagedObject {
         }
     }
     
+    /// the longitude property
+    /// - set: for set the longitude
+    /// - get: for get the longitude
     var plongitude: String? {
         get {
             return self.longitude

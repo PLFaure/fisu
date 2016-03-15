@@ -11,9 +11,11 @@ import CoreData
 
 
 class User: NSManagedObject {
-
     var programme: EventsSet = EventsSet()
-    
+   
+    /// the name property
+    /// - set: for set the name
+    /// - get: for get the name
     var puserName: String? {
         get {
             return self.userName
@@ -23,6 +25,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the password property
+    /// - set: for set the password
+    /// - get: for get the password
     var ppassword: String? {
         get {
             return self.password
@@ -32,6 +37,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the lastName property
+    /// - set: for set the lastName
+    /// - get: for get the lastName
     var plastName: String? {
         get {
             return self.lastName
@@ -41,6 +49,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the firstName property
+    /// - set: for set the firstName
+    /// - get: for get the firstName
     var pfirstName: String? {
         get {
             return self.firstName
@@ -50,6 +61,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the sex property
+    /// - set: for set the sex
+    /// - get: for get the sex
     var psex: String? {
         get {
             return self.sex
@@ -59,6 +73,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the nationality property
+    /// - set: for set the nationality
+    /// - get: for get the nationality
     var pnationality: String? {
         get {
             return self.nationality
@@ -68,6 +85,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the email property
+    /// - set: for set the email
+    /// - get: for get the email
     var pemail: String? {
         get {
             return self.email
@@ -77,6 +97,9 @@ class User: NSManagedObject {
         }
     }
     
+    /// the phone property
+    /// - set: for set the phone
+    /// - get: for get the phone
     var pphone: String? {
         get {
             return self.phone
