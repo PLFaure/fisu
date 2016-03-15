@@ -2,7 +2,7 @@
 //  Event+CoreDataProperties.swift
 //  fisu-app
 //
-//  Created by IG2013 on 14/03/2016.
+//  Created by IG2013 on 15/03/2016.
 //  Copyright © 2016 Faure Geoffray. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,7 +19,7 @@ extension Event {
     @NSManaged var name: String?
     @NSManaged var activityType: ActivityType?
     @NSManaged var location: Location?
-    @NSManaged var speaker: Speaker?
+    @NSManaged var speaker: SpeakersSet?
     @NSManaged var user: User?
 
 }
