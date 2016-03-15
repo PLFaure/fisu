@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar146.png" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-pL-EFA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-pL-EFA">
                                 <rect key="frame" x="371" y="46" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="26o-FP-vci"/>
@@ -30,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="home" image="house28.png">
+                                <state key="normal" title="home" image="house">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -88,7 +88,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="profile" image="users81.png">
+                                <state key="normal" title="profile" image="users">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -101,7 +101,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="eventsimg" image="calendar146.png">
+                                <state key="normal" title="eventsimg" image="calendar">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="restaurantsimg" image="cutlery23.png">
+                                <state key="normal" title="restaurantsimg" image="cutlery">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -163,11 +163,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="logout" image="logout13.png">
+                                <state key="normal" title="logout" image="logout">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blIr42c2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-gW-NTa">
+                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-gW-NTa">
                                 <rect key="frame" x="235" y="162" width="132" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="4BI-1G-blg"/>
@@ -183,7 +183,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="citymapimg" image="pin71.png">
+                                <state key="normal" title="citymapimg" image="pin">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -241,11 +241,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="home" image="house28.png">
+                                <state key="normal" title="home" image="house">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cutlery23.png" translatesAutoresizingMaskIntoConstraints="NO" id="xau-cl-BEq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cutlery" translatesAutoresizingMaskIntoConstraints="NO" id="xau-cl-BEq">
                                 <rect key="frame" x="389" y="39" width="51" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="P9g-h1-qvb"/>
@@ -283,12 +283,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blIr42c2.jpg" width="348" height="348"/>
-        <image name="calendar146.png" width="128" height="128"/>
-        <image name="cutlery23.png" width="128" height="128"/>
-        <image name="house28.png" width="128" height="128"/>
-        <image name="logout13.png" width="128" height="128"/>
-        <image name="pin71.png" width="128" height="128"/>
-        <image name="users81.png" width="256" height="256"/>
+        <image name="calendar" width="128" height="128"/>
+        <image name="cutlery" width="128" height="128"/>
+        <image name="house" width="128" height="128"/>
+        <image name="logo" width="348" height="348"/>
+        <image name="logout" width="128" height="128"/>
+        <image name="pin" width="128" height="128"/>
+        <image name="users" width="256" height="256"/>
     </resources>
 </document>

@@ -16,7 +16,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="activityType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ActivityType" inverseName="event" inverseEntity="ActivityType" syncable="YES"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="event" inverseEntity="Location" syncable="YES"/>
-        <relationship name="speaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speaker" syncable="YES"/>
+        <relationship name="speaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speaker" inverseName="event" inverseEntity="Speaker" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="event" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Location" representedClassName=".Location" syncable="YES">
@@ -43,7 +43,7 @@
         <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="speaker" inverseEntity="Event" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -59,10 +59,10 @@
     <elements>
         <element name="Accomodation" positionX="-4385" positionY="-3576" width="128" height="30"/>
         <element name="ActivityType" positionX="-4142" positionY="-3340" width="128" height="28"/>
-        <element name="Event" positionX="-4185" positionY="-3573" width="128" height="148"/>
+        <element name="Event" positionX="-4185" positionY="-3573" width="128" height="150"/>
         <element name="Location" positionX="-4403" positionY="-3351" width="128" height="30"/>
         <element name="Restaurant" positionX="-4572" positionY="-3396" width="128" height="30"/>
-        <element name="Speaker" positionX="-3890" positionY="-3649" width="128" height="193"/>
+        <element name="Speaker" positionX="-3890" positionY="-3649" width="128" height="195"/>
         <element name="User" positionX="-3863" positionY="-3321" width="128" height="180"/>
     </elements>
 </model>
