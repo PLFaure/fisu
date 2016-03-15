@@ -12,6 +12,10 @@ import CoreData
 
 class Accomodation: NSManagedObject {
     
+    
+    /// the name property
+    /// - set: for set the name
+    /// - get: for get the name
     var pname: String? {
         get {
             return self.name
@@ -21,6 +25,9 @@ class Accomodation: NSManagedObject {
         }
     }
     
+    /// the description property
+    /// - set: for set the description
+    /// - get: for get the description
     var pdescr: String? {
         get {
             return self.descr
@@ -30,6 +37,9 @@ class Accomodation: NSManagedObject {
         }
     }
     
+    /// the picture property
+    /// - set: for set the picture
+    /// - get: for get the picture
     var ppicture: NSData? {
         get {
             return self.picture
@@ -39,6 +49,9 @@ class Accomodation: NSManagedObject {
         }
     }
     
+    /// the location property
+    /// - set: for set the location
+    /// - get: for get the location
     var plocation: Location? {
         get {
             return self.location

@@ -9,7 +9,9 @@
 import Foundation
 import CoreData
 
-
+/// Type EventsSet
+/// An EventsSets is a collection of Event.
+/// An EventsSet is empty if it has no Event.
 class EventsSet: NSObject {
 
     var eventList:[Event?] = []
@@ -28,6 +30,11 @@ class EventsSet: NSObject {
         self.peventList = []
     }
     
+    
+    /// for determine if an Event is present in an EventsSet.
+    /// - parameter e: an object of type Event
+    /// - precondition: none
+    /// - returns: a boolean, True if the Event is in the EventsSet, else False.
     func isPresent(e: Event) -> Bool {
         var present: Bool = false
         var index: Int = 0
@@ -43,11 +50,21 @@ class EventsSet: NSObject {
         return present
     }
     
+    
+    /// for add an object of type Event in an EventsSet
+    /// - parameter e: an object of type Event
+    /// - precondition: the Event musn't already exists in the EventsSet.
+    /// - returns: a boolean, True if the Event has been add in the EventsSet, else False.
     func addToList(e: Event) -> Bool {
         self.peventList.append(e)
         return isPresent(e)
     }
     
+    
+    /// for remove an Event in an EventsSet
+    /// - parameter e: an object of type Event
+    /// - precondition: the Event must exists in the EventsSet.
+    /// - returns: a booleen, True if the Event has been remove, else False.
     func removeFromList(e: Event) -> Bool {
         var b: Bool = false
         var index: Int = 0
