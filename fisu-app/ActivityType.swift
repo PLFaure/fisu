@@ -12,6 +12,12 @@ import CoreData
 
 class ActivityType: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    var plabel: String? {
+        get {
+            return self.label
+        }
+        set {
+            self.label = plabel
+        }
+    }
 }

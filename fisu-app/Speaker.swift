@@ -12,6 +12,84 @@ import CoreData
 
 class Speaker: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    var plastName: String? {
+        get {
+            return self.lastName
+        }
+        set {
+            self.lastName = plastName
+        }
+    }
+    
+    var pfirstName: String? {
+        get {
+            return self.firstName
+        }
+        set {
+            self.firstName = pfirstName
+        }
+    }
+    
+    var psex: String? {
+        get {
+            return self.sex
+        }
+        set {
+            self.sex = psex
+        }
+    }
+    
+    var ptitle: String? {
+        get {
+            return self.title
+        }
+        set {
+            self.title = ptitle
+        }
+    }
+    
+    var pdescr: String? {
+        get {
+            return self.descr
+        }
+        set {
+            self.descr = pdescr
+        }
+    }
+    
+    var pemail: String? {
+        get {
+            return self.email
+        }
+        set {
+            self.email = pemail
+        }
+    }
+    
+    var pphone: String? {
+        get {
+            return self.phone
+        }
+        set {
+            self.phone = pphone
+        }
+    }
+    
+    var paddress: String? {
+        get {
+            return self.address
+        }
+        set {
+            self.address = paddress
+        }
+    }
+    
+    var ppicture: NSData? {
+        get {
+            return self.picture
+        }
+        set {
+            self.picture = ppicture
+        }
+    }
 }

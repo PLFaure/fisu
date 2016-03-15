@@ -11,12 +11,40 @@ import CoreData
 
 
 class Accomodation: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
     
+    var pname: String? {
+        get {
+            return self.name
+        }
+        set {
+            self.name = pname
+        }
+    }
+    
+    var pdescr: String? {
+        get {
+            return self.descr
+        }
+        set {
+            self.descr = pdescr
+        }
+    }
+    
+    var ppicture: NSData? {
+        get {
+            return self.picture
+        }
+        set {
+            self.picture = ppicture
+        }
+    }
+    
+    var plocation: Location? {
+        get {
+            return self.location
+        }
+        set {
+            self.location = plocation
+        }
+    }
 }
-
-@NSManaged var descr: String?
-@NSManaged var name: String?
-@NSManaged var picture: NSData?
-@NSManaged var location: NSManagedObject?

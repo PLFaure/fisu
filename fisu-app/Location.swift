@@ -12,6 +12,30 @@ import CoreData
 
 class Location: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
-
+    var pname: String? {
+        get {
+            return self.name
+        }
+        set {
+            self.name = pname
+        }
+    }
+    
+    var platitude: String? {
+        get {
+            return self.latitude
+        }
+        set {
+            self.latitude = platitude
+        }
+    }
+    
+    var plongitude: String? {
+        get {
+            return self.longitude
+        }
+        set {
+            self.longitude = plongitude
+        }
+    }
 }
