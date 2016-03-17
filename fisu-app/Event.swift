@@ -14,14 +14,16 @@ import CoreData
 class Event: NSManagedObject {
 
     class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, date: NSDate, descr: String, type: ActivityType, loc: Location, speakers: SpeakersSet) -> Event {
+        //function definition
         let newEvent = NSEntityDescription.insertNewObjectForEntityForName("Event", inManagedObjectContext: moc) as! Event
+        
         newEvent.pname = name
         newEvent.pdate = date
         newEvent.pdescr = descr
         newEvent.ptype = type
         newEvent.ploc = loc
         newEvent.pspeakers = speakers
-        //////////////////////////////////////////
+        
         return newEvent
     }
     
@@ -91,10 +93,10 @@ class Event: NSManagedObject {
     /// - get: for get the SpeakersSet
     var pspeakers: SpeakersSet? {
         set {
-            self.speakers = pspeakers
+            self.speaker = pspeakers
         }
         get {
-            return self.speakers
+            return self.speaker
         }
     }
 }
