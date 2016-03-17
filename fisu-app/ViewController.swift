@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     // Create an empty array of Events
     var events = [Event]()
+    var activityTypes = [ActivityType]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +24,55 @@ class ViewController: UIViewController {
         // Use optional binding to confirm the managedObjectContext
         let moc = self.managedObjectContext
 
-        // Create events datas
-        var events = [
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", ActivityType(), Location(), SpeakersSet()),
-            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", ActivityType(), Location(), SpeakersSet())
+        
+        // Create activityTypes data
+        let at = [
+            ("Challenge sportif"),
+            ("Symposium")
+        ]
+        // Loop through, creating activityTypes
+        for (atLabel) in at {
+            // Create an individual activityTypes
+            ActivityType.createInManagedObjectContext(moc, label: atLabel)
+        }
+        fetchActivityType()
+        
+        
+        // Create events data
+        let ev = [
+            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , Location(), SpeakersSet()),
+            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], Location(), SpeakersSet())
         ]
         // Loop through, creating events
-        for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in events {
+        for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
             // Create an individual event
-            Event.createInManagedObjectContext(moc,name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: eventSpeakers)
+            Event.createInManagedObjectContext(moc, name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: eventSpeakers)
+        }
+        fetchEvent()
+
+        save()
+    }
+    
+    func fetchActivityType() {
+        let fetchRequest = NSFetchRequest(entityName: "ActivityType")
+        
+        // Create a sort descriptor object that sorts on the "label"
+        // property of the Core Data object
+        let sortDescriptor = NSSortDescriptor(key: "label", ascending: true)
+        
+        // Set the list of sort descriptors in the fetch request,
+        // so it includes the sort descriptor
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ActivityType] {
+                activityTypes = fetchResults
+            }
+        } catch {
+            let nserror = error as NSError
+            NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
         
-        fetchEvent()
-        save()
     }
     
     func fetchEvent() {
@@ -50,7 +87,6 @@ class ViewController: UIViewController {
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         do {
-            
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
                 events = fetchResults
             }

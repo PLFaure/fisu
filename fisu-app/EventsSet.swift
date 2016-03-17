@@ -13,8 +13,8 @@ import CoreData
 /// An EventsSets is a collection of Event.
 /// An EventsSet is empty if it has no Event.
 class EventsSet: NSObject {
-    var eventList:[Event?] = []
     
+    var eventList:[Event?] = []
     
     var peventList: [Event?] {
         get {
