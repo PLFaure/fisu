@@ -58,10 +58,10 @@
     </entity>
     <elements>
         <element name="Accomodation" positionX="-4385" positionY="-3576" width="128" height="105"/>
-        <element name="ActivityType" positionX="-4142" positionY="-3340" width="128" height="28"/>
+        <element name="ActivityType" positionX="-4169" positionY="-3312" width="128" height="73"/>
         <element name="Event" positionX="-4185" positionY="-3573" width="128" height="148"/>
-        <element name="Location" positionX="-4403" positionY="-3351" width="128" height="30"/>
-        <element name="Restaurant" positionX="-4572" positionY="-3396" width="128" height="30"/>
+        <element name="Location" positionX="-4403" positionY="-3360" width="128" height="133"/>
+        <element name="Restaurant" positionX="-4446" positionY="-3190" width="128" height="103"/>
         <element name="Speaker" positionX="-3890" positionY="-3649" width="128" height="195"/>
         <element name="User" positionX="-3863" positionY="-3321" width="128" height="178"/>
     </elements>

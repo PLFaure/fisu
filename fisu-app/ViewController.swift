@@ -13,10 +13,12 @@ class ViewController: UIViewController {
     
     // Retreive the managedObjectContext from AppDelegate
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    // Create an empty array of Events
-    var events = [Event]()
-    var activityTypes = [ActivityType]()
+    
+    var events = [Event]() // Create an empty array of Events
+    var activityTypes = [ActivityType]() // Create an empty array of ActivityTypes
+    var locations = [Location]() // Create an empty array of Locations
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,10 +40,23 @@ class ViewController: UIViewController {
         fetchActivityType()
         
         
+        // Create locations data
+        let l = [
+            (("43.593333"),("3.849431"),("Stade de l'assiette")),
+            (("43.528198"),("3.934645"),("La Plage"))
+        ]
+        // Loop through, creating locations
+        for (lLatitude, lLongitude, lName) in l {
+            // Create an individual locations
+            Location.createInManagedObjectContext(moc, name: lName, latitude: lLatitude, longitude: lLongitude)
+        }
+        fetchLocation()
+        
+        
         // Create events data
         let ev = [
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , Location(), SpeakersSet()),
-            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], Location(), SpeakersSet())
+            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[0], SpeakersSet()),
+            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[1], SpeakersSet())
         ]
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
@@ -67,6 +82,28 @@ class ViewController: UIViewController {
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ActivityType] {
                 activityTypes = fetchResults
+            }
+        } catch {
+            let nserror = error as NSError
+            NSLog("Fetch failed: \(nserror.localizedDescription)")
+        }
+        
+    }
+    
+    func fetchLocation() {
+        let fetchRequest = NSFetchRequest(entityName: "Location")
+        
+        // Create a sort descriptor object that sorts on the "label"
+        // property of the Core Data object
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        // Set the list of sort descriptors in the fetch request,
+        // so it includes the sort descriptor
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Location] {
+                locations = fetchResults
             }
         } catch {
             let nserror = error as NSError

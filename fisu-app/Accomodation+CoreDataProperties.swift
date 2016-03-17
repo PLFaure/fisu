@@ -17,6 +17,6 @@ extension Accomodation {
     @NSManaged var descr: String?
     @NSManaged var name: String?
     @NSManaged var picture: NSData?
-    @NSManaged var location: Location? //NSManagedObject?
+    @NSManaged var location: Location?
 
 }
