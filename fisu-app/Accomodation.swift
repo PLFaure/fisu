@@ -12,6 +12,16 @@ import CoreData
 
 class Accomodation: NSManagedObject {
     
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, descr: String, picture: NSData, loc: Location) -> Accomodation {
+        let newAccomodation = NSEntityDescription.insertNewObjectForEntityForName("Accomodation", inManagedObjectContext: moc) as! Accomodation
+        newAccomodation.pname = name
+        newAccomodation.pdescr = descr
+        newAccomodation.ppicture = picture
+        newAccomodation.plocation = loc
+        //////////////////////////////////////////
+        return newAccomodation
+    }
+    
     
     /// the name property
     /// - set: for set the name

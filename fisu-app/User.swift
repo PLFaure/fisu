@@ -13,6 +13,20 @@ import CoreData
 class User: NSManagedObject {
     var programme: EventsSet = EventsSet()
    
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, userName: String, password:String, lastName: String, firstName: String, sex: String, email: String, phone: String, nationality: String) -> User {
+        let newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: moc) as! User
+        newUser.puserName = userName
+        newUser.ppassword = password
+        newUser.plastName = lastName
+        newUser.pfirstName = firstName
+        newUser.psex = sex
+        newUser.pemail = email
+        newUser.pphone = phone
+        newUser.pnationality = nationality
+        //////////////////////////////////////////
+        return newUser
+    }
+
     /// the name property
     /// - set: for set the name
     /// - get: for get the name

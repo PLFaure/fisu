@@ -12,6 +12,21 @@ import CoreData
 
 class Speaker: NSManagedObject {
 
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, lastName: String, firstName: String, sex: String, title: String, descr: String, email: String, phone:String, address: String, picture: NSData) -> Speaker {
+        let newSpeaker = NSEntityDescription.insertNewObjectForEntityForName("Speaker", inManagedObjectContext: moc) as! Speaker
+        newSpeaker.plastName = lastName
+        newSpeaker.pfirstName = firstName
+        newSpeaker.psex = sex
+        newSpeaker.ptitle = title
+        newSpeaker.pdescr = descr
+        newSpeaker.pemail = email
+        newSpeaker.pphone = phone
+        newSpeaker.paddress = address
+        newSpeaker.ppicture = picture
+        //////////////////////////////////////////
+        return newSpeaker
+    }
+    
     /// the lastName property
     /// - set: for set the lastName
     /// - get: for get the lastName
