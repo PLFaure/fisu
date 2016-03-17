@@ -115,9 +115,9 @@
                                 </state>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pd8-aK-rqK">
-                                <rect key="frame" x="20" y="80" width="560" height="464"/>
+                                <rect key="frame" x="20" y="80" width="560" height="500"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="464" id="cPd-DZ-h0J"/>
+                                    <constraint firstAttribute="height" constant="500" id="cPd-DZ-h0J"/>
                                 </constraints>
                             </mapView>
                         </subviews>
@@ -217,7 +217,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Events"/>
                                 <connections>
-                                    <segue destination="MgS-L0-ABx" kind="showDetail" id="4LT-iO-BsN"/>
+                                    <segue destination="MgS-L0-ABx" kind="show" id="4LT-iO-BsN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3g-wg-36B">

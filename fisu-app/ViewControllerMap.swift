@@ -13,6 +13,12 @@ class ViewControllerMap: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //location of montpellier city
+        let location = CLLocationCoordinate2D(latitude: 43.61092, longitude: 3.87723)
+        //Pour définir la taille du zoom de départ
+        let span = MKCoordinateSpanMake(0.1,0.1)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
