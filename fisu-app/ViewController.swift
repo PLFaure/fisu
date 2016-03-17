@@ -19,21 +19,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
         // Use optional binding to confirm the managedObjectContext
         let moc = self.managedObjectContext
 
         // Create events datas
         var events = [
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", ActivityType(), Location(), SpeakersSet()),
-            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", ActivityType(), Location(), SpeakersSet())
+           ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", ActivityType(), Location(), SpeakersSet()),
+           ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", ActivityType(), Location(), SpeakersSet())
         ]
         // Loop through, creating events
-        for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in events {
+         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in events {
             // Create an individual event
             Event.createInManagedObjectContext(moc,name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: eventSpeakers)
         }
-        
         fetchEvent()
         save()
     }
@@ -77,5 +76,10 @@ class ViewController: UIViewController {
     }
 
 
+    
+    
+    
+    
+    
 }
 
