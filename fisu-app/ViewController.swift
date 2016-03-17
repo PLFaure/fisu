@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         // Use optional binding to confirm the managedObjectContext
         let moc = self.managedObjectContext
 
-        
         // Create activityTypes data
         let at = [
             ("Challenge sportif"),
@@ -49,7 +48,6 @@ class ViewController: UIViewController {
             Event.createInManagedObjectContext(moc, name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: eventSpeakers)
         }
         fetchEvent()
-
         save()
     }
     
