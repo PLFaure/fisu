@@ -25,8 +25,8 @@ class ViewController: UIViewController {
 
         // Create events datas
         var events = [
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", nil, nil, []),
-            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", nil, nil, [])
+            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", ActivityType(), Location(), SpeakersSet()),
+            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", ActivityType(), Location(), SpeakersSet())
         ]
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in events {
@@ -34,13 +34,40 @@ class ViewController: UIViewController {
             Event.createInManagedObjectContext(moc,name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: eventSpeakers)
         }
         
-        fetchLog()
+        fetchEvent()
+        save()
     }
     
-    func fetchLog() {
+    func fetchEvent() {
         let fetchRequest = NSFetchRequest(entityName: "Event")
-        if let fetchResults = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as? [Event] {
-            events = fetchResults
+        
+        // Create a sort descriptor object that sorts on the "name"
+        // property of the Core Data object
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        // Set the list of sort descriptors in the fetch request,
+        // so it includes the sort descriptor
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            
+            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
+                events = fetchResults
+            }
+        } catch {
+            let nserror = error as NSError
+            NSLog("Fetch failed: \(nserror.localizedDescription)")
+        }
+
+    }
+    
+    func save() {
+        do {
+            try self.managedObjectContext.save()
+        } catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort() // Causes the application to generate a crash log and terminate. You should not use this function in a shipping application.
         }
     }
 
