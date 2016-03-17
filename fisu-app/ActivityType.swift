@@ -12,6 +12,13 @@ import CoreData
 
 class ActivityType: NSManagedObject {
 
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, label: String) -> ActivityType {
+        let newActivityType = NSEntityDescription.insertNewObjectForEntityForName("ActivityType", inManagedObjectContext: moc) as! ActivityType
+        newActivityType.plabel = label
+        //////////////////////////////////////////
+        return newActivityType
+    }
+    
     /// the label property
     /// - set: for set the label
     /// - get: for get the label

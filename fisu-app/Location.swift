@@ -12,6 +12,15 @@ import CoreData
 
 class Location: NSManagedObject {
 
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, latitude: String, longitude: String) -> Location {
+        let newLocation = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: moc) as! Location
+        newLocation.pname = name
+        newLocation.platitude = latitude
+        newLocation.plongitude = longitude
+        //////////////////////////////////////////
+        return newLocation
+    }
+
     /// the name property
     /// - set: for set the name
     /// - get: for get the name
