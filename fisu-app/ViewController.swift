@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var accomodations = [Accomodation]()
     var restaurants = [Restaurant]()
     var speakers = [Speaker]()
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +57,25 @@ class ViewController: UIViewController {
         }
         fetchLocation()
         
+        // Create speakers data
+        let sp = [
+            ("Kenobi", "Obi Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Force", NSData())
+        ]
+        //Loop through, creating accomodations
+        //
+        for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPicture) in sp {
+            // Create an individual accomodation
+            Speaker.createInManagedObjectContext(moc, lastName: spLastName, firstName: spFirstName, sex: spSex, title: spTitle, descr: spDescr, email: spEmail, phone: spPhone, address: spAddress, picture: spPicture)
+        }
+        fetchSpeaker()
         
         // Create events data
-        let ev = [
+        var ev = [
             ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[0], SpeakersSet()),
             ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[1], SpeakersSet())
         ]
+        // Add speakersSets
+        ev[0].5.addToList(speakers[0])
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
             // Create an individual event
@@ -91,21 +105,16 @@ class ViewController: UIViewController {
         }
         fetchRestaurant()
         
-        ///////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////                ICI              ///////////////////////
-        ///////////////////////////////////////////////////////////////////////////////////////
         // Create speakers data
-        let sp = [
-            ("Kenobi", "Obi Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue du ")
+        let usr = [
+            ("cricridu34", "rspklsd", "Fiorio", "Christophe", "Male", "christophe.fiorio@lirmm.fr", "04 67 41 86 41", "Français", EventsSet())
         ]
         //Loop through, creating accomodations
-        //lastName: String, firstName: String, sex: String, title: String, descr: String, email: String, phone:String, address: String, picture: NSData
-        for (rName, rDescr, rPict, rLoc) in r {
+        for (usrUserName, usrPass, usrLastName, usrFisrtName, usrSex, usrEmail, usrPhone, usrNat, usrEvts) in usr {
             // Create an individual accomodation
-            Restaurant.createInManagedObjectContext(moc, name: rName, descr: rDescr, picture: rPict, loc: rLoc)
+            User.createInManagedObjectContext(moc, userName: usrUserName, password: usrPass, lastName: usrLastName, firstName: usrFisrtName, sex: usrSex, email: usrEmail, phone: usrPhone, nationality: usrNat, events: usrEvts)
         }
-        fetchSpeaker()
-        //////////////////////////////////////////////////////////////////////////////////////
+        fetchUser()
         
         save()
     }
@@ -180,6 +189,34 @@ class ViewController: UIViewController {
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Restaurant] {
                 restaurants = fetchResults
+            }
+        } catch {
+            let nserror = error as NSError
+            NSLog("Fetch failed: \(nserror.localizedDescription)")
+        }
+        
+    }
+    
+    func fetchSpeaker() {
+        let fetchRequest = NSFetchRequest(entityName: "Speaker")
+        
+        do {
+            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Speaker] {
+                speakers = fetchResults
+            }
+        } catch {
+            let nserror = error as NSError
+            NSLog("Fetch failed: \(nserror.localizedDescription)")
+        }
+        
+    }
+    
+    func fetchUser() {
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        
+        do {
+            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [User] {
+                users = fetchResults
             }
         } catch {
             let nserror = error as NSError

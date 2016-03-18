@@ -13,7 +13,7 @@ import CoreData
 class User: NSManagedObject {
     var programme: EventsSet = EventsSet()
    
-    class func createInManagedObjectContext(moc: NSManagedObjectContext, userName: String, password:String, lastName: String, firstName: String, sex: String, email: String, phone: String, nationality: String) -> User {
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, userName: String, password:String, lastName: String, firstName: String, sex: String, email: String, phone: String, nationality: String, events: EventsSet) -> User {
         let newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: moc) as! User
         newUser.puserName = userName
         newUser.ppassword = password
@@ -23,7 +23,7 @@ class User: NSManagedObject {
         newUser.pemail = email
         newUser.pphone = phone
         newUser.pnationality = nationality
-        //////////////////////////////////////////
+        newUser.programme = events
         return newUser
     }
 
