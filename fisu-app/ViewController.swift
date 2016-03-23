@@ -60,8 +60,8 @@ class ViewController: UIViewController {
         
         // Create speakers data
         let sp = [
-            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", NSData(contentsOfURL: NSURL(string: "Assets.xcassets/speakers/obiwan.imageset/obiwan.png")!)),
-            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", NSData(contentsOfURL: NSURL(string: "Assets.xcassets/speakers/mario.imageset/mario.png")!))
+            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)),
+            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!))
         ]
         //Loop through, creating accomodations
         for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPict) in sp {
