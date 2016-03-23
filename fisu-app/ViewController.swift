@@ -57,10 +57,28 @@ class ViewController: UIViewController {
         fetchLocation()
         
         
+        // Create speakers data
+        let sp = [
+            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", NSData()),
+            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", NSData())
+        ]
+        //Loop through, creating accomodations
+        for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPict) in sp {
+            // Create an individual accomodation
+            //lastName: String, firstName: String, sex: String, title: String, descr: String, email: String, phone:String, address: String, picture: NSData
+            Speaker.createInManagedObjectContext(moc, lastName: spLastName, firstName: spFirstName, sex: spSex, title: spTitle, descr: spDescr, email: spEmail, phone: spPhone, address: spAddress, picture: spPict)
+        }
+        fetchSpeaker()
+        
+        let spSet1 = SpeakersSet()
+        spSet1.addToList(speakers[0]) //add Obi-Wan to spSet1
+        let spSet2 = SpeakersSet()
+        spSet2.addToList(speakers[1]) //add Mario to spSet2
+        
         // Create events data
         let ev = [
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[0], SpeakersSet()),
-            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[1], SpeakersSet())
+            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[0], spSet1),
+            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[1], spSet2)
         ]
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
@@ -91,21 +109,6 @@ class ViewController: UIViewController {
         }
         fetchRestaurant()
         
-        ///////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////                ICI              ///////////////////////
-        ///////////////////////////////////////////////////////////////////////////////////////
-        // Create speakers data
-        let sp = [
-            ("Kenobi", "Obi Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue du ")
-        ]
-        //Loop through, creating accomodations
-        //lastName: String, firstName: String, sex: String, title: String, descr: String, email: String, phone:String, address: String, picture: NSData
-        for (rName, rDescr, rPict, rLoc) in r {
-            // Create an individual accomodation
-            Restaurant.createInManagedObjectContext(moc, name: rName, descr: rDescr, picture: rPict, loc: rLoc)
-        }
-        fetchSpeaker()
-        //////////////////////////////////////////////////////////////////////////////////////
         
         save()
     }
@@ -187,6 +190,21 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    func fetchSpeaker() {
+        let fetchRequest = NSFetchRequest(entityName: "Speaker")
+        
+        do {
+            if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Speaker] {
+                speakers = fetchResults
+            }
+        } catch {
+            let nserror = error as NSError
+            NSLog("Fetch failed: \(nserror.localizedDescription)")
+        }
+        
+    }
+
     
     func save() {
         do {
