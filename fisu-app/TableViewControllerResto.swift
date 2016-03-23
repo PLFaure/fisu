@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewControllerResto: UITableViewController {
 
-    var restaurants = [Restaurant]()
+    var restaurantsArray:[Restaurant]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class TableViewControllerResto: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return restaurants.count
+        return 0
     }
 
     
