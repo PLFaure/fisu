@@ -14,7 +14,7 @@ class ActivityType: NSManagedObject {
 
     class func createInManagedObjectContext(moc: NSManagedObjectContext, label: String) -> ActivityType {
         let newActivityType = NSEntityDescription.insertNewObjectForEntityForName("ActivityType", inManagedObjectContext: moc) as! ActivityType
-        newActivityType.plabel = label
+        newActivityType.label = label
         //////////////////////////////////////////
         return newActivityType
     }

@@ -17,11 +17,11 @@ class Event: NSManagedObject {
         //function definition
         let newEvent = NSEntityDescription.insertNewObjectForEntityForName("Event", inManagedObjectContext: moc) as! Event
         
-        newEvent.pname = name
-        newEvent.pdate = date
-        newEvent.pdescr = descr
-        newEvent.ptype = type
-        newEvent.ploc = loc
+        newEvent.name = name
+        newEvent.date = date
+        newEvent.descr = descr
+        newEvent.activityType = type
+        newEvent.location = loc
         newEvent.pspeakers = speakers
         
         return newEvent

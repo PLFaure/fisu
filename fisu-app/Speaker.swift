@@ -14,15 +14,15 @@ class Speaker: NSManagedObject {
 
     class func createInManagedObjectContext(moc: NSManagedObjectContext, lastName: String, firstName: String, sex: String, title: String, descr: String, email: String, phone:String, address: String, picture: NSData) -> Speaker {
         let newSpeaker = NSEntityDescription.insertNewObjectForEntityForName("Speaker", inManagedObjectContext: moc) as! Speaker
-        newSpeaker.plastName = lastName
-        newSpeaker.pfirstName = firstName
-        newSpeaker.psex = sex
-        newSpeaker.ptitle = title
-        newSpeaker.pdescr = descr
-        newSpeaker.pemail = email
-        newSpeaker.pphone = phone
-        newSpeaker.paddress = address
-        newSpeaker.ppicture = picture
+        newSpeaker.lastName = lastName
+        newSpeaker.firstName = firstName
+        newSpeaker.sex = sex
+        newSpeaker.title = title
+        newSpeaker.descr = descr
+        newSpeaker.email = email
+        newSpeaker.phone = phone
+        newSpeaker.address = address
+        newSpeaker.picture = picture
         //////////////////////////////////////////
         return newSpeaker
     }

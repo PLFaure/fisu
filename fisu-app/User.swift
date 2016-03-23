@@ -15,14 +15,14 @@ class User: NSManagedObject {
    
     class func createInManagedObjectContext(moc: NSManagedObjectContext, userName: String, password:String, lastName: String, firstName: String, sex: String, email: String, phone: String, nationality: String, events: EventsSet) -> User {
         let newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: moc) as! User
-        newUser.puserName = userName
-        newUser.ppassword = password
-        newUser.plastName = lastName
-        newUser.pfirstName = firstName
-        newUser.psex = sex
-        newUser.pemail = email
-        newUser.pphone = phone
-        newUser.pnationality = nationality
+        newUser.userName = userName
+        newUser.password = password
+        newUser.lastName = lastName
+        newUser.firstName = firstName
+        newUser.sex = sex
+        newUser.email = email
+        newUser.phone = phone
+        newUser.nationality = nationality
         newUser.programme = events
         return newUser
     }

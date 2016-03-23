@@ -14,10 +14,10 @@ class Accomodation: NSManagedObject {
     
     class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, descr: String, picture: NSData, loc: Location) -> Accomodation {
         let newAccomodation = NSEntityDescription.insertNewObjectForEntityForName("Accomodation", inManagedObjectContext: moc) as! Accomodation
-        newAccomodation.pname = name
-        newAccomodation.pdescr = descr
-        newAccomodation.ppicture = picture
-        newAccomodation.plocation = loc
+        newAccomodation.name = name
+        newAccomodation.descr = descr
+        newAccomodation.picture = picture
+        newAccomodation.location = loc
         //////////////////////////////////////////
         return newAccomodation
     }

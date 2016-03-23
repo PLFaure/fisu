@@ -125,24 +125,36 @@ class ViewController: UIViewController {
         fetchUser()
         
         save()
-        print(self.restaurants[0].pname)
-        print(self.locations[0].pname)
-        print(self.accomodations[0].pname)
-        print(self.speakers[0].plastName)
-        print(self.users[0].plastName)
+        print(self.restaurants[0].name)
+        print(self.locations[0].name)
+        print(self.accomodations[0].name)
+        print(self.speakers[0].lastName)
+        print(self.users[0].lastName)
+        print(self.activityTypes[0].label)
+        print(self.events[0].name)
     }
     
     func fetchActivityType() {
         let fetchRequest = NSFetchRequest(entityName: "ActivityType")
         
+        // Create a sort descriptor object that sorts on the "label"
+        // property of the Core Data object
+        let sortDescriptor = NSSortDescriptor(key: "label", ascending: true)
+        
+        // Set the list of sort descriptors in the fetch request,
+        // so it includes the sort descriptor
+        fetchRequest.sortDescriptors = [sortDescriptor]
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ActivityType] {
+                
                 activityTypes = fetchResults
+                print(activityTypes[0].label)
             }
         } catch {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
+        
         
     }
     
