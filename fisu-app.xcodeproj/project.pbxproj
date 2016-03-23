@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E3721D11C9AF967009F4E3C /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */; };
+		3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */; };
 		3ED5C68E1C96C6EE006AA967 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */; };
 		3ED5C68F1C96C6EE006AA967 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67D1C96C6EE006AA967 /* Event.swift */; };
 		3ED5C6901C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerResto.swift; sourceTree = "<group>"; };
 		3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C67D1C96C6EE006AA967 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Accomodation+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				3ED5C68B1C96C6EE006AA967 /* User.swift */,
 				7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */,
 				3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */,
+				3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
 				7F76B8B61C6372F30061DE36 /* fisu_app.xcdatamodeld */,
@@ -317,6 +320,7 @@
 				3ED5C69F1C96C6EE006AA967 /* SpeakersSet.swift in Sources */,
 				3ED5C69A1C96C6EE006AA967 /* Speaker+CoreDataProperties.swift in Sources */,
 				7F76B8B21C6372F30061DE36 /* ViewController.swift in Sources */,
+				3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */,
 				7F76B8B81C6372F30061DE36 /* fisu_app.xcdatamodeld in Sources */,
 				3ED5C6931C96C6EE006AA967 /* EventsSet.swift in Sources */,
 				3ED5C6941C96C6EE006AA967 /* Restaurant+CoreDataProperties.swift in Sources */,

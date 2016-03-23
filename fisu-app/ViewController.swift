@@ -249,7 +249,12 @@ class ViewController: UIViewController {
     }
 
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueResto" {
+            let nextScene = segue.destinationViewController as! TableViewControllerResto
+            nextScene.copy(restaurants)
+        }
+    }
     
     
     
