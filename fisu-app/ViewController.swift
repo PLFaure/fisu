@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         // Create speakers data
         let sp = [
-            //("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)),
+            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)),
             ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!))
         ]
         //Loop through, creating accomodations
@@ -103,7 +103,8 @@ class ViewController: UIViewController {
         
         // Create restaurants data
         let r = [
-            ("Le RU","N'y vas pas, c'est pas bon...", NSData(),locations[3])
+            ("Le RU","N'y vas pas, c'est pas bon...", NSData(),locations[3]),
+            ("MacDo","Tout ce que t'aime !!", NSData(),locations[1])
         ]
         //Loop through, creating restaurants
         for (rName, rDescr, rPict, rLoc) in r {
@@ -124,6 +125,11 @@ class ViewController: UIViewController {
         fetchUser()
         
         save()
+        print(self.restaurants[0].pname)
+        print(self.locations[0].pname)
+        print(self.accomodations[0].pname)
+        print(self.speakers[0].plastName)
+        print(self.users[0].plastName)
     }
     
     func fetchActivityType() {

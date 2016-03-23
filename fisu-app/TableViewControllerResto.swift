@@ -8,18 +8,23 @@
 
 import UIKit
 
-class TableViewControllerResto: UITableViewController {
-
+class TableViewControllerResto: UITableViewController{
     var restaurantsArray:[Restaurant]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                // Uncomment the following line to preserve selection between presentations
+        tableViewRestau.delegate = self
+        tableViewRestau.dataSource = self
+        // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
+        print(self.restaurantsArray![0].pname)
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    @IBOutlet var tableViewRestau: UITableView!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,24 +35,25 @@ class TableViewControllerResto: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return restaurantsArray!.count
+        //attention penser au try/catch ici au lieu du "!"
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cellIdentifier = "RestaurantsCell"
+        let restaurant = self.restaurantsArray![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RestoTableViewCell
+        cell.nameLabel.text = restaurant.pname
         return cell
     }
-    */
+    
     
    
 
