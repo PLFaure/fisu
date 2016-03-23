@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         // Create speakers data
         let sp = [
-            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)),
+            //("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.imageset/obiwan.png")!)),
             ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!))
         ]
         //Loop through, creating accomodations
@@ -252,7 +252,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueResto" {
             let nextScene = segue.destinationViewController as! TableViewControllerResto
-            nextScene.copy(restaurants)
+            nextScene.restaurants = self.restaurants
         }
     }
     
