@@ -22,6 +22,6 @@ extension User {
     @NSManaged var phone: String?
     @NSManaged var sex: String?
     @NSManaged var userName: String?
-    @NSManaged var event: EventsSet?
+    @NSManaged var event: NSSet?
 
 }
