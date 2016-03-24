@@ -53,12 +53,12 @@ class EventTests: XCTestCase {
         XCTAssertNotNil(s,"Speaker don't initialised")
         
         //creation of the SpeakersSet and adding of a speaker
-        let spSet : SpeakersSet = SpeakersSet()
-        spSet.addToList(s)
+        var sps : [Speaker] = []
+        sps.append(s)
         //verification of the SpeakersSet
-        XCTAssertEqual(spSet.speakerList, [s], "the collection of Speakers might be [s]")
+        XCTAssertEqual(sps, [s], "the collection of Speakers might be [s]")
         
-        let e : Event = Event.createInManagedObjectContext(moc, name: "congress of IG students", date: d, descr: "about BI andIOT", type: at, loc: l, speakers: spSet)
+        let e : Event = Event.createInManagedObjectContext(moc, name: "congress of IG students", date: d, descr: "about BI andIOT", type: at, loc: l, speakers: NSSet(array: sps))
         XCTAssertNotNil(e,"Event don't initialised")
 
        
