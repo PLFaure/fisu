@@ -19,7 +19,7 @@ extension Event {
     @NSManaged var name: String?
     @NSManaged var activityType: ActivityType?
     @NSManaged var location: Location?
-    @NSManaged var speaker: SpeakersSet?
+    @NSManaged var speaker: NSSet?
     @NSManaged var user: User?
 
 }

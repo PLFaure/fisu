@@ -13,7 +13,7 @@ import CoreData
 /// An Event is composed by a date, a name, a description, a type, a location and one (or more) speaker(s).
 class Event: NSManagedObject {
 
-    class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, date: NSDate, descr: String, type: ActivityType, loc: Location, speakers: SpeakersSet) -> Event {
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, date: NSDate, descr: String, type: ActivityType, loc: Location, speakers: NSSet) -> Event {
         //function definition
         let newEvent = NSEntityDescription.insertNewObjectForEntityForName("Event", inManagedObjectContext: moc) as! Event
         
@@ -91,7 +91,7 @@ class Event: NSManagedObject {
     /// the SpeakersSet property
     /// - set: for set the SpeakersSet
     /// - get: for get the SpeakersSet
-    var pspeakers: SpeakersSet? {
+    var pspeakers: NSSet? {
         set {
             self.speaker = newValue
         }

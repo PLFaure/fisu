@@ -29,7 +29,14 @@ class ViewController: UIViewController {
     
         // Use optional binding to confirm the managedObjectContext
         let moc = self.managedObjectContext
-
+        fetchActivityType()
+        fetchLocation()
+        fetchSpeaker()
+        fetchEvent()
+        fetchAccomodation()
+        fetchRestaurant()
+        fetchUser()
+        
         // Create activityTypes data
         let at = [ //think to insert the elements in the alphabetical order (on label), for more visibility
             ("Challenge sportif"),
@@ -78,10 +85,10 @@ class ViewController: UIViewController {
         }
         fetchSpeaker() // fetch the new Speaker into the array speakers
         
-        let spSet1 = SpeakersSet()
-        spSet1.addToList(speakers[0]) //add Obi-Wan to spSet1
-        let spSet2 = SpeakersSet()
-        spSet2.addToList(speakers[1]) //add Mario to spSet2
+        var spSet1 : [Speaker] = []
+        spSet1.append(speakers[0]) //add Obi-Wan to spSet1
+        var spSet2 : [Speaker] = []
+        spSet2.append(speakers[1]) //add Mario to spSet2
         
         // Create events data
         let ev = [ //think to insert the elements in the alphabetical order (on name), for more visibility
@@ -92,7 +99,7 @@ class ViewController: UIViewController {
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
             if !isPresentEvent(self.events, evName: eventName) { //if an event with this name does not exists
                 // Create an individual event
-                Event.createInManagedObjectContext(moc, name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: eventSpeakers)
+                Event.createInManagedObjectContext(moc, name: eventName, date: eventDate, descr: eventDescr, type: eventType, loc: eventLoc, speakers: NSSet(array: eventSpeakers))
             }
         }
         fetchEvent() // fetch the new Event into the array events
@@ -162,7 +169,6 @@ class ViewController: UIViewController {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ActivityType] {
                 
                 activityTypes = fetchResults
-                print(activityTypes[0].label)
             }
         } catch {
             let nserror = error as NSError
@@ -323,8 +329,99 @@ class ViewController: UIViewController {
             }
         }
     }
-
     
+    //the following functions are defined to control the insertion of elements into the class arrays variables above
+    func isPresentEvent(evArray: [Event], evName: String) -> Bool { //function for the events
+        let n = evArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if evArray[i].name == evName {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
+    func isPresentActType(acArray: [ActivityType], acLabel: String) -> Bool { //function for the activity types
+        let n = acArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if acArray[i].label == acLabel {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
+    func isPresentLocation(locArray: [Location], locName: String) -> Bool { //function for the locations
+        let n = locArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if locArray[i].name == locName {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
+    func isPresentAccomodation(accArray: [Accomodation], accName: String) -> Bool { //function for the accomodations
+        let n = accArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if accArray[i].name == accName {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
+    func isPresentRestaurant(restArray: [Restaurant], restName: String) -> Bool { //function for the restaurants
+        let n = restArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if restArray[i].name == restName {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
+    func isPresentSpeaker(spArray: [Speaker], spLastName: String, spFirstName: String) -> Bool { //function for the speakers
+        let n = spArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if (spArray[i].lastName == spLastName) && (spArray[i].firstName == spFirstName) {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
+    func isPresentUser(usrArray: [User], usrName: String) -> Bool { //function for the users
+        let n = usrArray.count
+        var p = false
+        var i = 0
+        while (i < n) && !p {
+            if (usrArray[i].userName == usrName) {
+                p = true
+            } else {
+                i++
+            }
+        }
+        return p
+    }
     
 }
 
