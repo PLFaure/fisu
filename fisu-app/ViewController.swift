@@ -169,6 +169,7 @@ class ViewController: UIViewController {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ActivityType] {
                 
                 activityTypes = fetchResults
+                
             }
         } catch {
             let nserror = error as NSError
