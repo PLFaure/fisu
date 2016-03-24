@@ -119,7 +119,7 @@ class ViewController: UIViewController {
         
         // Create restaurants data
         let r = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("MacDo","Tout ce que t'aime !!", NSData(),locations[1]),
+            ("MacDo","Tout ce que t'aimes !!", NSData(),locations[1]),
             ("Le RU","N'y vas pas, c'est pas bon...", NSData(),locations[0])
         ]
         //Loop through, creating restaurants
@@ -328,7 +328,12 @@ class ViewController: UIViewController {
             if let nextScene = segue.destinationViewController as? TableViewControllerResto{
                 nextScene.restaurantsArray = self.restaurants
             }
+        } else if segue.identifier == "segueEvents" {
+            if let nextScene = segue.destinationViewController as? TableViewControllerEvents{
+
+                nextScene.eventsArray = self.events
         }
+    }
     }
     
     //the following functions are defined to control the insertion of elements into the class arrays variables above

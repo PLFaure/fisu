@@ -1,57 +1,65 @@
 //
-//  TableViewControllerResto.swift
+//  TableViewControllerEvents.swift
 //  fisu-app
 //
-//  Created by IG2013 on 23/03/2016.
+//  Created by IG2013 on 24/03/2016.
 //  Copyright © 2016 Faure Geoffray. All rights reserved.
 //
 
 import UIKit
 
-class TableViewControllerResto: UITableViewController{
-    var restaurantsArray:[Restaurant]?
+class TableViewControllerEvents: UITableViewController {
+    var eventsArray:[Event]?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewRestau.delegate = self
-        tableViewRestau.dataSource = self
+        tableViewEvents.delegate = self
+        tableViewEvents.dataSource = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Table view data source
-    @IBOutlet var tableViewRestau: UITableView!
 
+    // MARK: - Table view data source
+    @IBOutlet var tableViewEvents: UITableView!
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantsArray!.count
+        return eventsArray!.count
         //attention penser au try/catch ici au lieu du "!"
+
     }
 
+    //fonction pour convertir les dates en String
+    func dateConvert(date: NSDate) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEE dd MMMM, h:mm a"
+        let dateString = dateFormatter.stringFromDate(date)
+        return dateString
+    }
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "RestaurantsCell"
-        let restaurant = self.restaurantsArray![indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RestoTableViewCell
-        cell.nameLabel.text = restaurant.pname
+        let cellIdentifier = "EventsCell"
+        let event = self.eventsArray![indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
+        cell.nameLabel.text = event.pname
+        cell.dateLabel.text = dateConvert(event.pdate!)
+
         return cell
     }
     
-    
-   
 
     /*
     // Override to support conditional editing of the table view.
