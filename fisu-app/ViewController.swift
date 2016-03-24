@@ -271,11 +271,9 @@ class ViewController: UIViewController {
         if segue.identifier == "segueResto" {
             if let nextScene = segue.destinationViewController as? TableViewControllerResto{
                 nextScene.restaurantsArray = self.restaurants
-
             }
         }
     }
-    
 
     
     

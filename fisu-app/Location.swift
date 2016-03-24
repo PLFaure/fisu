@@ -29,7 +29,7 @@ class Location: NSManagedObject {
             return self.name
         }
         set {
-            self.name = pname
+            self.name = newValue
         }
     }
     
@@ -41,7 +41,7 @@ class Location: NSManagedObject {
             return self.latitude
         }
         set {
-            self.latitude = platitude
+            self.latitude = newValue
         }
     }
     
@@ -53,7 +53,7 @@ class Location: NSManagedObject {
             return self.longitude
         }
         set {
-            self.longitude = plongitude
+            self.longitude = newValue
         }
     }
 }

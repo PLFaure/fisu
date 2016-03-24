@@ -30,7 +30,7 @@ class Restaurant: NSManagedObject {
             return self.name
         }
         set {
-            self.name = pname
+            self.name = newValue
         }
     }
     
@@ -42,7 +42,7 @@ class Restaurant: NSManagedObject {
             return self.descr
         }
         set {
-            self.descr = pdescr
+            self.descr = newValue
         }
     }
     
@@ -54,7 +54,7 @@ class Restaurant: NSManagedObject {
             return self.picture
         }
         set {
-            self.picture = ppicture
+            self.picture = newValue
         }
     }
     
@@ -66,7 +66,7 @@ class Restaurant: NSManagedObject {
             return self.location
         }
         set {
-            self.location = plocation
+            self.location = newValue
         }
     }
 }

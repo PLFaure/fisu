@@ -11,17 +11,17 @@ import CoreData
 
 
 class SpeakersSet: NSObject {
-    var speakerList:[Speaker?] = []
+    var speakerList:[Speaker] = []
  
     /// the speakerList property
     /// - set: for set the speakerList
     /// - get: for get the speakerList
-    var pspeakerList: [Speaker?] {
+    var pspeakerList: [Speaker] {
         get {
             return self.speakerList
         }
         set {
-            self.speakerList = pspeakerList
+            self.speakerList = newValue
         }
     }
     

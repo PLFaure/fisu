@@ -35,7 +35,7 @@ class Speaker: NSManagedObject {
             return self.lastName
         }
         set {
-            self.lastName = plastName
+            self.lastName = newValue
         }
     }
     
@@ -47,7 +47,7 @@ class Speaker: NSManagedObject {
             return self.firstName
         }
         set {
-            self.firstName = pfirstName
+            self.firstName = newValue
         }
     }
     
@@ -59,7 +59,7 @@ class Speaker: NSManagedObject {
             return self.sex
         }
         set {
-            self.sex = psex
+            self.sex = newValue
         }
     }
     
@@ -71,7 +71,7 @@ class Speaker: NSManagedObject {
             return self.title
         }
         set {
-            self.title = ptitle
+            self.title = newValue
         }
     }
     
@@ -83,7 +83,7 @@ class Speaker: NSManagedObject {
             return self.descr
         }
         set {
-            self.descr = pdescr
+            self.descr = newValue
         }
     }
     
@@ -95,7 +95,7 @@ class Speaker: NSManagedObject {
             return self.email
         }
         set {
-            self.email = pemail
+            self.email = newValue
         }
     }
     
@@ -107,7 +107,7 @@ class Speaker: NSManagedObject {
             return self.phone
         }
         set {
-            self.phone = pphone
+            self.phone = newValue
         }
     }
     
@@ -119,7 +119,7 @@ class Speaker: NSManagedObject {
             return self.address
         }
         set {
-            self.address = paddress
+            self.address = newValue
         }
     }
     
@@ -131,7 +131,7 @@ class Speaker: NSManagedObject {
             return self.picture
         }
         set {
-            self.picture = ppicture
+            self.picture = newValue
         }
     }
 }

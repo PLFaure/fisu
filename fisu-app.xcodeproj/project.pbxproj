@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E3721D11C9AF967009F4E3C /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */; };
+		3E9D6E441CA415EE00597B7A /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E431CA415EE00597B7A /* EventTests.swift */; };
 		3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */; };
 		3EB2EB011CA2F17B0073736E /* RestoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EB001CA2F17B0073736E /* RestoTableViewCell.swift */; };
 		3ED5C68E1C96C6EE006AA967 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		3E9D6E431CA415EE00597B7A /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerResto.swift; sourceTree = "<group>"; };
 		3EB2EB001CA2F17B0073736E /* RestoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoTableViewCell.swift; sourceTree = "<group>"; };
 		3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				7F76B8C71C6372F30061DE36 /* fisu_appTests.swift */,
+				3E9D6E431CA415EE00597B7A /* EventTests.swift */,
 				7F76B8C91C6372F30061DE36 /* Info.plist */,
 			);
 			path = "fisu-appTests";
@@ -346,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9D6E441CA415EE00597B7A /* EventTests.swift in Sources */,
 				7F76B8C81C6372F30061DE36 /* fisu_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

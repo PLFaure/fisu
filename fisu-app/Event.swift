@@ -33,7 +33,7 @@ class Event: NSManagedObject {
     /// - get: for get the date
     var pdate: NSDate? {
         set {
-            self.date = pdate
+            self.date = newValue
         }
         get {
             return self.date
@@ -45,7 +45,7 @@ class Event: NSManagedObject {
     /// - get: for get the name
     var pname: String? {
         set {
-            self.name = pname
+            self.name = newValue
         }
         get {
             return self.name
@@ -57,7 +57,7 @@ class Event: NSManagedObject {
     /// - get: for get the description
     var pdescr: String? {
         set {
-            self.descr = pdescr
+            self.descr = newValue
         }
         get {
             return self.descr
@@ -69,7 +69,7 @@ class Event: NSManagedObject {
     /// - get: for get the activity type
     var ptype: ActivityType? {
         set {
-            self.activityType = ptype
+            self.activityType = newValue
         }
         get {
             return self.activityType
@@ -81,7 +81,7 @@ class Event: NSManagedObject {
     /// - get: for get the location
     var ploc: Location? {
         set {
-            self.location = ploc
+            self.location = newValue
         }
         get {
             return self.location
@@ -93,7 +93,7 @@ class Event: NSManagedObject {
     /// - get: for get the SpeakersSet
     var pspeakers: SpeakersSet? {
         set {
-            self.speaker = pspeakers
+            self.speaker = newValue
         }
         get {
             return self.speaker

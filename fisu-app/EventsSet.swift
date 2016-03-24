@@ -14,14 +14,14 @@ import CoreData
 /// An EventsSet is empty if it has no Event.
 class EventsSet: NSObject {
     
-    var eventList:[Event?] = []
+    var eventList:[Event] = []
     
-    var peventList: [Event?] {
+    var peventList: [Event] {
         get {
             return self.eventList
         }
         set {
-            self.eventList = peventList
+            self.eventList = newValue
         }
     }
     

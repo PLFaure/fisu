@@ -27,7 +27,7 @@ class ActivityType: NSManagedObject {
             return self.label
         }
         set {
-            self.label = plabel
+            self.label = newValue
         }
     }
 }

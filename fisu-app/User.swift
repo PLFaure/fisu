@@ -35,7 +35,7 @@ class User: NSManagedObject {
             return self.userName
         }
         set {
-            self.userName = puserName
+            self.userName = newValue
         }
     }
     
@@ -47,7 +47,7 @@ class User: NSManagedObject {
             return self.password
         }
         set {
-            self.password = ppassword
+            self.password = newValue
         }
     }
     
@@ -59,7 +59,7 @@ class User: NSManagedObject {
             return self.lastName
         }
         set {
-            self.lastName = plastName
+            self.lastName = newValue
         }
     }
     
@@ -71,7 +71,7 @@ class User: NSManagedObject {
             return self.firstName
         }
         set {
-            self.firstName = pfirstName
+            self.firstName = newValue
         }
     }
     
@@ -83,7 +83,7 @@ class User: NSManagedObject {
             return self.sex
         }
         set {
-            self.sex = psex
+            self.sex = newValue
         }
     }
     
@@ -95,7 +95,7 @@ class User: NSManagedObject {
             return self.nationality
         }
         set {
-            self.nationality = pnationality
+            self.nationality = newValue
         }
     }
     
@@ -107,7 +107,7 @@ class User: NSManagedObject {
             return self.email
         }
         set {
-            self.email = pemail
+            self.email = newValue
         }
     }
     
@@ -119,7 +119,7 @@ class User: NSManagedObject {
             return self.phone
         }
         set {
-            self.phone = pphone
+            self.phone = newValue
         }
     }
 }
