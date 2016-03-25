@@ -27,9 +27,6 @@ class EventsTableViewCell: UITableViewCell {
     }
     
     
-    
-    //needed for the switch
-   // var dependentCells = [UITableViewCell]()
-    
+   
 
 }
