@@ -330,10 +330,13 @@ class ViewController: UIViewController {
             }
         } else if segue.identifier == "segueEvents" {
             if let nextScene = segue.destinationViewController as? TableViewControllerEvents{
-
                 nextScene.eventsArray = self.events
+            }
+        } else if segue.identifier == "segueProfil" {
+            if let nextScene = segue.destinationViewController as? ProfilViewController{
+                nextScene.profil = self.users[0]
+            }
         }
-    }
     }
     
     //the following functions are defined to control the insertion of elements into the class arrays variables above
