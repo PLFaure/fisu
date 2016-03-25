@@ -96,14 +96,19 @@ class TableViewControllerEvents: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "eventDescription" {
+            if let nextScene = segue.destinationViewController as? SpeakerViewController{
+                let indexpath = self.tableViewEvents.indexPathForSelectedRow
+                nextScene.theEvent = self.eventsArray![indexpath!.row]
+                nextScene.theEventDateConverter = self.dateConvert(eventsArray![indexpath!.row].pdate!)
+            }
     }
-    */
+    }
+
+    
 
 }
