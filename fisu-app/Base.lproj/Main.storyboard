@@ -395,7 +395,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="City map"/>
                                 <connections>
-                                    <segue destination="fJJ-EZ-Msx" kind="show" id="VFo-8K-7hy"/>
+                                    <segue destination="fJJ-EZ-Msx" kind="show" identifier="segueMap" id="VFo-8K-7hy"/>
                                 </connections>
                             </button>
                         </subviews>

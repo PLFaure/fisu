@@ -336,6 +336,12 @@ class ViewController: UIViewController {
             if let nextScene = segue.destinationViewController as? ProfilViewController{
                 nextScene.profil = self.users[0]
             }
+        } else if segue.identifier == "segueMap" {
+            if let nextScene = segue.destinationViewController as? ViewControllerMap{
+                nextScene.eventsLoc = self.events
+                nextScene.restaurantsLoc = self.restaurants
+                nextScene.accomodationsLoc = self.accomodations
+            }
         }
     }
     
