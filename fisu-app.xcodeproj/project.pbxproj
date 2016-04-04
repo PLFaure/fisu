@@ -31,6 +31,7 @@
 		3ED5C69C1C96C6EE006AA967 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68A1C96C6EE006AA967 /* User+CoreDataProperties.swift */; };
 		3ED5C69D1C96C6EE006AA967 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68B1C96C6EE006AA967 /* User.swift */; };
 		3ED5C69F1C96C6EE006AA967 /* SpeakersSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C68D1C96C6EE006AA967 /* SpeakersSet.swift */; };
+		3EE201021CB27B9E003B604F /* ColorPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE201011CB27B9E003B604F /* ColorPointAnnotation.swift */; };
 		7F76B8B01C6372F30061DE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */; };
 		7F76B8B21C6372F30061DE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F76B8B11C6372F30061DE36 /* ViewController.swift */; };
 		7F76B8B51C6372F30061DE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F76B8B31C6372F30061DE36 /* Main.storyboard */; };
@@ -83,6 +84,7 @@
 		3ED5C68A1C96C6EE006AA967 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C68B1C96C6EE006AA967 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3ED5C68D1C96C6EE006AA967 /* SpeakersSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersSet.swift; sourceTree = "<group>"; };
+		3EE201011CB27B9E003B604F /* ColorPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPointAnnotation.swift; sourceTree = "<group>"; };
 		7F76B8AC1C6372F30061DE36 /* fisu-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fisu-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F76B8B11C6372F30061DE36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				7F76B8B91C6372F30061DE36 /* Assets.xcassets */,
 				7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */,
 				7F76B8BE1C6372F30061DE36 /* Info.plist */,
+				3EE201011CB27B9E003B604F /* ColorPointAnnotation.swift */,
 			);
 			path = "fisu-app";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				3ED5C69F1C96C6EE006AA967 /* SpeakersSet.swift in Sources */,
 				3ED5C69A1C96C6EE006AA967 /* Speaker+CoreDataProperties.swift in Sources */,
 				7F76B8B21C6372F30061DE36 /* ViewController.swift in Sources */,
+				3EE201021CB27B9E003B604F /* ColorPointAnnotation.swift in Sources */,
 				3EB2EB011CA2F17B0073736E /* RestoTableViewCell.swift in Sources */,
 				3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */,
 				7F76B8B81C6372F30061DE36 /* fisu_app.xcdatamodeld in Sources */,
