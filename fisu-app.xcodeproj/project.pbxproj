@@ -352,6 +352,7 @@
 				3ED5C69F1C96C6EE006AA967 /* SpeakersSet.swift in Sources */,
 				3ED5C69A1C96C6EE006AA967 /* Speaker+CoreDataProperties.swift in Sources */,
 				7F76B8B21C6372F30061DE36 /* ViewController.swift in Sources */,
+				3EBCFD531CB26FED00C8A861 /* SpeakerViewCell.swift in Sources */,
 				3EE201021CB27B9E003B604F /* ColorPointAnnotation.swift in Sources */,
 				3EB2EB011CA2F17B0073736E /* RestoTableViewCell.swift in Sources */,
 				3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */,
