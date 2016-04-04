@@ -15,6 +15,8 @@
 		3E9D6E481CA4449400597B7A /* TableViewControllerEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */; };
 		3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */; };
 		3EB2EB011CA2F17B0073736E /* RestoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EB001CA2F17B0073736E /* RestoTableViewCell.swift */; };
+		3EBCFD531CB26FED00C8A861 /* SpeakerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBCFD521CB26FED00C8A861 /* SpeakerViewCell.swift */; };
+		3EBCFD551CB2740F00C8A861 /* SpeakerDescrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBCFD541CB2740F00C8A861 /* SpeakerDescrViewController.swift */; };
 		3ED5C68E1C96C6EE006AA967 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */; };
 		3ED5C68F1C96C6EE006AA967 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67D1C96C6EE006AA967 /* Event.swift */; };
 		3ED5C6901C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */; };
@@ -68,6 +70,8 @@
 		3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerEvents.swift; sourceTree = "<group>"; };
 		3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerResto.swift; sourceTree = "<group>"; };
 		3EB2EB001CA2F17B0073736E /* RestoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoTableViewCell.swift; sourceTree = "<group>"; };
+		3EBCFD521CB26FED00C8A861 /* SpeakerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerViewCell.swift; sourceTree = "<group>"; };
+		3EBCFD541CB2740F00C8A861 /* SpeakerDescrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerDescrViewController.swift; sourceTree = "<group>"; };
 		3ED5C67C1C96C6EE006AA967 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3ED5C67D1C96C6EE006AA967 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3ED5C67E1C96C6EE006AA967 /* Accomodation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Accomodation+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				3E9D6E451CA440F000597B7A /* EventsTableViewCell.swift */,
 				3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */,
 				3E9B1C9C1CA5A224003A8290 /* SpeakerViewController.swift */,
+				3EBCFD541CB2740F00C8A861 /* SpeakerDescrViewController.swift */,
+				3EBCFD521CB26FED00C8A861 /* SpeakerViewCell.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
 				7F76B8B61C6372F30061DE36 /* fisu_app.xcdatamodeld */,
@@ -335,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EBCFD551CB2740F00C8A861 /* SpeakerDescrViewController.swift in Sources */,
 				3E9B1C9D1CA5A224003A8290 /* SpeakerViewController.swift in Sources */,
 				3E9D6E461CA440F000597B7A /* EventsTableViewCell.swift in Sources */,
 				3E9B1C9B1CA526F8003A8290 /* ProfilViewController.swift in Sources */,

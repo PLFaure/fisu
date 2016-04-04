@@ -98,7 +98,6 @@ class TableViewControllerEvents: UITableViewController {
 
     
     // MARK: - Navigation
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "eventDescription" {
             if let nextScene = segue.destinationViewController as? SpeakerViewController{
