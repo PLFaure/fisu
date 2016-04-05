@@ -23,8 +23,6 @@ class SpeakerDescrViewController: UIViewController {
         let pictureNSData = theSpeaker!.ppicture
         picture.image = UIImage(data: pictureNSData!)
         
-        //picture.image = theSpeaker!.ppicture
-        
         // Do any additional setup after loading the view.
     }
     

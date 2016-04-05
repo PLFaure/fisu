@@ -122,6 +122,7 @@ class ViewController: UIViewController {
             ("MacDo","Tout ce que t'aimes !!", NSData(),locations[1]),
             ("Le RU","N'y vas pas, c'est pas bon...", NSData(),locations[0])
         ]
+        
         //Loop through, creating restaurants
         for (rName, rDescr, rPict, rLoc) in r {
             if !isPresentRestaurant(self.restaurants, restName: rName) { //if a restaurant with this name does not exists
