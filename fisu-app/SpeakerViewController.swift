@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
-class SpeakerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class SpeakerViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
     var theEvent:Event?
     var theEventDateConverter:String?
     var speakersArray: [Speaker] = []
+    var theEventLoc: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,26 @@ class SpeakerViewController: UIViewController, UITableViewDelegate, UITableViewD
         activityType.text = theEvent?.activityType?.label
         mySpeakersTable.dataSource = self
         mySpeakersTable.delegate=self
+        
+        //for the event location
+        theEventLoc = theEvent?.ploc
+        let lat = Double(theEventLoc!.platitude!)
+        let lon = Double(theEventLoc!.plongitude!)
+        let eventloc = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
+        
+        //for the map
+        self.eventLocation.delegate = self
+        let span = MKCoordinateSpanMake(0.1,0.1)
+        let region = MKCoordinateRegion(center: eventloc, span: span)
+        self.eventLocation.setRegion(region, animated: true)
+        
+        //the restaurant pin
+        let eventPin = MKPointAnnotation()
+        eventPin.coordinate = eventloc
+        eventPin.title = theEvent!.pname
+        eventPin.subtitle = theEvent?.pdescr
+        self.eventLocation.addAnnotation(eventPin)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +54,7 @@ class SpeakerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var activityType: UILabel!
     @IBOutlet weak var mySpeakersTable: UITableView!
+    @IBOutlet weak var eventLocation: MKMapView!
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
