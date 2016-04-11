@@ -58,6 +58,7 @@ class Restaurant: NSManagedObject {
         }
     }
     
+    
     /// the location property
     /// - set: for set the location
     /// - get: for get the location

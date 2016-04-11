@@ -41,9 +41,4 @@ class SpeakerDescrViewController: UIViewController {
     @IBOutlet weak var picture: UIImageView!
     
     
-    
-
-    
-    
-    
 }

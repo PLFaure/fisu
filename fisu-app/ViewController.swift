@@ -119,15 +119,16 @@ class ViewController: UIViewController {
         
         // Create restaurants data
         let r = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("MacDo","Tout ce que t'aimes !!", NSData(),locations[1]),
-            ("Le RU","N'y vas pas, c'est pas bon...", NSData(),locations[0])
+            ("Le RU","N'y vas pas, c'est pas bon...", UIImagePNGRepresentation(UIImage(named: "menudomac.png")!),locations[0]),
+            ("MacDo","Tout ce que t'aimes !!", UIImagePNGRepresentation(UIImage(named: "macdo.png")!),locations[1])
+            
         ]
         
         //Loop through, creating restaurants
         for (rName, rDescr, rPict, rLoc) in r {
             if !isPresentRestaurant(self.restaurants, restName: rName) { //if a restaurant with this name does not exists
                 // Create an individual restaurant
-                Restaurant.createInManagedObjectContext(moc, name: rName, descr: rDescr, picture: rPict, loc: rLoc)
+                Restaurant.createInManagedObjectContext(moc, name: rName, descr: rDescr, picture: rPict!, loc: rLoc)
             }
         }
         fetchRestaurant() // fetch the new Restaurant into the array restaurants
@@ -145,15 +146,6 @@ class ViewController: UIViewController {
         
         save() //save the data sets
         
-        /////////A ENLEVER /////////
-        print(self.restaurants[0].name)
-        print(self.locations[0].name)
-        print(self.accomodations[0].name)
-        print(self.speakers[0].lastName)
-        print(self.users[0].lastName)
-        print(self.activityTypes[0].label)
-        print(self.events[0].name)
-        /////////JUSQUE LA/////////
     }
     
     func fetchActivityType() { // this fonction fetch a new ActivityType into activityTypes array
