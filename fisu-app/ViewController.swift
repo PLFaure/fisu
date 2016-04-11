@@ -358,6 +358,7 @@ class ViewController: UIViewController {
             if let nextScene = segue.destinationViewController as? TableViewControllerEvents{
                 nextScene.eventsArray = self.events
                 nextScene.theUser = self.users[0]
+                print("ca ecrit au moins?")
             }
         } else if segue.identifier == "segueProfil" {
             if let nextScene = segue.destinationViewController as? ProfilViewController{
@@ -375,6 +376,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToVC(segue:UIStoryboardSegue) {
         if let prevScene = segue.sourceViewController as? TableViewControllerEvents {
             self.users[0] = prevScene.theUser!
+            print("oui?")
         }
     }
     
