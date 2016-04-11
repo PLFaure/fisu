@@ -133,14 +133,17 @@ class ViewController: UIViewController {
         }
         fetchRestaurant() // fetch the new Restaurant into the array restaurants
         
+        var evSet : [Event] = []
+        evSet.append(events[0])
+        
         // Create speakers data
         let usr = [ //think to insert the elements in the alphabetical order (on username), for more visibility
-            ("cricridu34", "rspklsd", "Fiorio", "Christophe", "Male", "christophe.fiorio@lirmm.fr", "04 67 41 86 41", "Français", EventsSet())
+            ("cricridu34", "rspklsd", "Fiorio", "Christophe", "Male", "christophe.fiorio@lirmm.fr", "04 67 41 86 41", "Français", evSet)
         ]
         //Loop through, creating accomodations
         for (usrUserName, usrPass, usrLastName, usrFisrtName, usrSex, usrEmail, usrPhone, usrNat, usrEvts) in usr {
             // Create an individual accomodation
-            User.createInManagedObjectContext(moc, userName: usrUserName, password: usrPass, lastName: usrLastName, firstName: usrFisrtName, sex: usrSex, email: usrEmail, phone: usrPhone, nationality: usrNat, events: usrEvts)
+            User.createInManagedObjectContext(moc, userName: usrUserName, password: usrPass, lastName: usrLastName, firstName: usrFisrtName, sex: usrSex, email: usrEmail, phone: usrPhone, nationality: usrNat, events: NSSet(array: usrEvts))
         }
         fetchUser() // fetch the new User into the array users
         
@@ -324,6 +327,7 @@ class ViewController: UIViewController {
         } else if segue.identifier == "segueEvents" {
             if let nextScene = segue.destinationViewController as? TableViewControllerEvents{
                 nextScene.eventsArray = self.events
+                nextScene.theUser = self.users[0]
             }
         } else if segue.identifier == "segueProfil" {
             if let nextScene = segue.destinationViewController as? ProfilViewController{
@@ -335,6 +339,12 @@ class ViewController: UIViewController {
                 nextScene.restaurantsLoc = self.restaurants
                 nextScene.accomodationsLoc = self.accomodations
             }
+        }
+    }
+    
+    @IBAction func unwindToVC(segue:UIStoryboardSegue) {
+        if let prevScene = segue.sourceViewController as? TableViewControllerEvents {
+            self.users[0] = prevScene.theUser!
         }
     }
     
