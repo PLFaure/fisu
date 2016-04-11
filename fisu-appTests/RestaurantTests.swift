@@ -98,8 +98,8 @@ class RestaurantTests: XCTestCase {
         
         rest.pname = name2
         rest.pdescr = descr2
-        rest.picture = picture2
-        rest.location = l2
+        rest.ppicture = picture2
+        rest.plocation = l2
         XCTAssertEqual(rest.pname, name2, "the names might be the same")
         XCTAssertNotEqual(rest.pname, name, "the names might be differents")
         XCTAssertEqual(rest.pdescr, descr2, "the descriptions might be the same")

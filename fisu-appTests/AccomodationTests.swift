@@ -99,8 +99,8 @@ class AccomodationTests: XCTestCase {
 
         acc.pname = name2
         acc.pdescr = descr2
-        acc.picture = picture2
-        acc.location = l2
+        acc.ppicture = picture2
+        acc.plocation = l2
         XCTAssertEqual(acc.pname, name2, "the names might be the same")
         XCTAssertNotEqual(acc.pname, name, "the names might be differents")
         XCTAssertEqual(acc.pdescr, descr2, "the descriptions might be the same")

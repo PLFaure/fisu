@@ -141,33 +141,33 @@ class SpeakerTests: XCTestCase {
         let picture2 = str2.dataUsingEncoding(NSUTF8StringEncoding)
         XCTAssertNotNil(picture2,"picture2 not initialised")
         
-        sp.lastName = lastName2
-        sp.firstName = firstName2
-        sp.sex = sex2
-        sp.title = title2
-        sp.descr = descr2
-        sp.email = email2
-        sp.phone = phone2
-        sp.address = address2
-        sp.picture = picture2
+        sp.plastName = lastName2
+        sp.pfirstName = firstName2
+        sp.psex = sex2
+        sp.ptitle = title2
+        sp.pdescr = descr2
+        sp.pemail = email2
+        sp.pphone = phone2
+        sp.paddress = address2
+        sp.ppicture = picture2
         
-        XCTAssertEqual(sp.lastName, lastName2, "the names might be the same")
-        XCTAssertNotEqual(sp.lastName, lastName, "the names might be differents")
-        XCTAssertEqual(sp.firstName, firstName2, "the first names might be the same")
-        XCTAssertNotEqual(sp.firstName, firstName, "the first names might be differents")
-        XCTAssertEqual(sp.sex, sex2, "the sexes might be the same")
-        XCTAssertNotEqual(sp.sex, sex, "the sexes might be differents")
-        XCTAssertEqual(sp.title, title2, "the titles might be the same")
-        XCTAssertNotEqual(sp.title, title, "the titles might be differents")
-        XCTAssertEqual(sp.descr, descr2, "the descriptions might be the same")
-        XCTAssertNotEqual(sp.descr, descr, "the descriptions might be differents")
-        XCTAssertEqual(sp.email, email2, "the emails might be the same")
-        XCTAssertNotEqual(sp.email, email, "the emails might be differents")
-        XCTAssertEqual(sp.phone, phone2, "the phones might be the same")
-        XCTAssertNotEqual(sp.phone, phone, "the phones might be differents")
-        XCTAssertEqual(sp.address, address2, "the addresses might be the same")
-        XCTAssertNotEqual(sp.address, address, "the addresses might be differents")
-        XCTAssertEqual(sp.picture, picture2, "the pictures might be the same")
-        XCTAssertNotEqual(sp.picture, picture, "the pictures might be differents")
+        XCTAssertEqual(sp.plastName, lastName2, "the names might be the same")
+        XCTAssertNotEqual(sp.plastName, lastName, "the names might be differents")
+        XCTAssertEqual(sp.pfirstName, firstName2, "the first names might be the same")
+        XCTAssertNotEqual(sp.pfirstName, firstName, "the first names might be differents")
+        XCTAssertEqual(sp.psex, sex2, "the sexes might be the same")
+        XCTAssertNotEqual(sp.psex, sex, "the sexes might be differents")
+        XCTAssertEqual(sp.ptitle, title2, "the titles might be the same")
+        XCTAssertNotEqual(sp.ptitle, title, "the titles might be differents")
+        XCTAssertEqual(sp.pdescr, descr2, "the descriptions might be the same")
+        XCTAssertNotEqual(sp.pdescr, descr, "the descriptions might be differents")
+        XCTAssertEqual(sp.pemail, email2, "the emails might be the same")
+        XCTAssertNotEqual(sp.pemail, email, "the emails might be differents")
+        XCTAssertEqual(sp.pphone, phone2, "the phones might be the same")
+        XCTAssertNotEqual(sp.pphone, phone, "the phones might be differents")
+        XCTAssertEqual(sp.paddress, address2, "the addresses might be the same")
+        XCTAssertNotEqual(sp.paddress, address, "the addresses might be differents")
+        XCTAssertEqual(sp.ppicture, picture2, "the pictures might be the same")
+        XCTAssertNotEqual(sp.ppicture, picture, "the pictures might be differents")
     }
 }
