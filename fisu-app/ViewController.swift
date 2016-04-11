@@ -56,21 +56,21 @@ class ViewController: UIViewController {
         
         // Create locations data
         let l = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("43.593333", "3.849431", "Altrad Stadium"), //0
-            ("43.528198", "3.934645", "La Plage"), //1
-            ("43.632727", "3.862610", "Polyetch"), //2
-            ("43.622028", "3.812391", "Stade de la Mosson"), //3
-            ("43.639362", "3.874070", "Zoo de Montpellier"), //4
-            ("43.638398", "3.875177", "Palais des sports"), //5
-            ("43.6137826","3.882258","Le Corum"), //6
-            ("43.6086772","3.879343","MacDonald Comédie"), //7
-            ("43.6075426","3.878437","L'Opéra"), //8
-            ("43.6064739","3.877880","Hotel des Arts"), //9
-            ("43.609069","3.8821123","Hotel Ibis"), //10
-            ("43.609069","3.88211239","Crowne Plaza Hotel"), //11
-            ("43.603640","3.91787759","La Baraka Jeux"), //12
-            ("43.583751", "3.861918599", "KFC"), //13
-            ("43.6037139", "3.91644229", "Les trois brasseurs") //14
+            ("43.593333", "3.849431", "0 - Altrad Stadium"),
+            ("43.528198", "3.934645", "1 - La Plage"),
+            ("43.632727", "3.862610", "2 - Polyetch"),
+            ("43.622028", "3.812391", "3 - Stade de la Mosson"),
+            ("43.639362", "3.874070", "4 - Zoo de Montpellier"),
+            ("43.638398", "3.875177", "5 - Palais des sports"),
+            ("43.6137826","3.882258","6 - Le Corum"),
+            ("43.6086772","3.879343","7 - MacDonald Comédie"),
+            ("43.6075426","3.878437","8 - L'Opéra"),
+            ("43.6064739","3.877880","9 - Hotel des Arts"),
+            ("43.609069","3.8821123","10 - Hotel Ibis"),
+            ("43.609069","3.88211239","11 - Crowne Plaza Hotel"),
+            ("43.603640","3.91787759","12 - La Baraka Jeux"),
+            ("43.583751", "3.861918599", "13 - KFC"),
+            ("43.6037139", "3.91644229", "14 - Les trois brasseurs")
         ]
         
         // Loop through, creating locations
@@ -86,10 +86,13 @@ class ViewController: UIViewController {
         
         // Create speakers data
         let sp = [ //think to insert the elements in the alphabetical order (on lastName), for more visibility
-            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)), //0
-            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!)), //1
-            ("Chabal", "Sébastien", "Male", "Rugbyman", "The most famous French rugbyman", "sebounette@ffr.fr", "06 00 00 00 07", "18 impasse des stades", UIImagePNGRepresentation(UIImage(named: "chabal.png")!)), //2
-            ("Milloud", "Olivier", "Male", "Rugbyman", "The most beautiful ear", "olivier@ffr.fr", "06 00 00 00 08", "32 impasse des stades", UIImagePNGRepresentation(UIImage(named: "olivierMilloud.png")!)) //3
+            ("Chabal", "Sébastien", "Male", "Rugbyman", "The most famous French rugbyman", "sebounette@ffr.fr", "06 00 00 00 07", "18 impasse des stades", UIImagePNGRepresentation(UIImage(named: "chabal.png")!)), //0
+            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)), //1
+            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!)), //2
+            ("Milloud", "Olivier", "Male", "Rugbyman", "The most beautiful ears", "olivier@ffr.fr", "06 00 00 00 08", "32 impasse des stades", UIImagePNGRepresentation(UIImage(named: "olivierMilloud.png")!)), //3
+            ("Pavarotti", "Luciano", "Male", "Ténor", "The perfect man for this visit", "luciano@ffr.fr", "06 00 00 10 08", "32 rue des lalalas", UIImagePNGRepresentation(UIImage(named: "pavarotti.png")!))
+            
+            
         ]
         //Loop through, creating accomodations
         for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPict) in sp {
@@ -102,18 +105,21 @@ class ViewController: UIViewController {
         
         //to declare the speakers set
         var spSet1 : [Speaker] = []
-        spSet1.append(speakers[0]) //add Obi-Wan to spSet1
+        spSet1.append(speakers[1]) //add Obi-Wan to spSet1
         var spSet2 : [Speaker] = []
-        spSet2.append(speakers[1]) //add Mario to spSet2
+        spSet2.append(speakers[2]) //add Mario to spSet2
         var spSet3 : [Speaker] = []
-        spSet2.append(speakers[2])
-        spSet2.append(speakers[3])
+        spSet3.append(speakers[0]) //add chabal to spSet3
+        spSet3.append(speakers[3]) //add olivier to spSet3
+        var spSet4 : [Speaker] = []
+        spSet4.append(speakers[4])
         
         // Create events data
         let ev = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[1], spSet2),
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[3], spSet1),
-            ("Tournoi de rugby", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[3], spSet1)
+            ("Karting Challenge", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[3], spSet2),
+            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[1], spSet1),
+            ("Tournoi de rugby", NSDate(), "Tournois animé par des célébrités du rugby", activityTypes[0] , locations[0], spSet3),
+            ("Visite de l'opéra", NSDate(), "sur la célèbre place de la Comédie", activityTypes[2], locations[9], spSet4)
         ]
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
@@ -126,7 +132,9 @@ class ViewController: UIViewController {
         
         // Create accomodations data
         let a = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("Booba Room","Une salle trop fat. En plus il y a une cafetiere.", NSData(),locations[2])
+            ("Crowne Plaza Hotel","Un hotel de luxe", NSData(),locations[11]),
+            ("Hotel des Arts","Proche de toutes commodités", NSData(),locations[9]),
+            ("Hotel Ibis","Chaîne hotelière de qualité", NSData(),locations[10])
         ]
         //Loop through, creating accomodations
         for (aName, aDescr, aPict, aLoc) in a {
@@ -139,9 +147,11 @@ class ViewController: UIViewController {
         
         // Create restaurants data
         let r = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("Le RU","N'y vas pas, c'est pas bon...", UIImagePNGRepresentation(UIImage(named: "menudomac.png")!),locations[0]),
-            ("MacDo","Tout ce que t'aimes !!", UIImagePNGRepresentation(UIImage(named: "macdo.png")!),locations[1])
-            
+            ("Delice","Mmmhhh! C'est delicieux!!", UIImagePNGRepresentation(UIImage(named: "delice.png")!),locations[2]),
+            ("KFC","Si tu n'aimes pas le porc", UIImagePNGRepresentation(UIImage(named: "kfc.png")!),locations[13]),
+            ("Le RU","N'y vas pas, c'est pas bon...", UIImagePNGRepresentation(UIImage(named: "ru.png")!),locations[2]),
+            ("Les 3 brasseurs","Pour les amateurs de bière", UIImagePNGRepresentation(UIImage(named: "3b.png")!),locations[14]),
+            ("MacDo","Tout ce que t'aimes !!", UIImagePNGRepresentation(UIImage(named: "macdo.png")!),locations[7])
         ]
         
         //Loop through, creating restaurants
