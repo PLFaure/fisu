@@ -20,6 +20,7 @@ class EventsTableViewCell: UITableViewCell {
         if addRemSwitch.on {
             if !self.isPresentUserEv() {
                 self.userEvents?.append(self.theEvent!)
+                print("peut etre que ca marche")
             }
         } else {
             if self.isPresentUserEv() {

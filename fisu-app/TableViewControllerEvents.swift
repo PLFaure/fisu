@@ -57,7 +57,7 @@ class TableViewControllerEvents: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
         cell.nameLabel.text = event.pname
         cell.dateLabel.text = dateConvert(event.pdate!)
-
+        
         if isPresentUserEv(event) {
             cell.addRemSwitch.setOn(true, animated:true)
         } else {
@@ -67,8 +67,8 @@ class TableViewControllerEvents: UITableViewController {
         cell.theEvent = event
         
         //fetch the modifications on the events of user
+        print("j'ai modifie quelque chose")
         self.theUser?.pevents = NSSet(array: cell.userEvents!)
-        
         return cell
     }
     
@@ -139,9 +139,9 @@ class TableViewControllerEvents: UITableViewController {
                 nextScene.theEventDateConverter = self.dateConvert(eventsArray![indexpath!.row].pdate!)
             }
         }
-        if segue.identifier == "unwindToVC" {
+        /*if segue.identifier == "unwindToVC" {
             print("ouiiiii!")
-        }
+        }*/
     }
 
     
