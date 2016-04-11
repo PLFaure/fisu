@@ -13,21 +13,9 @@ class EventsTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var added: UILabel!
     var userEvents: [Event]?
     var theEvent: Event?
-    @IBOutlet weak var addRemSwitch: UISwitch!
-    @IBAction func buttonClicked(sender: AnyObject) {
-        if addRemSwitch.on {
-            if !self.isPresentUserEv() {
-                self.userEvents?.append(self.theEvent!)
-                print("peut etre que ca marche")
-            }
-        } else {
-            if self.isPresentUserEv() {
-                self.removeEvent()
-            }
-        }
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,19 +43,5 @@ class EventsTableViewCell: UITableViewCell {
         return present
     }
     
-    func removeEvent() {
-        var i = 0
-        let n = self.userEvents?.count
-        var present = false
-        while (i<n) && !present {
-            if (self.userEvents![i] == self.theEvent) {
-                present = true
-            }
-            else {
-                i++
-            }
-        }
-        self.userEvents?.removeAtIndex(i)
-    }
-
+    
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E3721D11C9AF967009F4E3C /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */; };
 		3E9B1C9B1CA526F8003A8290 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B1C9A1CA526F8003A8290 /* ProfilViewController.swift */; };
-		3E9B1C9D1CA5A224003A8290 /* SpeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B1C9C1CA5A224003A8290 /* SpeakerViewController.swift */; };
+		3E9B1C9D1CA5A224003A8290 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B1C9C1CA5A224003A8290 /* EventViewController.swift */; };
 		3E9D6E441CA415EE00597B7A /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E431CA415EE00597B7A /* EventTests.swift */; };
 		3E9D6E461CA440F000597B7A /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E451CA440F000597B7A /* EventsTableViewCell.swift */; };
 		3E9D6E481CA4449400597B7A /* TableViewControllerEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */; };
@@ -66,7 +66,7 @@
 /* Begin PBXFileReference section */
 		3E3721D01C9AF967009F4E3C /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
 		3E9B1C9A1CA526F8003A8290 /* ProfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
-		3E9B1C9C1CA5A224003A8290 /* SpeakerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerViewController.swift; sourceTree = "<group>"; };
+		3E9B1C9C1CA5A224003A8290 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		3E9D6E431CA415EE00597B7A /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		3E9D6E451CA440F000597B7A /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerEvents.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 				3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */,
 				3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */,
 				3E9D6E451CA440F000597B7A /* EventsTableViewCell.swift */,
-				3E9B1C9C1CA5A224003A8290 /* SpeakerViewController.swift */,
+				3E9B1C9C1CA5A224003A8290 /* EventViewController.swift */,
 				3EBCFD541CB2740F00C8A861 /* SpeakerDescrViewController.swift */,
 				3EBCFD521CB26FED00C8A861 /* SpeakerViewCell.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
@@ -348,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EBCFD551CB2740F00C8A861 /* SpeakerDescrViewController.swift in Sources */,
-				3E9B1C9D1CA5A224003A8290 /* SpeakerViewController.swift in Sources */,
+				3E9B1C9D1CA5A224003A8290 /* EventViewController.swift in Sources */,
 				3E9D6E461CA440F000597B7A /* EventsTableViewCell.swift in Sources */,
 				3E9B1C9B1CA526F8003A8290 /* ProfilViewController.swift in Sources */,
 				3ED5C69B1C96C6EE006AA967 /* Speaker.swift in Sources */,

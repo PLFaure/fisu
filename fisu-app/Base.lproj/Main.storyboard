@@ -138,25 +138,30 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="delete" offImage="add" translatesAutoresizingMaskIntoConstraints="NO" id="7Mq-5V-DfF">
-                                            <rect key="frame" x="543" y="18" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="buttonClicked:" destination="U5A-QO-XXH" eventType="valueChanged" id="mO5-Xw-sZq"/>
-                                            </connections>
-                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tha-E0-ceg">
+                                            <rect key="frame" x="536" y="23" width="56" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="56" id="2Um-qB-O12"/>
+                                                <constraint firstAttribute="height" constant="21" id="Zfk-Fg-g9n"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" red="0.16844466418283252" green="0.58992266414141414" blue="0.11236007294869879" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tha-E0-ceg" secondAttribute="bottom" constant="16" id="2IO-Kn-Gsg"/>
                                         <constraint firstItem="Tb1-8X-tA7" firstAttribute="leading" secondItem="xCZ-mX-93y" secondAttribute="leading" id="5ZU-6o-kW6"/>
+                                        <constraint firstItem="tha-E0-ceg" firstAttribute="top" secondItem="tM2-TV-RHX" secondAttribute="topMargin" constant="15" id="9RO-kA-ffu"/>
                                         <constraint firstItem="Tb1-8X-tA7" firstAttribute="top" secondItem="xCZ-mX-93y" secondAttribute="bottom" constant="8" id="O6s-H8-eEj"/>
+                                        <constraint firstItem="tha-E0-ceg" firstAttribute="trailing" secondItem="tM2-TV-RHX" secondAttribute="trailingMargin" id="Sgy-v1-D6n"/>
                                         <constraint firstItem="xCZ-mX-93y" firstAttribute="top" secondItem="tM2-TV-RHX" secondAttribute="topMargin" id="TBi-it-h3N"/>
-                                        <constraint firstItem="7Mq-5V-DfF" firstAttribute="trailing" secondItem="tM2-TV-RHX" secondAttribute="trailingMargin" id="ULz-49-fdF"/>
                                         <constraint firstItem="Tb1-8X-tA7" firstAttribute="trailing" secondItem="xCZ-mX-93y" secondAttribute="trailing" id="Ylk-2d-zRb"/>
                                         <constraint firstItem="xCZ-mX-93y" firstAttribute="leading" secondItem="tM2-TV-RHX" secondAttribute="leadingMargin" id="b2f-2f-BCQ"/>
-                                        <constraint firstItem="7Mq-5V-DfF" firstAttribute="centerY" secondItem="tM2-TV-RHX" secondAttribute="centerY" id="iFr-qz-sZk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="addRemSwitch" destination="7Mq-5V-DfF" id="MdH-K3-5XY"/>
+                                    <outlet property="added" destination="tha-E0-ceg" id="SzQ-xe-cjR"/>
                                     <outlet property="dateLabel" destination="Tb1-8X-tA7" id="9PP-Bi-myl"/>
                                     <outlet property="nameLabel" destination="xCZ-mX-93y" id="OuA-9O-gL7"/>
                                     <segue destination="bna-nM-z1m" kind="show" identifier="eventDescription" id="adU-Bo-MVl"/>
@@ -273,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="2427" y="1136"/>
         </scene>
-        <!--Speaker View Controller-->
+        <!--Event View Controller-->
         <scene sceneID="0Jw-nw-9tb">
             <objects>
-                <viewController id="bna-nM-z1m" customClass="SpeakerViewController" customModule="fisu_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bna-nM-z1m" customClass="EventViewController" customModule="fisu_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BBe-tu-hID"/>
                         <viewControllerLayoutGuide type="bottom" id="UX7-R4-D8M"/>
@@ -357,6 +362,12 @@
                                 <color key="textColor" red="0.22395849108731725" green="0.40968603939053622" blue="0.7581806282722513" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clS-bx-B6u">
+                                <rect key="frame" x="531" y="81" width="51" height="31"/>
+                                <connections>
+                                    <action selector="addAction:" destination="bna-nM-z1m" eventType="valueChanged" id="Au8-hn-uLA"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -386,14 +397,17 @@
                     </view>
                     <connections>
                         <outlet property="activityType" destination="TJs-ex-Zlf" id="TUw-k8-2wc"/>
+                        <outlet property="addRemSwitch" destination="clS-bx-B6u" id="OO2-KG-E2q"/>
                         <outlet property="eventDate" destination="l9h-Xr-RTo" id="pCz-t1-X59"/>
                         <outlet property="eventDescription" destination="Fhy-hh-RRh" id="GHB-Tv-aYi"/>
                         <outlet property="eventLocation" destination="Aqa-g3-TUJ" id="XNb-EC-u96"/>
                         <outlet property="eventName" destination="YXe-yN-eel" id="diK-6a-juY"/>
                         <outlet property="mySpeakersTable" destination="roE-Gr-TEB" id="flY-an-e1v"/>
+                        <segue destination="zsC-ey-ATg" kind="unwind" identifier="unwindToTVCE" unwindAction="unwindToTVCE:" id="INr-19-rGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdU-pB-wTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zsC-ey-ATg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2444" y="468"/>
         </scene>
@@ -812,7 +826,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cVF-7w-mPm" firstAttribute="leading" secondItem="5Wl-p3-XcR" secondAttribute="trailing" constant="17" id="3hn-Qq-UzO"/>
                             <constraint firstItem="WbY-z1-ZNN" firstAttribute="leading" secondItem="Oyf-g9-ziS" secondAttribute="trailing" constant="20" id="Ftw-8K-Yle"/>
@@ -933,10 +947,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="128" height="128"/>
         <image name="calendar" width="128" height="128"/>
         <image name="cutlery" width="128" height="128"/>
-        <image name="delete" width="128" height="128"/>
         <image name="logo" width="348" height="348"/>
         <image name="logout" width="128" height="128"/>
         <image name="pin" width="128" height="128"/>

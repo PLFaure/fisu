@@ -70,7 +70,8 @@ class ViewController: UIViewController {
             ("43.609069","3.88211239","11 - Crowne Plaza Hotel"),
             ("43.603640","3.91787759","12 - La Baraka Jeux"),
             ("43.583751", "3.861918599", "13 - KFC"),
-            ("43.6037139", "3.91644229", "14 - Les trois brasseurs")
+            ("43.6037139", "3.91644229", "14 - Les trois brasseurs"),
+            ("43.6037139", "3.91644229", "15 - Delice")
         ]
         
         // Loop through, creating locations
@@ -147,7 +148,7 @@ class ViewController: UIViewController {
         
         // Create restaurants data
         let r = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("Delice","Mmmhhh! C'est delicieux!!", UIImagePNGRepresentation(UIImage(named: "delice.png")!),locations[2]),
+            ("Delice","Mmmhhh! C'est delicieux!!", UIImagePNGRepresentation(UIImage(named: "delice.png")!),locations[15]),
             ("KFC","Si tu n'aimes pas le porc", UIImagePNGRepresentation(UIImage(named: "kfc.png")!),locations[13]),
             ("Le RU","N'y vas pas, c'est pas bon...", UIImagePNGRepresentation(UIImage(named: "ru.png")!),locations[2]),
             ("Les 3 brasseurs","Pour les amateurs de bière", UIImagePNGRepresentation(UIImage(named: "3b.png")!),locations[14]),
@@ -163,8 +164,8 @@ class ViewController: UIViewController {
         }
         fetchRestaurant() // fetch the new Restaurant into the array restaurants
         
-        var evSet : [Event] = []
-        evSet.append(events[0])
+        var evSet : [Event]
+        evSet = []
         
         // Create speakers data
         let usr = [ //think to insert the elements in the alphabetical order (on username), for more visibility

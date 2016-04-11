@@ -10,11 +10,12 @@ import UIKit
 import MapKit
 
 
-class SpeakerViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
     var theEvent:Event?
     var theEventDateConverter:String?
     var speakersArray: [Speaker] = []
     var theEventLoc: Location?
+    var theUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,11 @@ class SpeakerViewController: UIViewController, MKMapViewDelegate, UITableViewDel
         eventPin.subtitle = theEvent?.pdescr
         self.eventLocation.addAnnotation(eventPin)
         
+        if isPresentUserEv() {
+            self.addRemSwitch.setOn(true, animated:true)
+        } else {
+            self.addRemSwitch.setOn(false, animated:true)
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -55,7 +61,22 @@ class SpeakerViewController: UIViewController, MKMapViewDelegate, UITableViewDel
     @IBOutlet weak var activityType: UILabel!
     @IBOutlet weak var mySpeakersTable: UITableView!
     @IBOutlet weak var eventLocation: MKMapView!
+    @IBOutlet weak var addRemSwitch: UISwitch!
     
+    @IBAction func addAction(sender: AnyObject) {
+        var userEvents = self.theUser?.pevents!.allObjects as? [Event]
+        if addRemSwitch.on {
+            if !self.isPresentUserEv() {
+                userEvents?.append(self.theEvent!)
+                print("peut etre que ca marche")
+            }
+        } else {
+            if self.isPresentUserEv() {
+                userEvents=removeEvent(userEvents!)
+            }
+        }
+        self.theUser?.pevents = NSSet(array: userEvents!)
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (theEvent?.pspeakers?.count)!
@@ -79,13 +100,51 @@ class SpeakerViewController: UIViewController, MKMapViewDelegate, UITableViewDel
         return cell
     }
     
-    
+    func isPresentUserEv() -> Bool {
+        var evArray = self.theUser?.pevents!.allObjects as? [Event]
+        var i = 0
+        let n = evArray?.count
+        var present = false
+        while (i<n) && !present {
+            if (evArray![i] == theEvent) {
+                present = true
+            } else {
+                i++
+            }
+        }
+        return present
+    }
+
+    func removeEvent(events: [Event]) -> [Event]{
+        var evts = events
+        var i = 0
+        let n = evts.count
+        var present = false
+        while (i<n) && !present {
+            if (evts[i] == self.theEvent) {
+                present = true
+            }
+            else {
+                i++
+            }
+        }
+        evts.removeAtIndex(i)
+        return evts
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //Back button pressed
+   override func didMoveToParentViewController(parent: UIViewController?) {
+        if (!(parent?.isEqual(self.parentViewController) ?? false)) {
+            self.performSegueWithIdentifier("unwindToTVCE", sender: self)
+            print("ca marche pas?")
+        } 
+    }
       
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "speakerDescription" {

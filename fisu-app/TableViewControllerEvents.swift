@@ -57,18 +57,12 @@ class TableViewControllerEvents: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! EventsTableViewCell
         cell.nameLabel.text = event.pname
         cell.dateLabel.text = dateConvert(event.pdate!)
-        
-        if isPresentUserEv(event) {
-            cell.addRemSwitch.setOn(true, animated:true)
-        } else {
-            cell.addRemSwitch.setOn(false, animated:true)
-        }
-        cell.userEvents = self.theUser?.pevents!.allObjects as? [Event]
         cell.theEvent = event
-        
-        //fetch the modifications on the events of user
-        print("j'ai modifie quelque chose")
-        self.theUser?.pevents = NSSet(array: cell.userEvents!)
+        if isPresentUserEv(event) {
+            cell.added.text = "Added"
+        } else {
+            cell.added.text = ""
+        }
         return cell
     }
     
@@ -133,10 +127,11 @@ class TableViewControllerEvents: UITableViewController {
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "eventDescription" {
-            if let nextScene = segue.destinationViewController as? SpeakerViewController{
+            if let nextScene = segue.destinationViewController as? EventViewController{
                 let indexpath = self.tableViewEvents.indexPathForSelectedRow
                 nextScene.theEvent = self.eventsArray![indexpath!.row]
                 nextScene.theEventDateConverter = self.dateConvert(eventsArray![indexpath!.row].pdate!)
+                nextScene.theUser = self.theUser
             }
         }
         /*if segue.identifier == "unwindToVC" {
@@ -144,6 +139,14 @@ class TableViewControllerEvents: UITableViewController {
         }*/
     }
 
+    @IBAction func unwindToTVCE(sender:UIStoryboardSegue) {
+        if let prevScene = sender.sourceViewController as? EventViewController {
+            self.theUser = prevScene.theUser!
+            self.tableViewEvents.reloadData()
+            print("oui?")
+        }
+    }
     
+
 
 }
