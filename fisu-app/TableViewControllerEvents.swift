@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewControllerEvents: UITableViewController {
     var eventsArray:[Event]?
+    var theUser: User?
 
     
     override func viewDidLoad() {
@@ -57,10 +58,35 @@ class TableViewControllerEvents: UITableViewController {
         cell.nameLabel.text = event.pname
         cell.dateLabel.text = dateConvert(event.pdate!)
 
+        if isPresentUserEv(event) {
+            cell.addRemSwitch.setOn(true, animated:true)
+        } else {
+            cell.addRemSwitch.setOn(false, animated:true)
+        }
+        cell.userEvents = self.theUser?.pevents!.allObjects as? [Event]
+        cell.theEvent = event
+        
+        //fetch the modifications on the events of user
+        self.theUser?.pevents = NSSet(array: cell.userEvents!)
+        
         return cell
     }
     
-
+    func isPresentUserEv(ev: Event) -> Bool {
+        var evArray = self.theUser?.pevents!.allObjects as? [Event]
+        var i = 0
+        let n = evArray?.count
+        var present = false
+        while (i<n) && !present {
+            if (evArray![i] == ev) {
+                present = true
+            } else {
+                i++
+            }
+        }
+        return present
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -96,6 +122,13 @@ class TableViewControllerEvents: UITableViewController {
     }
     */
 
+    //Back button pressed
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if (!(parent?.isEqual(self.parentViewController) ?? false)) {
+            self.performSegueWithIdentifier("unwindToVC", sender: self)
+            print("ca marche?")
+        }
+    }
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -105,7 +138,10 @@ class TableViewControllerEvents: UITableViewController {
                 nextScene.theEvent = self.eventsArray![indexpath!.row]
                 nextScene.theEventDateConverter = self.dateConvert(eventsArray![indexpath!.row].pdate!)
             }
-    }
+        }
+        if segue.identifier == "unwindToVC" {
+            print("ouiiiii!")
+        }
     }
 
     
