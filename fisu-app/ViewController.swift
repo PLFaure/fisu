@@ -40,7 +40,8 @@ class ViewController: UIViewController {
         // Create activityTypes data
         let at = [ //think to insert the elements in the alphabetical order (on label), for more visibility
             ("Challenge sportif"),
-            ("Symposium")
+            ("Conférence"),
+            ("Evenement touristique")
         ]
         // Loop through, creating activityTypes
         for (atLabel) in at {
@@ -55,11 +56,23 @@ class ViewController: UIViewController {
         
         // Create locations data
         let l = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("43.631113", "3.860338", "2 Place Eugène Bataillon"),
-            ("43.528198", "3.934645", "La Plage"),
-            ("43.632699", "3.862738", "Polyetch"),
-            ("43.593333", "3.849431", "Stade de l'assiette")
+            ("43.593333", "3.849431", "Altrad Stadium"), //0
+            ("43.528198", "3.934645", "La Plage"), //1
+            ("43.632727", "3.862610", "Polyetch"), //2
+            ("43.622028", "3.812391", "Stade de la Mosson"), //3
+            ("43.639362", "3.874070", "Zoo de Montpellier"), //4
+            ("43.638398", "3.875177", "Palais des sports"), //5
+            ("43.6137826","3.882258","Le Corum"), //6
+            ("43.6086772","3.879343","MacDonald Comédie"), //7
+            ("43.6075426","3.878437","L'Opéra"), //8
+            ("43.6064739","3.877880","Hotel des Arts"), //9
+            ("43.609069","3.8821123","Hotel Ibis"), //10
+            ("43.609069","3.88211239","Crowne Plaza Hotel"), //11
+            ("43.603640","3.91787759","La Baraka Jeux"), //12
+            ("43.583751", "3.861918599", "KFC"), //13
+            ("43.6037139", "3.91644229", "Les trois brasseurs") //14
         ]
+        
         // Loop through, creating locations
         for (lLatitude, lLongitude, lName) in l {
             if !isPresentLocation(self.locations, locName: lName) { //if a location with this name does not exists
@@ -73,8 +86,10 @@ class ViewController: UIViewController {
         
         // Create speakers data
         let sp = [ //think to insert the elements in the alphabetical order (on lastName), for more visibility
-            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)),
-            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!))
+            ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)), //0
+            ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!)), //1
+            ("Chabal", "Sébastien", "Male", "Rugbyman", "The most famous French rugbyman", "sebounette@ffr.fr", "06 00 00 00 07", "18 impasse des stades", UIImagePNGRepresentation(UIImage(named: "chabal.png")!)), //2
+            ("Milloud", "Olivier", "Male", "Rugbyman", "The most beautiful ear", "olivier@ffr.fr", "06 00 00 00 08", "32 impasse des stades", UIImagePNGRepresentation(UIImage(named: "olivierMilloud.png")!)) //3
         ]
         //Loop through, creating accomodations
         for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPict) in sp {
@@ -85,15 +100,20 @@ class ViewController: UIViewController {
         }
         fetchSpeaker() // fetch the new Speaker into the array speakers
         
+        //to declare the speakers set
         var spSet1 : [Speaker] = []
         spSet1.append(speakers[0]) //add Obi-Wan to spSet1
         var spSet2 : [Speaker] = []
         spSet2.append(speakers[1]) //add Mario to spSet2
+        var spSet3 : [Speaker] = []
+        spSet2.append(speakers[2])
+        spSet2.append(speakers[3])
         
         // Create events data
         let ev = [ //think to insert the elements in the alphabetical order (on name), for more visibility
             ("Course Yolo", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[1], spSet2),
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[3], spSet1)
+            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[3], spSet1),
+            ("Tournoi de rugby", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[3], spSet1)
         ]
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
