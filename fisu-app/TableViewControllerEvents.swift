@@ -66,6 +66,11 @@ class TableViewControllerEvents: UITableViewController {
         return cell
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        self.tableViewEvents.reloadData()
+    }
+    
     func isPresentUserEv(ev: Event) -> Bool {
         var evArray = self.theUser?.pevents!.allObjects as? [Event]
         var i = 0

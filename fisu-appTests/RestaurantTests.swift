@@ -1,5 +1,5 @@
 //
-//  AccomodationTests.swift
+//  Restaurant.swift
 //  fisu-app
 //
 //  Created by IG2013 on 11/04/2016.
@@ -8,10 +8,9 @@
 
 import XCTest
 
-
 @testable import fisu_app
 
-class AccomodationTests: XCTestCase {
+class RestaurantTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -35,7 +34,7 @@ class AccomodationTests: XCTestCase {
         }
     }
     
-    //test the initialisation of an Accomodation
+    //test the initialisation of a Restaurant
     func testInit(){
         let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let name = "nom"
@@ -46,12 +45,12 @@ class AccomodationTests: XCTestCase {
         XCTAssertNotNil(picture,"picture not initialised")
         let l : Location = Location.createInManagedObjectContext(moc, name: "Polyetch", latitude: "43.632699", longitude: "3.862738")
         XCTAssertNotNil(l,"localisation not initialised")
-        
-        let acc : Accomodation = Accomodation.createInManagedObjectContext(moc, name: name, descr: descr, picture: picture, loc: l)
-        XCTAssertNotNil(acc,"Accomodation not initialised")
-    }
 
-    //test the getters of an Accomodation
+        let rest : Restaurant = Restaurant.createInManagedObjectContext(moc, name: name, descr: descr, picture: picture, loc: l)
+        XCTAssertNotNil(rest,"Restaurant not initialised")
+    }
+    
+    //test the getters of a Restaurant
     func testGetters(){
         let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let name = "nom"
@@ -62,16 +61,16 @@ class AccomodationTests: XCTestCase {
         XCTAssertNotNil(picture,"picture not initialised")
         let l : Location = Location.createInManagedObjectContext(moc, name: "Polyetch", latitude: "43.632699", longitude: "3.862738")
         XCTAssertNotNil(l,"localisation not initialised")
-        let acc : Accomodation = Accomodation.createInManagedObjectContext(moc, name: name, descr: descr, picture: picture, loc: l)
-        XCTAssertNotNil(acc,"Accomodation not initialised")
+        let rest : Restaurant = Restaurant.createInManagedObjectContext(moc, name: name, descr: descr, picture: picture, loc: l)
+        XCTAssertNotNil(rest,"Restaurant not initialised")
         
-        XCTAssertEqual(acc.pname, name, "the names might be the same")
-        XCTAssertEqual(acc.pdescr, descr, "the descriptions might be the same")
-        XCTAssertEqual(acc.ppicture, picture, "the pictures might be the same")
-        XCTAssertEqual(acc.plocation, l, "the locations might be the same")
+        XCTAssertEqual(rest.pname, name, "the names might be the same")
+        XCTAssertEqual(rest.pdescr, descr, "the descriptions might be the same")
+        XCTAssertEqual(rest.ppicture, picture, "the pictures might be the same")
+        XCTAssertEqual(rest.plocation, l, "the locations might be the same")
     }
     
-    //test the setters of an Accomodation
+    //test the setters of a Restaurant
     func testSetters(){
         let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let name = "nom"
@@ -83,8 +82,8 @@ class AccomodationTests: XCTestCase {
         XCTAssertNotNil(picture,"picture not initialised")
         let l : Location = Location.createInManagedObjectContext(moc, name: "Polyetch", latitude: "43.632699", longitude: "3.862738")
         XCTAssertNotNil(l,"localisation not initialised")
-        let acc : Accomodation = Accomodation.createInManagedObjectContext(moc, name: name, descr: descr, picture: picture!, loc: l)
-        XCTAssertNotNil(acc,"Accomodation not initialised")
+        let rest : Restaurant = Restaurant.createInManagedObjectContext(moc, name: name, descr: descr, picture: picture!, loc: l)
+        XCTAssertNotNil(rest,"Restaurant not initialised")
         
         let name2 = "nom2"
         XCTAssertNotNil(name2,"name2 not initialised")
@@ -96,19 +95,19 @@ class AccomodationTests: XCTestCase {
         XCTAssertNotEqual(picture, picture2, "the picture might be differents")
         let l2 : Location = Location.createInManagedObjectContext(moc, name: "trezgtr", latitude: "44.632899", longitude: "2.8627415")
         XCTAssertNotNil(l2,"localisation2 not initialised")
-
-        acc.pname = name2
-        acc.pdescr = descr2
-        acc.picture = picture2
-        acc.location = l2
-        XCTAssertEqual(acc.pname, name2, "the names might be the same")
-        XCTAssertNotEqual(acc.pname, name, "the names might be differents")
-        XCTAssertEqual(acc.pdescr, descr2, "the descriptions might be the same")
-        XCTAssertNotEqual(acc.pdescr, descr, "the descriptions might be differents")
-        XCTAssertEqual(acc.ppicture, picture2, "the pictures might be the same")
-        XCTAssertNotEqual(acc.ppicture, picture, "the pictures might be differents")
-        XCTAssertEqual(acc.plocation, l2, "the locations might be the same")
-        XCTAssertNotEqual(acc.plocation, l, "the locations might be differents")
+        
+        rest.pname = name2
+        rest.pdescr = descr2
+        rest.picture = picture2
+        rest.location = l2
+        XCTAssertEqual(rest.pname, name2, "the names might be the same")
+        XCTAssertNotEqual(rest.pname, name, "the names might be differents")
+        XCTAssertEqual(rest.pdescr, descr2, "the descriptions might be the same")
+        XCTAssertNotEqual(rest.pdescr, descr, "the descriptions might be differents")
+        XCTAssertEqual(rest.ppicture, picture2, "the pictures might be the same")
+        XCTAssertNotEqual(rest.ppicture, picture, "the pictures might be differents")
+        XCTAssertEqual(rest.plocation, l2, "the locations might be the same")
+        XCTAssertNotEqual(rest.plocation, l, "the locations might be differents")
     }
 
     
