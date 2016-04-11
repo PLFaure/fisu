@@ -64,7 +64,7 @@ class ViewController: UIViewController {
             ("43.638398", "3.875177", "5 - Palais des sports"),
             ("43.6137826","3.882258","6 - Le Corum"),
             ("43.6086772","3.879343","7 - MacDonald Comédie"),
-            ("43.6075426","3.878437","8 - L'Opéra"),
+            ("43.6075426","3.878437","8 - L'Opera"),
             ("43.6064739","3.877880","9 - Hotel des Arts"),
             ("43.609069","3.8821123","10 - Hotel Ibis"),
             ("43.609069","3.88211239","11 - Crowne Plaza Hotel"),
