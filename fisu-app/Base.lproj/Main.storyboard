@@ -21,13 +21,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pd8-aK-rqK">
                                 <rect key="frame" x="20" y="103" width="560" height="489"/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool-2" translatesAutoresizingMaskIntoConstraints="NO" id="TUE-9A-9oA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool (1)" translatesAutoresizingMaskIntoConstraints="NO" id="TUE-9A-9oA">
                                 <rect key="frame" x="235" y="72" width="23" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="23" id="zoD-n7-gPP"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool-3" translatesAutoresizingMaskIntoConstraints="NO" id="aaB-ND-Svx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool" translatesAutoresizingMaskIntoConstraints="NO" id="aaB-ND-Svx">
                                 <rect key="frame" x="342" y="72" width="23" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="23" id="dhA-Hh-Akt"/>
@@ -51,7 +51,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-gF-Vem">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool (2)" translatesAutoresizingMaskIntoConstraints="NO" id="Rbd-gF-Vem">
                                 <rect key="frame" x="153" y="72" width="23" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="23" id="C6r-SI-L1V"/>
@@ -432,6 +432,37 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JxW-RI-hPz" firstAttribute="trailing" secondItem="Sit-qw-Cd3" secondAttribute="trailing" id="03u-mL-Kos"/>
+                            <constraint firstItem="MML-U8-vsM" firstAttribute="leading" secondItem="xSW-tP-oTT" secondAttribute="leading" id="0Pc-Vz-9lU"/>
+                            <constraint firstItem="Bp9-WY-7nV" firstAttribute="trailing" secondItem="Sit-qw-Cd3" secondAttribute="trailing" id="4A3-qr-uge"/>
+                            <constraint firstItem="ORn-r7-hw7" firstAttribute="centerX" secondItem="kgD-Cz-9wV" secondAttribute="centerX" id="6XY-YA-NwE"/>
+                            <constraint firstItem="MML-U8-vsM" firstAttribute="centerX" secondItem="kgD-Cz-9wV" secondAttribute="centerX" id="6rL-3o-8im"/>
+                            <constraint firstItem="fdG-Wh-K0a" firstAttribute="leading" secondItem="xSW-tP-oTT" secondAttribute="leading" id="8Hi-KF-dQE"/>
+                            <constraint firstItem="MML-U8-vsM" firstAttribute="trailing" secondItem="Sit-qw-Cd3" secondAttribute="trailing" id="DKU-Df-GMf"/>
+                            <constraint firstItem="Sit-qw-Cd3" firstAttribute="centerX" secondItem="kgD-Cz-9wV" secondAttribute="centerX" id="Flo-0b-MUi"/>
+                            <constraint firstItem="Mx4-3i-TBB" firstAttribute="trailing" secondItem="OHx-ZJ-jzD" secondAttribute="trailingMargin" id="Fqp-sy-GVf"/>
+                            <constraint firstItem="Sit-qw-Cd3" firstAttribute="top" secondItem="Mx4-3i-TBB" secondAttribute="bottom" constant="7" id="ITl-cc-vVH"/>
+                            <constraint firstItem="ORn-r7-hw7" firstAttribute="top" secondItem="MML-U8-vsM" secondAttribute="bottom" constant="8" id="LEF-Xw-srA"/>
+                            <constraint firstItem="Bp9-WY-7nV" firstAttribute="centerX" secondItem="kgD-Cz-9wV" secondAttribute="centerX" id="M9D-NT-ec5"/>
+                            <constraint firstItem="JxW-RI-hPz" firstAttribute="centerX" secondItem="kgD-Cz-9wV" secondAttribute="centerX" id="Q5M-Wb-uW5"/>
+                            <constraint firstItem="MML-U8-vsM" firstAttribute="top" secondItem="Bp9-WY-7nV" secondAttribute="bottom" constant="17" id="SaT-Im-6bJ"/>
+                            <constraint firstItem="fdG-Wh-K0a" firstAttribute="trailing" secondItem="Sit-qw-Cd3" secondAttribute="trailing" id="Vhu-rS-EDx"/>
+                            <constraint firstItem="kgD-Cz-9wV" firstAttribute="top" secondItem="Rgw-6y-P3o" secondAttribute="bottom" constant="8" id="XvA-Zx-j6U"/>
+                            <constraint firstItem="Mx4-3i-TBB" firstAttribute="trailing" secondItem="Sit-qw-Cd3" secondAttribute="trailing" id="Y1o-lL-la5"/>
+                            <constraint firstItem="fdG-Wh-K0a" firstAttribute="top" secondItem="ORn-r7-hw7" secondAttribute="bottom" constant="8" id="Z6U-Cb-AcO"/>
+                            <constraint firstItem="Bp9-WY-7nV" firstAttribute="top" secondItem="Sit-qw-Cd3" secondAttribute="bottom" constant="8" id="Zk1-Ed-sPa"/>
+                            <constraint firstItem="JxW-RI-hPz" firstAttribute="top" secondItem="fdG-Wh-K0a" secondAttribute="bottom" constant="8" id="aNr-r0-gvc"/>
+                            <constraint firstItem="xSW-tP-oTT" firstAttribute="leading" secondItem="OHx-ZJ-jzD" secondAttribute="leadingMargin" id="c8Q-gb-XcN"/>
+                            <constraint firstItem="Mx4-3i-TBB" firstAttribute="top" secondItem="kgD-Cz-9wV" secondAttribute="bottom" constant="8" id="chU-Dl-R9M"/>
+                            <constraint firstItem="fdG-Wh-K0a" firstAttribute="centerX" secondItem="kgD-Cz-9wV" secondAttribute="centerX" id="dBs-vR-Ri7"/>
+                            <constraint firstItem="Bp9-WY-7nV" firstAttribute="leading" secondItem="xSW-tP-oTT" secondAttribute="leading" id="gMe-Wb-56e"/>
+                            <constraint firstItem="Sit-qw-Cd3" firstAttribute="leading" secondItem="xSW-tP-oTT" secondAttribute="leading" id="ge7-du-s8M"/>
+                            <constraint firstItem="xSW-tP-oTT" firstAttribute="top" secondItem="kgD-Cz-9wV" secondAttribute="bottom" constant="8" id="lUa-eg-2SC"/>
+                            <constraint firstItem="ORn-r7-hw7" firstAttribute="trailing" secondItem="Sit-qw-Cd3" secondAttribute="trailing" id="oDR-mH-ROA"/>
+                            <constraint firstItem="JxW-RI-hPz" firstAttribute="leading" secondItem="xSW-tP-oTT" secondAttribute="leading" id="sh8-5G-v5h"/>
+                            <constraint firstItem="ORn-r7-hw7" firstAttribute="leading" secondItem="xSW-tP-oTT" secondAttribute="leading" id="z7e-cE-mko"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="lbAddress" destination="JxW-RI-hPz" id="KjB-UM-e6l"/>
@@ -867,9 +898,9 @@
         <image name="logo" width="348" height="348"/>
         <image name="logout" width="128" height="128"/>
         <image name="pin" width="128" height="128"/>
-        <image name="tool" width="128" height="128"/>
-        <image name="tool-2" width="128" height="128"/>
-        <image name="tool-3" width="128" height="128"/>
+        <image name="tool" width="256" height="256"/>
+        <image name="tool (1)" width="256" height="256"/>
+        <image name="tool (2)" width="256" height="256"/>
         <image name="users" width="256" height="256"/>
     </resources>
 </document>
