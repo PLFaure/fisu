@@ -97,7 +97,8 @@ class ViewController: UIViewController {
             ("Kenobi", "Obi-Wan", "Male", "Jedi Master", "The Force is strong with this one.", "obi.keke@jeditemple.cor", "06 00 00 00 00", "75 rue de la Lumiere", UIImagePNGRepresentation(UIImage(named: "obiwan.png")!)), //1
             ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!)), //2
             ("Milloud", "Olivier", "Male", "Rugbyman", "The most beautiful ears", "olivier@ffr.fr", "06 00 00 00 08", "32 impasse des stades", UIImagePNGRepresentation(UIImage(named: "olivierMilloud.png")!)), //3
-            ("Pavarotti", "Luciano", "Male", "Ténor", "The perfect man for this visit", "luciano@ffr.fr", "06 00 00 10 08", "32 rue des lalalas", UIImagePNGRepresentation(UIImage(named: "pavarotti.png")!))
+            ("Pavarotti", "Luciano", "Male", "Ténor", "The perfect man for this visit", "luciano@ffr.fr", "06 00 00 10 08", "32 rue des lalalas", UIImagePNGRepresentation(UIImage(named: "pavarotti.png")!)),
+            ("Rosenfeld", "Alexandra", "Female", "Miss", "City tour Organizer", "lamiss@hotmail.fr", "06 00 00 10 10", "1 impasse du vernis",UIImagePNGRepresentation(UIImage(named: "alexandra.png")!))
         ]
         //Loop through, creating speakers
         for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPict) in sp {
@@ -118,9 +119,12 @@ class ViewController: UIViewController {
         spSet3.append(speakers[3]) //add olivier to spSet3
         var spSet4 : [Speaker] = []
         spSet4.append(speakers[4])
+        var spSet5 : [Speaker] = []
+        spSet5.append(speakers[5]) //add alexandra to spSet5
         
         // Create events data
         let ev = [ //think to insert the elements in the date order (on date), for more visibility
+            ("City tour",  NSDate(dateString:"05/05/2016 13:25"), "Visite de la ville de Montpellier", activityTypes[2], locations[6], spSet5),
             ("Karting Challenge", NSDate(dateString:"06/05/2016 13:25"), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[3], spSet2),
             ("Tournoi d'Ultimate Frisbee", NSDate(dateString:"26/05/2016 08:15"), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[1], spSet1),
             ("Tournoi de rugby", NSDate(dateString:"13/06/2016 18:45"), "Tournois animé par des célébrités du rugby", activityTypes[0] , locations[0], spSet3),
