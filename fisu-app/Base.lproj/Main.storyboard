@@ -363,10 +363,11 @@
                                 <color key="textColor" red="0.22395849108731725" green="0.40968603939053622" blue="0.7581806282722513" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clS-bx-B6u">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="clS-bx-B6u">
                                 <rect key="frame" x="531" y="72" width="51" height="31"/>
-                                <color key="onTintColor" red="0.0" green="0.4190147219" blue="0.75818062829999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.81950490782054086" green="0.88287015086484233" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.2032592128216319" green="0.67732007571616171" blue="0.59862627812753766" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.83232821444091332" green="0.89269928584521985" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addAction:" destination="bna-nM-z1m" eventType="valueChanged" id="Au8-hn-uLA"/>
                                 </connections>
