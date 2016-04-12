@@ -315,10 +315,10 @@
                                 </constraints>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="activityType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJs-ex-Zlf">
-                                <rect key="frame" x="20" y="133" width="560" height="21"/>
+                                <rect key="frame" x="20" y="126" width="560" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="560" id="CAd-rJ-k3T"/>
-                                    <constraint firstAttribute="height" constant="21" id="yip-b9-3pN"/>
+                                    <constraint firstAttribute="height" constant="28" id="yip-b9-3pN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.55265817444644583" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -364,7 +364,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="clS-bx-B6u">
-                                <rect key="frame" x="531" y="72" width="51" height="31"/>
+                                <rect key="frame" x="531" y="100" width="51" height="31"/>
                                 <color key="tintColor" red="0.81950490782054086" green="0.88287015086484233" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="onTintColor" red="0.2032592128216319" green="0.67732007571616171" blue="0.59862627812753766" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.83232821444091332" green="0.89269928584521985" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -375,7 +375,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TJs-ex-Zlf" firstAttribute="top" secondItem="l9h-Xr-RTo" secondAttribute="bottom" constant="8" id="1hh-Os-TfF"/>
+                            <constraint firstItem="TJs-ex-Zlf" firstAttribute="top" secondItem="l9h-Xr-RTo" secondAttribute="bottom" constant="1" id="1hh-Os-TfF"/>
                             <constraint firstItem="roE-Gr-TEB" firstAttribute="trailing" secondItem="YXe-yN-eel" secondAttribute="trailing" id="4Hb-G9-bMI"/>
                             <constraint firstItem="Fhy-hh-RRh" firstAttribute="centerX" secondItem="HjL-z1-cva" secondAttribute="centerX" id="58s-qP-gBt"/>
                             <constraint firstItem="roE-Gr-TEB" firstAttribute="top" secondItem="Aqa-g3-TUJ" secondAttribute="bottom" constant="3" id="75W-4R-PNw"/>
@@ -395,7 +395,7 @@
                             <constraint firstItem="YXe-yN-eel" firstAttribute="trailing" secondItem="HjL-z1-cva" secondAttribute="trailingMargin" id="fue-Ow-OJJ"/>
                             <constraint firstItem="YXe-yN-eel" firstAttribute="leading" secondItem="HjL-z1-cva" secondAttribute="leadingMargin" id="mzi-ua-eCm"/>
                             <constraint firstItem="YXe-yN-eel" firstAttribute="top" secondItem="BBe-tu-hID" secondAttribute="bottom" constant="8" id="pra-8z-OtL"/>
-                            <constraint firstItem="clS-bx-B6u" firstAttribute="top" secondItem="BBe-tu-hID" secondAttribute="bottom" constant="8" id="qKm-pg-sZC"/>
+                            <constraint firstItem="clS-bx-B6u" firstAttribute="top" secondItem="BBe-tu-hID" secondAttribute="bottom" constant="36" id="qKm-pg-sZC"/>
                             <constraint firstItem="l9h-Xr-RTo" firstAttribute="leading" secondItem="YXe-yN-eel" secondAttribute="leading" id="qaB-2F-fIm"/>
                             <constraint firstItem="clS-bx-B6u" firstAttribute="trailing" secondItem="HjL-z1-cva" secondAttribute="trailingMargin" id="vvg-FK-tP9"/>
                             <constraint firstItem="YXe-yN-eel" firstAttribute="centerX" secondItem="HjL-z1-cva" secondAttribute="centerX" id="wIb-Jd-15P"/>
