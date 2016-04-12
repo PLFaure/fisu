@@ -342,8 +342,11 @@ class ViewController: UIViewController {
         }
     }
     
-    /// Check if the 
-    func isPresentEvent(evArray: [Event], evName: String) -> Bool { //function for the events
+    /// Check if the event is present into the events array.
+    /// - parameter evArray : [Event], the events array we want to check in.
+    /// - parameter evName : String, the name of the event we want to find.
+    /// - returns : Boolean. True if the event is present, False if it isn't.
+    func isPresentEvent(evArray: [Event], evName: String) -> Bool {
         let n = evArray.count
         var p = false
         var i = 0
@@ -356,7 +359,12 @@ class ViewController: UIViewController {
         }
         return p
     }
-    func isPresentActType(acArray: [ActivityType], acLabel: String) -> Bool { //function for the activity types
+    
+    /// Check if the activity type is present into the types array.
+    /// - parameter acArray : [ActivityType], the activity types array we want to check in.
+    /// - parameter acLabel : String, the label of the type we want to find.
+    /// - returns : Boolean. True if the type is present, False if it isn't.
+    func isPresentActType(acArray: [ActivityType], acLabel: String) -> Bool {
         let n = acArray.count
         var p = false
         var i = 0
@@ -369,7 +377,12 @@ class ViewController: UIViewController {
         }
         return p
     }
-    func isPresentLocation(locArray: [Location], locName: String) -> Bool { //function for the locations
+    
+    /// Check if the location is present into the locations array.
+    /// - parameter locArray : [Location], the locations array we want to check in.
+    /// - parameter locName : String, the name of the location we want to find.
+    /// - returns : Boolean. True if the location is present, False if it isn't.
+    func isPresentLocation(locArray: [Location], locName: String) -> Bool {
         let n = locArray.count
         var p = false
         var i = 0
@@ -382,7 +395,12 @@ class ViewController: UIViewController {
         }
         return p
     }
-    func isPresentAccomodation(accArray: [Accomodation], accName: String) -> Bool { //function for the accomodations
+    
+    /// Check if the accomodation is present into the accomodations array.
+    /// - parameter accArray : [Accomodation], the accomodatins array we want to check in.
+    /// - parameter accName : String, the name of the accomodation we want to find.
+    /// - returns : Boolean. True if the accomodation is present, False if it isn't.
+    func isPresentAccomodation(accArray: [Accomodation], accName: String) -> Bool {
         let n = accArray.count
         var p = false
         var i = 0
@@ -395,7 +413,12 @@ class ViewController: UIViewController {
         }
         return p
     }
-    func isPresentRestaurant(restArray: [Restaurant], restName: String) -> Bool { //function for the restaurants
+    
+    /// Check if the restaurant is present into the restaurants array.
+    /// - parameter restArray : [Restaurant], the restaurants array we want to check in.
+    /// - parameter restNae : String, the name of the restaurant we want to find.
+    /// - returns : Boolean. True if the restaurant is present, False if it isn't.
+    func isPresentRestaurant(restArray: [Restaurant], restName: String) -> Bool {
         let n = restArray.count
         var p = false
         var i = 0
@@ -408,7 +431,13 @@ class ViewController: UIViewController {
         }
         return p
     }
-    func isPresentSpeaker(spArray: [Speaker], spLastName: String, spFirstName: String) -> Bool { //function for the speakers
+    
+    /// Check if the speaker is present into the speakers array.
+    /// - parameter spArray : [Speaker], the speakers array we want to check in.
+    /// - parameter spLastName : String, the name of the speaker we want to find.
+    /// - parameter spFirstName : String, the first name of the speaker we want to find.
+    /// - returns : Boolean. True if the speaker is present, False if it isn't.
+    func isPresentSpeaker(spArray: [Speaker], spLastName: String, spFirstName: String) -> Bool {
         let n = spArray.count
         var p = false
         var i = 0
@@ -421,7 +450,12 @@ class ViewController: UIViewController {
         }
         return p
     }
-    func isPresentUser(usrArray: [User], usrName: String) -> Bool { //function for the users
+    
+    /// Check if the user is present into the users array.
+    /// - parameter usrArray : [User], the users array we want to check in.
+    /// - parameter usrName : String, the username of the user we want to find.
+    /// - returns : Boolean. True if the user is present, False if it isn't.
+    func isPresentUser(usrArray: [User], usrName: String) -> Bool {
         let n = usrArray.count
         var p = false
         var i = 0
