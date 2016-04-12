@@ -63,6 +63,7 @@ class ViewControllerMap: UIViewController, MKMapViewDelegate {
         return pinView
     }
     
+    /// Displays the events on the map.
     func displayEvents() {
         guard let e = self.eventsLoc where e.count > 0 else {
             return
@@ -86,6 +87,7 @@ class ViewControllerMap: UIViewController, MKMapViewDelegate {
         }
     }
     
+    /// Displays the restaurants on the map.
     func displayRestos() {
         guard let r = self.restaurantsLoc where r.count > 0 else {
             return
@@ -109,6 +111,7 @@ class ViewControllerMap: UIViewController, MKMapViewDelegate {
         }
     }
     
+    /// Displays the accommodation on the map.
     func displayAccoms() {
         guard let a = self.accomodationsLoc where a.count > 0 else {
             return

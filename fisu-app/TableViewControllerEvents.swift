@@ -50,7 +50,6 @@ class TableViewControllerEvents: UITableViewController {
         return dateString
     }
     
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "EventsCell"
         let event = self.eventsArray![indexPath.row]
@@ -71,6 +70,9 @@ class TableViewControllerEvents: UITableViewController {
         self.tableViewEvents.reloadData()
     }
     
+    /// Check if the event is present into the class event array.
+    /// - parameter ev : Event, the event searched
+    /// - returns : Boolean. True if the event is present into the class event array. False if the event is not present.
     func isPresentUserEv(ev: Event) -> Bool {
         var evArray = self.theUser?.pevents!.allObjects as? [Event]
         var i = 0
@@ -140,6 +142,8 @@ class TableViewControllerEvents: UITableViewController {
         }
     }
 
+    /// unwind function for the son pages
+    /// - parameter segue : the previous page.
     @IBAction func unwindToTVCE(sender:UIStoryboardSegue) {
         if let prevScene = sender.sourceViewController as? EventViewController {
             self.theUser = prevScene.theUser!

@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 
+/// Class for the color of the pin.
 class ColorPointAnnotation: MKPointAnnotation {
     var pinColor: UIColor
     
