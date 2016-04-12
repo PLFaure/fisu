@@ -173,13 +173,13 @@
 			name = data;
 			sourceTree = "<group>";
 		};
-		3EC5C3F81CBCE38B009CF9F9 /* modell */ = {
+		3EC5C3F81CBCE38B009CF9F9 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				3EC5C3F61CBCE217009CF9F9 /* business */,
 				3EC5C3F71CBCE344009CF9F9 /* data */,
 			);
-			name = modell;
+			name = model;
 			sourceTree = "<group>";
 		};
 		3EC5C3F91CBCE3B5009CF9F9 /* viewcontroller */ = {
@@ -198,11 +198,10 @@
 				3EBCFD541CB2740F00C8A861 /* SpeakerDescrViewController.swift */,
 				3EBCFD521CB26FED00C8A861 /* SpeakerViewCell.swift */,
 				3EA87B741CBCE0C600DA6D54 /* HelpViewController.swift */,
-				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
 				7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */,
 				7F76B8B91C6372F30061DE36 /* Assets.xcassets */,
-				3EC5C3F81CBCE38B009CF9F9 /* modell */,
+				3EC5C3F81CBCE38B009CF9F9 /* model */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
