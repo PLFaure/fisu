@@ -18,18 +18,7 @@ class RestoViewController: UIViewController {
         lbNameResto.text = theResto!.pname
         lbDescrResto.text = theResto!.pdescr
         let pictureNSData = theResto!.ppicture
-        menuView.image = UIImage(data: pictureNSData!)
-        
-        
-        
-        //for the picture
-        //if theResto?.ppicture == nil {
-        //    let imageData:NSData?
-        //    imageData = theResto?.ppicture
-        //    let imageui : UIImage = UIImage(data: imageData!)!
-        //    menuView.image = imageui
-        //}
-        
+        menuView.image = UIImage(data: pictureNSData!)        
     }
 
     override func didReceiveMemoryWarning() {

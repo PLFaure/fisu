@@ -117,6 +117,8 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         return cell
     }
     
+    /// Check if the class event is present into the class event array.
+    /// - returns : Boolean. True if the class event is present into the class event array. False if the event is not present.
     func isPresentUserEv() -> Bool {
         var evArray = self.theUser?.pevents!.allObjects as? [Event]
         var i = 0
@@ -132,6 +134,9 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         return present
     }
 
+    /// Remove the class event from the event array.
+    /// - parameter events : [Event], the event array.
+    /// - returns : [Event]. the event array without the class event.
     func removeEvent(events: [Event]) -> [Event]{
         var evts = events
         var i = 0
