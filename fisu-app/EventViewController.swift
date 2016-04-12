@@ -23,6 +23,7 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         eventDate.text = theEventDateConverter
         eventDescription.text = theEvent?.descr
         activityType.text = theEvent?.activityType?.label
+        print(theEvent?.activityType?.label)
         mySpeakersTable.dataSource = self
         mySpeakersTable.delegate=self
         

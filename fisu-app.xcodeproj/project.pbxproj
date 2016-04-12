@@ -19,6 +19,7 @@
 		3E9D6E441CA415EE00597B7A /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E431CA415EE00597B7A /* EventTests.swift */; };
 		3E9D6E461CA440F000597B7A /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E451CA440F000597B7A /* EventsTableViewCell.swift */; };
 		3E9D6E481CA4449400597B7A /* TableViewControllerEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */; };
+		3EA87B751CBCE0C600DA6D54 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA87B741CBCE0C600DA6D54 /* HelpViewController.swift */; };
 		3EB27A7A1CB4F97900D658DD /* GPSRestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB27A791CB4F97900D658DD /* GPSRestoViewController.swift */; };
 		3EB2EAFF1CA2A5A10073736E /* TableViewControllerResto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */; };
 		3EB2EB011CA2F17B0073736E /* RestoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB2EB001CA2F17B0073736E /* RestoTableViewCell.swift */; };
@@ -82,6 +83,7 @@
 		3E9D6E431CA415EE00597B7A /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		3E9D6E451CA440F000597B7A /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		3E9D6E471CA4449400597B7A /* TableViewControllerEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerEvents.swift; sourceTree = "<group>"; };
+		3EA87B741CBCE0C600DA6D54 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		3EB27A791CB4F97900D658DD /* GPSRestoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSRestoViewController.swift; sourceTree = "<group>"; };
 		3EB2EAFE1CA2A5A10073736E /* TableViewControllerResto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerResto.swift; sourceTree = "<group>"; };
 		3EB2EB001CA2F17B0073736E /* RestoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				3E9B1C9C1CA5A224003A8290 /* EventViewController.swift */,
 				3EBCFD541CB2740F00C8A861 /* SpeakerDescrViewController.swift */,
 				3EBCFD521CB26FED00C8A861 /* SpeakerViewCell.swift */,
+				3EA87B741CBCE0C600DA6D54 /* HelpViewController.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
 				7F76B8B61C6372F30061DE36 /* fisu_app.xcdatamodeld */,
@@ -392,6 +395,7 @@
 				7F76B8B01C6372F30061DE36 /* AppDelegate.swift in Sources */,
 				D009B2BB1CB3990700523614 /* RestoViewController.swift in Sources */,
 				3ED5C6971C96C6EE006AA967 /* ActivityType.swift in Sources */,
+				3EA87B751CBCE0C600DA6D54 /* HelpViewController.swift in Sources */,
 				3ED5C68F1C96C6EE006AA967 /* Event.swift in Sources */,
 				3ED5C6911C96C6EE006AA967 /* Accomodation.swift in Sources */,
 				3E9D6E481CA4449400597B7A /* TableViewControllerEvents.swift in Sources */,
