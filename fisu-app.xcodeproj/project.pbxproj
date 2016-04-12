@@ -201,7 +201,6 @@
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
 				7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */,
 				7F76B8B91C6372F30061DE36 /* Assets.xcassets */,
-				3EC5C3F81CBCE38B009CF9F9 /* model */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
@@ -232,6 +231,7 @@
 				7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
 				3EC5C3F91CBCE3B5009CF9F9 /* viewcontroller */,
+				3EC5C3F81CBCE38B009CF9F9 /* model */,
 				7F76B8BE1C6372F30061DE36 /* Info.plist */,
 			);
 			path = "fisu-app";
