@@ -126,11 +126,11 @@ class User: NSManagedObject {
     /// - set: for set the EventsSet
     /// - get: for get the EventsSet
     var pevents: NSSet? {
-        set {
-            self.event = newValue
-        }
         get {
             return self.event
+        }
+        set {
+            self.event = newValue
         }
     }
 }

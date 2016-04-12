@@ -39,11 +39,12 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         self.eventLocation.setRegion(region, animated: true)
         
         //the restaurant pin
-        let eventPin = MKPointAnnotation()
+        let eventPin = ColorPointAnnotation(pinColor: UIColor.blueColor())
         eventPin.coordinate = eventloc
         eventPin.title = theEvent!.pname
         eventPin.subtitle = theEvent?.pdescr
         self.eventLocation.addAnnotation(eventPin)
+        
         
         if isPresentUserEv() {
             self.addRemSwitch.setOn(true, animated:true)
@@ -53,6 +54,22 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         // Do any additional setup after loading the view.
     }
     
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseId = "pin"
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            
+            let colorPointAnnotation = annotation as! ColorPointAnnotation
+            pinView?.pinTintColor = colorPointAnnotation.pinColor
+        }
+        else {
+            pinView?.annotation = annotation
+        }
+        pinView?.animatesDrop = true
+        pinView?.canShowCallout = true
+        return pinView
+    }
     
     // MARK: properties
     @IBOutlet weak var eventName: UILabel!
