@@ -173,16 +173,16 @@
 			name = data;
 			sourceTree = "<group>";
 		};
-		3EC5C3F81CBCE38B009CF9F9 /* model */ = {
+		3EC5C3F81CBCE38B009CF9F9 /* modell */ = {
 			isa = PBXGroup;
 			children = (
 				3EC5C3F61CBCE217009CF9F9 /* business */,
 				3EC5C3F71CBCE344009CF9F9 /* data */,
 			);
-			name = model;
+			name = modell;
 			sourceTree = "<group>";
 		};
-		3EC5C3F91CBCE3B5009CF9F9 /* controller */ = {
+		3EC5C3F91CBCE3B5009CF9F9 /* viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
 				3EE201011CB27B9E003B604F /* ColorPointAnnotation.swift */,
@@ -202,8 +202,9 @@
 				7F76B8B31C6372F30061DE36 /* Main.storyboard */,
 				7F76B8BB1C6372F30061DE36 /* LaunchScreen.storyboard */,
 				7F76B8B91C6372F30061DE36 /* Assets.xcassets */,
+				3EC5C3F81CBCE38B009CF9F9 /* modell */,
 			);
-			name = view;
+			name = viewcontroller;
 			sourceTree = "<group>";
 		};
 		7F76B8A31C6372F30061DE36 = {
@@ -231,8 +232,7 @@
 			children = (
 				7F76B8AF1C6372F30061DE36 /* AppDelegate.swift */,
 				7F76B8B11C6372F30061DE36 /* ViewController.swift */,
-				3EC5C3F91CBCE3B5009CF9F9 /* controller */,
-				3EC5C3FA1CBCE42A009CF9F9 /* view */,
+				3EC5C3F91CBCE3B5009CF9F9 /* viewcontroller */,
 				7F76B8BE1C6372F30061DE36 /* Info.plist */,
 			);
 			path = "fisu-app";
