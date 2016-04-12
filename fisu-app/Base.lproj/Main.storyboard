@@ -903,9 +903,6 @@
                                 <state key="normal" title="eventsimg" image="calendar">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="eventButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NbT-it-Xf2"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-gW-NTa">
                                 <rect key="frame" x="225" y="134" width="150" height="147"/>
