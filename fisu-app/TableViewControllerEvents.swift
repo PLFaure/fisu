@@ -125,7 +125,6 @@ class TableViewControllerEvents: UITableViewController {
     override func didMoveToParentViewController(parent: UIViewController?) {
         if (!(parent?.isEqual(self.parentViewController) ?? false)) {
             self.performSegueWithIdentifier("unwindToVC", sender: self)
-            print("ca marche?")
         }
     }
     
@@ -139,16 +138,12 @@ class TableViewControllerEvents: UITableViewController {
                 nextScene.theUser = self.theUser
             }
         }
-        /*if segue.identifier == "unwindToVC" {
-            print("ouiiiii!")
-        }*/
     }
 
     @IBAction func unwindToTVCE(sender:UIStoryboardSegue) {
         if let prevScene = sender.sourceViewController as? EventViewController {
             self.theUser = prevScene.theUser!
             self.tableViewEvents.reloadData()
-            print("oui?")
         }
     }
     

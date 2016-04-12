@@ -85,7 +85,6 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         if addRemSwitch.on {
             if !self.isPresentUserEv() {
                 userEvents?.append(self.theEvent!)
-                print("peut etre que ca marche")
             }
         } else {
             if self.isPresentUserEv() {
@@ -159,7 +158,6 @@ class EventViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
    override func didMoveToParentViewController(parent: UIViewController?) {
         if (!(parent?.isEqual(self.parentViewController) ?? false)) {
             self.performSegueWithIdentifier("unwindToTVCE", sender: self)
-            print("ca marche pas?")
         } 
     }
       

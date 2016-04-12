@@ -9,16 +9,21 @@
 import Foundation
 import CoreData
 
-
+/// Type Restaurant.
 class Restaurant: NSManagedObject {
 
+    /// Creation of a Restaurant in core data.
+    /// - parameter moc: NSManagedObjectContext, the managed object context
+    /// - parameter name: String, the name of the restaurant
+    /// - parameter descr: String, the description of the restaurant
+    /// - parameter picture: NSData, the picture of the restaurant
+    /// - parameter loc: Location, the location of the restaurant
     class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, descr: String, picture: NSData, loc: Location) -> Restaurant {
         let newRestaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: moc) as! Restaurant
-        newRestaurant.name = name
-        newRestaurant.descr = descr
-        newRestaurant.picture = picture
-        newRestaurant.location = loc
-        //////////////////////////////////////////
+        newRestaurant.pname = name
+        newRestaurant.pdescr = descr
+        newRestaurant.ppicture = picture
+        newRestaurant.plocation = loc
         return newRestaurant
     }
     

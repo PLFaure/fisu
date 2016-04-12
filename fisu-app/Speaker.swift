@@ -9,21 +9,31 @@
 import Foundation
 import CoreData
 
-
+/// Type Speaker.
 class Speaker: NSManagedObject {
 
+    /// Creation of a Speaker in core data.
+    /// - parameter moc: NSManagedObjectContext, the managed object context
+    /// - parameter lastName: String, the last name of the speaker
+    /// - parameter firstName: String, the first name of the speaker
+    /// - parameter sex: String, the sex of the speaker
+    /// - parameter title: String, the title of the speaker
+    /// - parameter descr: String, the description of the speaker
+    /// - parameter email: String, the email of the speaker
+    /// - parameter phone: String, the phone number of the speaker
+    /// - parameter address: String, the address of the speaker
+    /// - parameter picture: NSData, a beautiful picture of the speaker
     class func createInManagedObjectContext(moc: NSManagedObjectContext, lastName: String, firstName: String, sex: String, title: String, descr: String, email: String, phone:String, address: String, picture: NSData) -> Speaker {
         let newSpeaker = NSEntityDescription.insertNewObjectForEntityForName("Speaker", inManagedObjectContext: moc) as! Speaker
-        newSpeaker.lastName = lastName
-        newSpeaker.firstName = firstName
-        newSpeaker.sex = sex
-        newSpeaker.title = title
-        newSpeaker.descr = descr
-        newSpeaker.email = email
-        newSpeaker.phone = phone
-        newSpeaker.address = address
-        newSpeaker.picture = picture
-        //////////////////////////////////////////
+        newSpeaker.plastName = lastName
+        newSpeaker.pfirstName = firstName
+        newSpeaker.psex = sex
+        newSpeaker.ptitle = title
+        newSpeaker.pdescr = descr
+        newSpeaker.pemail = email
+        newSpeaker.pphone = phone
+        newSpeaker.paddress = address
+        newSpeaker.ppicture = picture
         return newSpeaker
     }
     
