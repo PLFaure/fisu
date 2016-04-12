@@ -9,16 +9,21 @@
 import Foundation
 import CoreData
 
-
+/// Type Accomodation.
 class Accomodation: NSManagedObject {
     
+    /// Creation of an Accomodation in core data.
+    /// - parameter moc: NSManagedObjectContext, the managed object context
+    /// - parameter name: String, the name of the accomodation
+    /// - parameter descr: String, the description of the accomodation
+    /// - parameter picture: NSData, the picture of the accomodation
+    /// - parameter loc: Location, the location of the accomodation
     class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, descr: String, picture: NSData, loc: Location) -> Accomodation {
         let newAccomodation = NSEntityDescription.insertNewObjectForEntityForName("Accomodation", inManagedObjectContext: moc) as! Accomodation
-        newAccomodation.name = name
-        newAccomodation.descr = descr
-        newAccomodation.picture = picture
-        newAccomodation.location = loc
-        //////////////////////////////////////////
+        newAccomodation.pname = name
+        newAccomodation.pdescr = descr
+        newAccomodation.ppicture = picture
+        newAccomodation.plocation = loc
         return newAccomodation
     }
     

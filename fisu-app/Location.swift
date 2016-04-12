@@ -9,15 +9,19 @@
 import Foundation
 import CoreData
 
-
+/// Type Location.
 class Location: NSManagedObject {
 
+    /// Creation of a Location in core data.
+    /// - parameter moc: NSManagedObjectContext, the managed object context
+    /// - parameter name: String, the name of the location
+    /// - parameter latitude: String, the latitude of the location
+    /// - parameter longitude: String, the longitude of the location
     class func createInManagedObjectContext(moc: NSManagedObjectContext, name: String, latitude: String, longitude: String) -> Location {
         let newLocation = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: moc) as! Location
-        newLocation.name = name
-        newLocation.latitude = latitude
-        newLocation.longitude = longitude
-        //////////////////////////////////////////
+        newLocation.pname = name
+        newLocation.platitude = latitude
+        newLocation.plongitude = longitude
         return newLocation
     }
 

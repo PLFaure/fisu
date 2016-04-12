@@ -9,19 +9,30 @@
 import Foundation
 import CoreData
 
-
+/// Type User.
 class User: NSManagedObject {
    
+    /// Creation of a User in core data.
+    /// - parameter moc: NSManagedObjectContext, the managed object context
+    /// - parameter userName: String, the user name of the user
+    /// - parameter password: String, the password of the user
+    /// - parameter lastName: String, the last name of the user
+    /// - parameter firstName: String, the first name of the user
+    /// - parameter sex: String, the sex of the user
+    /// - parameter email: String, the email of the user
+    /// - parameter phone: String, the phone number of the user
+    /// - parameter nationality: String, the nationality of the user
+    /// - parameter events: NSet, a set representing the program of the user, in other words the list of events he wishes to take part in
     class func createInManagedObjectContext(moc: NSManagedObjectContext, userName: String, password:String, lastName: String, firstName: String, sex: String, email: String, phone: String, nationality: String, events: NSSet) -> User {
         let newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: moc) as! User
-        newUser.userName = userName
-        newUser.password = password
-        newUser.lastName = lastName
-        newUser.firstName = firstName
-        newUser.sex = sex
-        newUser.email = email
-        newUser.phone = phone
-        newUser.nationality = nationality
+        newUser.puserName = userName
+        newUser.ppassword = password
+        newUser.plastName = lastName
+        newUser.pfirstName = firstName
+        newUser.psex = sex
+        newUser.pemail = email
+        newUser.pphone = phone
+        newUser.pnationality = nationality
         newUser.pevents = events
         return newUser
     }

@@ -9,6 +9,18 @@
 import UIKit
 import CoreData
 
+extension NSDate
+{
+    convenience
+    init(dateString:String) {
+        let dateStringFormatter = NSDateFormatter()
+        dateStringFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        dateStringFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
+        let d = dateStringFormatter.dateFromString(dateString)!
+        self.init(timeInterval:0, sinceDate:d)
+    }
+}
+
 class ViewController: UIViewController {
     
     // Retreive the managedObjectContext from AppDelegate
@@ -25,10 +37,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    
-        // Use optional binding to confirm the managedObjectContext
+        print("Welcome on 2016 FISU Forum Application!")
         let moc = self.managedObjectContext
+        // Fetch all data arrays, to verify if those data already exists
         fetchActivityType()
         fetchLocation()
         fetchSpeaker()
@@ -40,7 +51,7 @@ class ViewController: UIViewController {
         // Create activityTypes data
         let at = [ //think to insert the elements in the alphabetical order (on label), for more visibility
             ("Challenge sportif"),
-            ("Conférence"),
+            ("Conference"),
             ("Evenement touristique")
         ]
         // Loop through, creating activityTypes
@@ -49,10 +60,8 @@ class ViewController: UIViewController {
                 // Create an individual activityTypes
                 ActivityType.createInManagedObjectContext(moc, label: atLabel)
             }
-            
         }
         fetchActivityType() // fetch the new ActivityType into the array activityTypes
-        
         
         // Create locations data
         let l = [ //think to insert the elements in the alphabetical order (on name), for more visibility
@@ -73,17 +82,14 @@ class ViewController: UIViewController {
             ("43.6037139", "3.91644229", "14 - Les trois brasseurs"),
             ("43.6037139", "3.91644229", "15 - Delice")
         ]
-        
         // Loop through, creating locations
         for (lLatitude, lLongitude, lName) in l {
             if !isPresentLocation(self.locations, locName: lName) { //if a location with this name does not exists
                 // Create an individual locations
                 Location.createInManagedObjectContext(moc, name: lName, latitude: lLatitude, longitude: lLongitude)
             }
-            
         }
         fetchLocation() // fetch the new Location into the array locations
-
         
         // Create speakers data
         let sp = [ //think to insert the elements in the alphabetical order (on lastName), for more visibility
@@ -92,19 +98,17 @@ class ViewController: UIViewController {
             ("Mario", "Mario", "Male", "Jumpman", "It's me!", "mario@nintendo.io", "06 00 00 00 01", "1 avenue des Champis", UIImagePNGRepresentation(UIImage(named: "mario.png")!)), //2
             ("Milloud", "Olivier", "Male", "Rugbyman", "The most beautiful ears", "olivier@ffr.fr", "06 00 00 00 08", "32 impasse des stades", UIImagePNGRepresentation(UIImage(named: "olivierMilloud.png")!)), //3
             ("Pavarotti", "Luciano", "Male", "Ténor", "The perfect man for this visit", "luciano@ffr.fr", "06 00 00 10 08", "32 rue des lalalas", UIImagePNGRepresentation(UIImage(named: "pavarotti.png")!))
-            
-            
         ]
-        //Loop through, creating accomodations
+        //Loop through, creating speakers
         for (spLastName, spFirstName, spSex, spTitle, spDescr, spEmail, spPhone, spAddress, spPict) in sp {
             if !isPresentSpeaker(self.speakers, spLastName: spLastName, spFirstName: spFirstName) { //if a speaker with these first and last names does not exists
-                // Create an individual accomodation
+                // Create an individual speaker
                 Speaker.createInManagedObjectContext(moc, lastName: spLastName, firstName: spFirstName, sex: spSex, title: spTitle, descr: spDescr, email: spEmail, phone: spPhone, address: spAddress, picture: spPict!)
             }
         }
         fetchSpeaker() // fetch the new Speaker into the array speakers
         
-        //to declare the speakers set
+        // declare the speakers sets
         var spSet1 : [Speaker] = []
         spSet1.append(speakers[1]) //add Obi-Wan to spSet1
         var spSet2 : [Speaker] = []
@@ -116,11 +120,11 @@ class ViewController: UIViewController {
         spSet4.append(speakers[4])
         
         // Create events data
-        let ev = [ //think to insert the elements in the alphabetical order (on name), for more visibility
-            ("Karting Challenge", NSDate(), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[3], spSet2),
-            ("Tournoi d'Ultimate Frisbee", NSDate(), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[1], spSet1),
-            ("Tournoi de rugby", NSDate(), "Tournois animé par des célébrités du rugby", activityTypes[0] , locations[0], spSet3),
-            ("Visite de l'opéra", NSDate(), "sur la célèbre place de la Comédie", activityTypes[2], locations[9], spSet4)
+        let ev = [ //think to insert the elements in the date order (on date), for more visibility
+            ("Karting Challenge", NSDate(dateString:"06/05/2016 13:25"), "Vous allez voir pleuvoir des bananes !", activityTypes[0], locations[3], spSet2),
+            ("Tournoi d'Ultimate Frisbee", NSDate(dateString:"26/05/2016 08:15"), "Le plus gros tournois du millénaire !", activityTypes[0] , locations[1], spSet1),
+            ("Tournoi de rugby", NSDate(dateString:"13/06/2016 18:45"), "Tournois animé par des célébrités du rugby", activityTypes[0] , locations[0], spSet3),
+            ("Visite de l'opéra", NSDate(dateString:"13/06/2016 20:00"), "sur la célèbre place de la Comédie", activityTypes[2], locations[9], spSet4)
         ]
         // Loop through, creating events
         for (eventName, eventDate, eventDescr, eventType, eventLoc, eventSpeakers) in ev {
@@ -154,7 +158,6 @@ class ViewController: UIViewController {
             ("Les 3 brasseurs","Pour les amateurs de bière", UIImagePNGRepresentation(UIImage(named: "3b.png")!),locations[14]),
             ("MacDo","Tout ce que t'aimes !!", UIImagePNGRepresentation(UIImage(named: "macdo.png")!),locations[7])
         ]
-        
         //Loop through, creating restaurants
         for (rName, rDescr, rPict, rLoc) in r {
             if !isPresentRestaurant(self.restaurants, restName: rName) { //if a restaurant with this name does not exists
@@ -164,6 +167,7 @@ class ViewController: UIViewController {
         }
         fetchRestaurant() // fetch the new Restaurant into the array restaurants
         
+        // declare the events set
         var evSet : [Event]
         evSet = []
         
@@ -178,44 +182,29 @@ class ViewController: UIViewController {
         }
         fetchUser() // fetch the new User into the array users
         
-        save() //save the data sets
-        
+        save() //save all the data sets
     }
     
-    func fetchActivityType() { // this fonction fetch a new ActivityType into activityTypes array
+    /// This fonction fetchs a new ActivityType into activityTypes array.
+    func fetchActivityType() {
         let fetchRequest = NSFetchRequest(entityName: "ActivityType")
-        
-        // Create a sort descriptor object that sorts on the "label"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "label", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "label", ascending: true) // Create a sort descriptor object that sorts on the "label" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ActivityType] {
-                
                 activityTypes = fetchResults
-                
             }
         } catch {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-        
-        
     }
     
-    func fetchLocation() { // this fonction fetch a new Location into locations array
+    /// This fonction fetchs a new Location into locations array.
+    func fetchLocation() {
         let fetchRequest = NSFetchRequest(entityName: "Location")
-        
-        // Create a sort descriptor object that sorts on the "name"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true) // Create a sort descriptor object that sorts on the "name" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Location] {
                 locations = fetchResults
@@ -224,20 +213,13 @@ class ViewController: UIViewController {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-        
     }
     
-    func fetchEvent() { // this fonction fetch a new Event into events array
+    /// This fonction fetchs a new Event into events array.
+    func fetchEvent() {
         let fetchRequest = NSFetchRequest(entityName: "Event")
-        
-        // Create a sort descriptor object that sorts on the "name"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true) // Create a sort descriptor object that sorts on the "name" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
                 events = fetchResults
@@ -246,19 +228,13 @@ class ViewController: UIViewController {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-
     }
     
-    func fetchAccomodation() { // this fonction fetch a new Accomodation into accomodations array
+    /// This fonction fetchs a new Accomodation into accomodations array.
+    func fetchAccomodation() {
         let fetchRequest = NSFetchRequest(entityName: "Accomodation")
-        
-        // Create a sort descriptor object that sorts on the "name"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true) // Create a sort descriptor object that sorts on the "name" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Accomodation] {
                 accomodations = fetchResults
@@ -267,19 +243,13 @@ class ViewController: UIViewController {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-        
     }
     
-    func fetchRestaurant() { // this fonction fetch a new Restaurant into restaurants array
+    /// This fonction fetchs a new Restaurant into restaurants array.
+    func fetchRestaurant() {
         let fetchRequest = NSFetchRequest(entityName: "Restaurant")
-        
-        // Create a sort descriptor object that sorts on the "name"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true) // Create a sort descriptor object that sorts on the "name" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Restaurant] {
                 restaurants = fetchResults
@@ -288,19 +258,13 @@ class ViewController: UIViewController {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-        
     }
     
-    func fetchSpeaker() { // this fonction fetch a new Speaker into speakers array
+    /// This fonction fetchs a new Speaker into speakers array.
+    func fetchSpeaker() {
         let fetchRequest = NSFetchRequest(entityName: "Speaker")
-        
-        // Create a sort descriptor object that sorts on the "lastName"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "lastName", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "lastName", ascending: true) // Create a sort descriptor object that sorts on the "lastName" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Speaker] {
                 speakers = fetchResults
@@ -309,20 +273,13 @@ class ViewController: UIViewController {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-        
     }
 
-    
-    func fetchUser() { // this fonction fetch a new User into users array
+    /// This fonction fetchs a new User into users array.
+    func fetchUser() {
         let fetchRequest = NSFetchRequest(entityName: "User")
-        
-        // Create a sort descriptor object that sorts on the "userName"
-        // property of the Core Data object
-        let sortDescriptor = NSSortDescriptor(key: "userName", ascending: true)
-        
-        // Set the list of sort descriptors in the fetch request,
-        // so it includes the sort descriptor
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let sortDescriptor = NSSortDescriptor(key: "userName", ascending: true) // Create a sort descriptor object that sorts on the "userName" property of the Core Data object
+        fetchRequest.sortDescriptors = [sortDescriptor] // Set the list of sort descriptors in the fetch request, so it includes the sort descriptor
         do {
             if let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [User] {
                 users = fetchResults
@@ -331,10 +288,10 @@ class ViewController: UIViewController {
             let nserror = error as NSError
             NSLog("Fetch failed: \(nserror.localizedDescription)")
         }
-        
     }
     
-    func save() { // save the current data set
+    /// This function saves the current data sets.
+    func save() {
         do {
             try self.managedObjectContext.save()
         } catch {
@@ -359,7 +316,6 @@ class ViewController: UIViewController {
             if let nextScene = segue.destinationViewController as? TableViewControllerEvents{
                 nextScene.eventsArray = self.events
                 nextScene.theUser = self.users[0]
-                print("ca ecrit au moins?")
             }
         } else if segue.identifier == "segueProfil" {
             if let nextScene = segue.destinationViewController as? ProfilViewController{
@@ -374,10 +330,11 @@ class ViewController: UIViewController {
         }
     }
     
+    /// unwind function for the son pages
+    /// - parameter segue : the previous page.
     @IBAction func unwindToVC(segue:UIStoryboardSegue) {
         if let prevScene = segue.sourceViewController as? TableViewControllerEvents {
             self.users[0] = prevScene.theUser!
-            print("oui?")
         }
     }
     
