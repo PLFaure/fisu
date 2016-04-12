@@ -338,7 +338,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //the following functions are defined to control the insertion of elements into the class arrays variables above
+    /// Check if the 
     func isPresentEvent(evArray: [Event], evName: String) -> Bool { //function for the events
         let n = evArray.count
         var p = false
