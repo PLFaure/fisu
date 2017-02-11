@@ -1,2 +1,2 @@
 # FISU application
-iOS application for the FISU (International University Sport Federation). 
+iOS application proposed for the FISU (International University Sport Federation). 
